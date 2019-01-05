@@ -33,6 +33,9 @@
 
   --color-dark: black;
   --color-day: white;
+  --color-purple: #8e43ca;
+  --color-pink: #ff00ff;
+  --color-lightpink: #fff9ff;
 
   --grid-unit: 1rem;
 }
@@ -44,7 +47,6 @@ html {
 
 body {
   margin: 0;
-  padding: 20px;
   background: var(--color-dark);
 }
 
