@@ -16,18 +16,29 @@
   font-style: bold;
 }
 
-:root {
-  --color-dark: black;
-  --color-day: white;
+@font-face {
+  font-family: 'Flaco mono';
+  src: url('./Flaco-Mono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+:root {
+  --type-base: 14px;
   --type-header: 3rem;
   --type-subheader: 2rem;
   --type-largebody: 1.2rem;
   --type-body: 1rem;
   --type-subtext: 0.9rem;
+
+  --color-dark: black;
+  --color-day: white;
+
+  --grid-unit: 1rem;
 }
 
 html {
+  font-size: var(--type-base);
   height: 100%;
 }
 
@@ -46,7 +57,14 @@ h6,
 p,
 q,
 li {
-  font-family: 'Sans Sharp';
+  font-weight: 600;
+  color: var(--color-day);
+}
+
+p,
+q,
+li {
+  font-family: 'Flaco Mono';
   font-weight: 600;
   color: var(--color-day);
 }
@@ -57,5 +75,6 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Sans Sharp';
   font-weight: 700;
 }
