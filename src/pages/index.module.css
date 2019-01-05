@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 5rem;
 }
 
 .grid {
@@ -17,13 +16,21 @@
 
 .positionedGrid {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+}
+
+.gridGradient {
+  background: linear-gradient(
+    to right,
+    var(--color-pink) 0%,
+    var(--color-blue) 100%
+  );
+}
+
+.gridBorder {
+  grid-row: 1 / 13;
+  background: black;
+  border-left: 1px solid transparent;
+  background-clip: content-box;
 }
 
 .bgback {

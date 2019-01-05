@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import cx from 'classnames'
 import { graphql } from 'gatsby'
 import styles from './index.module.css'
 import Layout from '../layout'
@@ -15,15 +16,36 @@ class Index extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges
     return (
       <Layout>
+        <Helmet title={config.siteTitle} />
+        {/* <SEO /> */}
         <div className={styles.container}>
-          <Helmet title={config.siteTitle} />
+          <div
+            className={cx(
+              styles.grid,
+              styles.positionedGrid,
+              styles.gridGradient
+            )}
+          >
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+            <div className={styles.gridBorder} />
+          </div>
           <div className={styles.grid}>
-            {/* <SEO /> */}
+            <div className={cx(styles.grid, styles.positionedGrid)} />
             <img className={styles.bgback} src={bgback} />
-            <div className={styles.positionedGrid}>
+            <div className={cx(styles.grid, styles.positionedGrid)}>
               <img className={styles.bgfront} src={bgfront} />
             </div>
-            <div className={styles.positionedGrid}>
+            <div className={cx(styles.grid, styles.positionedGrid)}>
               <img className={styles.title} src={title} />
             </div>
             <div className={styles.text}>
