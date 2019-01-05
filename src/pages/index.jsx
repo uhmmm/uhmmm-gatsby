@@ -19,31 +19,29 @@ class Index extends React.Component {
           <Helmet title={config.siteTitle} />
           <div className={styles.grid}>
             {/* <SEO /> */}
-            <div className={styles.display}>
-              <img className={styles.title} src={title} />
-              <img className={styles.bgback} src={bgback} />
+            <img className={styles.bgback} src={bgback} />
+            <div className={styles.positionedGrid}>
               <img className={styles.bgfront} src={bgfront} />
             </div>
-            <div className={styles.firstParagraph}>
+            <div className={styles.positionedGrid}>
+              <img className={styles.title} src={title} />
+            </div>
+            <div className={styles.text}>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-                cumque debitis rerum quod, excepturi velit consequuntur in ex
-                aperiam temporibus adipisci animi libero dolorum sunt eveniet
-                vitae suscipit, commodi sapiente!
+                cumque debitis rerum quod, excepturi velit consequuntur.
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-                cumque debitis rerum quod, excepturi velit consequuntur in ex
-                aperiam temporibus adipisci animi libero dolorum sunt eveniet
-                vitae suscipit, commodi sapiente!
+                cumque debitis rerum quod, excepturi velit consequuntur.
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-                cumque debitis rerum quod, excepturi velit consequuntur in ex
-                aperiam temporibus adipisci animi libero dolorum sunt eveniet
-                vitae suscipit, commodi sapiente!
+                cumque debitis rerum quod, excepturi velit consequuntur.
               </p>
             </div>
+          </div>
+          <div className={styles.grid}>
             <PostListing postEdges={postEdges} />
           </div>
         </div>
