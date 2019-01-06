@@ -1,10 +1,11 @@
 ---
-title: '888mailer v2'
+title: '888mailer'
 cover: 'https://unsplash.it/400/300/?random?BoldMage'
 date: '31/01/2019'
 category: 'tech'
 tags:
   - Proposed
+description: '888zoeker is only a way to actively explore, but not to monitor. 888mailer makes passive monitoring possible.'
 ---
 
 # Quanto et ius coniunctis urbes

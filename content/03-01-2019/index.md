@@ -5,6 +5,7 @@ date: '03/01/2019'
 category: 'tech'
 tags:
   - Proposed
+description: 'The 888zoeker is a niche search engine that indexes the content of the Dutch public broadcasting system.'
 ---
 
 # Domos primus caelum taedia

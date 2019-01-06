@@ -7,4 +7,9 @@
 
 .post {
   grid-area: span 1 / span 4;
+  padding-right: var(--grid-unit);
+}
+
+.title {
+  padding: calc(var(--grid-unit) * 2) 0 var(--grid-unit);
 }

@@ -5,6 +5,7 @@ category: 'something'
 date: '20/12/2018'
 tags:
   - Under Development
+description: 'We are aiming to make the freedom of information act more accessible for journalists, activists and citizens.'
 ---
 
 # Eram mora tuas in inter ferens caterva

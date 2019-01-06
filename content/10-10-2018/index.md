@@ -1,10 +1,11 @@
 ---
-title: '888zoeker v1'
+title: '888zoeker'
 cover: 'https://unsplash.it/400/300/?random?BoldMage'
 date: '10/10/2018'
 category: 'tech'
 tags:
   - Launched
+description: 'The 888zoeker is a niche search engine that indexes the content of the Dutch public broadcasting system.'
 ---
 
 # Quanto et ius coniunctis urbes

@@ -1,5 +1,5 @@
 .tags {
-  padding: calc(var(--grid-unit) * 3) 0 var(--grid-unit);
+  padding: calc(var(--grid-unit) * 3) 0 0;
   outline: 0;
 }
 
