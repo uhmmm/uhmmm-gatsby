@@ -1,0 +1,13 @@
+.link {
+  outline: 0;
+}
+
+.container {
+  background: var(--color-pink);
+  border: 0;
+  color: white;
+  font-family: var(--type-family-body);
+  font-size: var(--type-subtext);
+  padding: calc(var(--grid-unit) / 4);
+  outline: 0;
+}
