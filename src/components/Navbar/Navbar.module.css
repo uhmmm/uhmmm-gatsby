@@ -1,8 +1,13 @@
+.outer {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 90vw;
+  width: var(--grid-max-width);
   padding: var(--grid-unit) 0 calc(var(--grid-unit) * 5);
 }
 
