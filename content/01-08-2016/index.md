@@ -5,7 +5,7 @@ category: 'tech'
 date: '01/08/2016'
 tags:
   - Launched
-description: 'The 888zoeker is a niche search engine that indexes the content of the Dutch public broadcasting system.'
+description: 'A visualization of the tradingnetwork of the Dutch East India Company.'
 ---
 
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum

@@ -5,7 +5,7 @@ category: 'tech'
 date: '04/01/2019'
 tags:
   - Under Development
-description: 'The 888zoeker is a niche search engine that indexes the content of the Dutch public broadcasting system.'
+description: 'An expanded and accesible version of VOC-visualization.'
 ---
 
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
