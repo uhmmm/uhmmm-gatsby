@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  width: var(--grid-max-width);
+  grid-template-columns: var(--grid-columns);
+}
+
+.contact {
+  grid-column: span 3;
+}
+
+.title {
+  font-size: var(--type-subheader);
+  padding-bottom: var(--grid-unit);
+}
+
+.text {
+  font-size: var(--type-body);
+}
+
+.people {
+  grid-column: span 9;
+}

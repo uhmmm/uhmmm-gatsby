@@ -33,6 +33,7 @@
   --type-subtext: 0.9rem;
 
   --color-dark: black;
+  --color-grey: grey;
   --color-day: white;
   --color-purple: #8e43ca;
   --color-pink: #ff00ff;
@@ -41,6 +42,7 @@
 
   --grid-unit: 1rem;
   --grid-max-width: 90vw;
+  --grid-columns: repeat(12, 1fr);
 }
 
 html {
@@ -76,7 +78,16 @@ p,
 q,
 li {
   font-family: var(--type-family-body);
+}
+
+p {
   margin-bottom: var(--grid-unit);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1,

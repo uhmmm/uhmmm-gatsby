@@ -1,0 +1,32 @@
+.container {
+  grid-column: span 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.image {
+  grid-column: span 3;
+  display: block;
+  background: white;
+  border-radius: 100%;
+  width: calc(100% - var(--grid-unit) * 5);
+  height: auto;
+}
+
+.details {
+  width: 100%;
+  grid-column: span 3;
+  padding: calc(var(--grid-unit) * 2) 0;
+}
+
+.name {
+  font-size: var(--type-subtext);
+}
+
+.function {
+  font-size: var(--type-subtext);
+
+  color: var(--color-grey);
+}

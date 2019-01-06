@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import styles from './index.module.css'
 import Layout from '../layout'
 import PostListing from '../components/PostListing/PostListing'
+import Contact from '../components/Contact/Contact'
 import Navbar from '../components/Navbar/Navbar'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
@@ -73,6 +74,7 @@ class Index extends React.Component {
             </div>
           </div>
           <PostListing postEdges={postEdges} />
+          <Contact />
         </div>
         <div className={styles.container}>
           <div className={styles.bgtopGrid}>
