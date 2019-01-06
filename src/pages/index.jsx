@@ -9,10 +9,9 @@ import Gradient from '../components/Gradient/Gradient'
 import Showcase from '../components/Showcase/Showcase'
 import Contact from '../components/Contact/Contact'
 import Navbar from '../components/Navbar/Navbar'
+import Bar from '../components/Bar/Bar'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
-
-import bgtop from './bar2x.png'
 
 class Index extends React.Component {
   render() {
@@ -22,22 +21,12 @@ class Index extends React.Component {
         <Helmet title={config.siteTitle} />
         {/* <SEO /> */}
         <Gradient />
-
-        <div className={styles.container}>
-          <div className={styles.bgtopGrid}>
-            <img className={styles.bgtop} src={bgtop} />
-          </div>
-        </div>
-
+        <Bar type="horizontal" />
         <Navbar />
         <Showcase />
         <PostListing postEdges={postEdges} />
         <Contact />
-        <div className={styles.container}>
-          <div className={styles.bgtopGrid}>
-            <img className={styles.bgtop} src={bgtop} />
-          </div>
-        </div>
+        <Bar type="horizontal" />
       </Layout>
     )
   }
