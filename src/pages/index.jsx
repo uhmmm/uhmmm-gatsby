@@ -53,16 +53,16 @@ class Index extends React.Component {
           <div className={styles.grid}>
             <div className={styles.text}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-                cumque debitis rerum quod, excepturi velit consequuntur.
+                Uhmmm develops digital tools for journalists and academics to
+                aid them in their research.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-                cumque debitis rerum quod, excepturi velit consequuntur.
+                Some of our projects have been self-initiated, while others have
+                been made in partnership.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-                cumque debitis rerum quod, excepturi velit consequuntur.
+                If you are looking for collaboration please contact us at
+                info@uhmmm.io
               </p>
             </div>
           </div>

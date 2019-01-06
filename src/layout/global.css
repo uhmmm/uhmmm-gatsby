@@ -22,7 +22,10 @@
 }
 
 :root {
-  --type-base: 14px;
+  --type-family-body: 'Flaco mono';
+  --type-family-header: 'Sans Sharp';
+
+  --type-base: 18px;
   --type-header: 3rem;
   --type-subheader: 2rem;
   --type-largebody: 1.2rem;
@@ -62,14 +65,15 @@ q,
 li,
 a {
   color: var(--color-day);
+  margin: 0;
 }
 
 a,
 p,
 q,
 li {
-  font-family: 'Flaco Mono';
-  color: var(--color-day);
+  font-family: var(--type-family-body);
+  margin-bottom: var(--grid-unit);
 }
 
 h1,
@@ -78,5 +82,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Sans Sharp';
+  font-family: var(--type-family-header);
 }

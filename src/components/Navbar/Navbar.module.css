@@ -10,6 +10,7 @@
 }
 
 .logoText {
+  font-size: var(--type-largebody);
   font-weight: 100;
 }
 
@@ -18,7 +19,10 @@
 }
 
 .link {
+  font-family: var(--type-family-body);
+  font-size: var(--type-body);
   padding: 0 calc(var(--grid-unit) * 2) 0 0;
+  font-weight: 100;
 }
 
 .link:last-of-type {
