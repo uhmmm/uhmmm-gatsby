@@ -1,10 +1,10 @@
 ---
-title: '888zoeker'
+title: '888mailer v2'
 cover: 'https://unsplash.it/400/300/?random?BoldMage'
-date: '01/01/2017'
+date: '31/01/2019'
 category: 'tech'
 tags:
-  - Launched
+  - Proposed
 ---
 
 # Quanto et ius coniunctis urbes

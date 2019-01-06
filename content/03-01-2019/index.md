@@ -1,10 +1,10 @@
 ---
 title: 'ArchiWoZ'
 cover: 'https://unsplash.it/1152/300/?random?BirchintheRoses'
-date: '01/03/2017'
+date: '03/01/2019'
 category: 'tech'
 tags:
-  - Under Development
+  - Proposed
 ---
 
 # Domos primus caelum taedia
