@@ -20,7 +20,7 @@
 
   color: white;
 
-  background: url(./knockout.png);
+  background-image: url(./knockout.png);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
