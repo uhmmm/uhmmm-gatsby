@@ -7,13 +7,41 @@
 
 .container {
   display: grid;
-  grid-template-columns: var(--grid-columns);
   width: var(--grid-max-width);
 }
 
 .title {
+  position: relative;
+  display: block;
+
+  font-family: var(--type-family-header);
+  font-size: var(--type-title);
+  font-weight: normal;
+
+  color: white;
+
+  background: url(./knockout.png);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titleImg {
   display: block;
   grid-column: span 8;
   width: 100%;
   padding-bottom: calc(var(--grid-unit) * 5);
+}
+
+.clip-text-maybe {
+  /* if we can clip, do it */
+
+  /* what will show through the text
+      ~ or ~
+     what will be the background of that element */
+
+  /* fallback text color
+      ~ or ~
+     the actual color of text, so it better work on the background */
+  color: red;
 }
