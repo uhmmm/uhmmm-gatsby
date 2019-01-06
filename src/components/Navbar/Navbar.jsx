@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import styles from './Navbar.module.css'
 
@@ -6,12 +7,20 @@ export default () => (
   <div className={styles.outer}>
     <nav className={styles.container}>
       <div className={styles.logo}>
-        <h3 className={styles.logoText}>uhmmm.io</h3>
+        <Link to="/" className={styles.logoText}>
+          uhmmm.io
+        </Link>
       </div>
       <div className={styles.links}>
-        <h3 className={styles.link}>about</h3>
-        <h3 className={styles.link}>projects</h3>
-        <h3 className={styles.link}>contact</h3>
+        <Link to="/" className={styles.link}>
+          about
+        </Link>
+        <Link to="/" className={styles.link}>
+          projects
+        </Link>
+        <Link to="/" className={styles.link}>
+          contact
+        </Link>
       </div>
     </nav>
   </div>

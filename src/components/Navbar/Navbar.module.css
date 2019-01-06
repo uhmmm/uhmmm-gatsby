@@ -15,6 +15,7 @@
 }
 
 .logoText {
+  font-family: var(--type-family-header);
   font-size: var(--type-largebody);
   font-weight: 100;
 }
