@@ -40,6 +40,7 @@
   --color-blue: #00d3ba;
 
   --grid-unit: 1rem;
+  --grid-max-width: 90vw;
 }
 
 html {
@@ -67,6 +68,7 @@ li,
 a {
   color: var(--color-day);
   margin: 0;
+  text-decoration: none;
 }
 
 a,

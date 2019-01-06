@@ -72,10 +72,7 @@ class Index extends React.Component {
               </p>
             </div>
           </div>
-
-          <div className={styles.postGrid}>
-            <PostListing postEdges={postEdges} />
-          </div>
+          <PostListing postEdges={postEdges} />
         </div>
         <div className={styles.container}>
           <div className={styles.bgtopGrid}>
