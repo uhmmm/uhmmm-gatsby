@@ -19,8 +19,8 @@
     var(--color-pink) 0%,
     var(--color-blue) 100%
   );
-  top: 0;
-  bottom: 0;
+  top: -500px;
+  bottom: -500px;
 }
 
 .gridGradientBorder {

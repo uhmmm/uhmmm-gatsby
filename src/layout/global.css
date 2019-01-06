@@ -5,14 +5,12 @@
 @font-face {
   font-family: 'Sans Sharp';
   src: url('./ss-600.otf') format('opentype');
-  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Sans Sharp';
   src: url('./ss-700.otf') format('opentype');
-  font-weight: 700;
   font-style: bold;
 }
 
@@ -44,9 +42,11 @@
 html {
   font-size: var(--type-base);
   height: 100%;
+  overflow: hidden;
 }
 
 body {
+  overflow: scroll;
   margin: 0;
   background: var(--color-dark);
 }
@@ -59,16 +59,16 @@ h5,
 h6,
 p,
 q,
-li {
-  font-weight: 600;
+li,
+a {
   color: var(--color-day);
 }
 
+a,
 p,
 q,
 li {
   font-family: 'Flaco Mono';
-  font-weight: 600;
   color: var(--color-day);
 }
 
@@ -79,5 +79,4 @@ h4,
 h5,
 h6 {
   font-family: 'Sans Sharp';
-  font-weight: 700;
 }
