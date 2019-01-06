@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  padding: var(--grid-unit) 0 calc(var(--grid-unit) * 5);
+}
+
+.logo {
+}
+
+.logoText {
+  font-weight: 100;
+}
+
+.links {
+  display: flex;
+}
+
+.link {
+  padding: 0 calc(var(--grid-unit) * 2) 0 0;
+}
+
+.link:last-of-type {
+  padding: unset;
+}

@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import styles from './index.module.css'
 import Layout from '../layout'
 import PostListing from '../components/PostListing/PostListing'
+import Navbar from '../components/Navbar/Navbar'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
 import bgback from './bg-back.png'
@@ -18,36 +19,38 @@ class Index extends React.Component {
       <Layout>
         <Helmet title={config.siteTitle} />
         {/* <SEO /> */}
+        <div className={styles.gridGradientContainer}>
+          <div className={styles.gridGradient}>
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+            <div className={styles.gridGradientBorder} />
+          </div>
+        </div>
+
         <div className={styles.container}>
-          <div
-            className={cx(
-              styles.grid,
-              styles.positionedGrid,
-              styles.gridGradient
-            )}
-          >
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
-            <div className={styles.gridBorder} />
+          <Navbar />
+        </div>
+
+        <div className={styles.container}>
+          <div className={cx(styles.grid, styles.positionedGrid)}>
+            <img className={styles.bgback} src={bgback} />
+          </div>
+          <div className={cx(styles.grid, styles.positionedGrid)}>
+            <img className={styles.bgfront} src={bgfront} />
+          </div>
+          <div className={cx(styles.grid, styles.positionedGrid)}>
+            <img className={styles.title} src={title} />
           </div>
           <div className={styles.grid}>
-            <div className={cx(styles.grid, styles.positionedGrid)} />
-            <img className={styles.bgback} src={bgback} />
-            <div className={cx(styles.grid, styles.positionedGrid)}>
-              <img className={styles.bgfront} src={bgfront} />
-            </div>
-            <div className={cx(styles.grid, styles.positionedGrid)}>
-              <img className={styles.title} src={title} />
-            </div>
             <div className={styles.text}>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
@@ -63,7 +66,8 @@ class Index extends React.Component {
               </p>
             </div>
           </div>
-          <div className={styles.grid}>
+
+          <div className={styles.postGrid}>
             <PostListing postEdges={postEdges} />
           </div>
         </div>

@@ -1,8 +1,48 @@
-.container {
+.gridGradientContainer {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 0 var(--grid-unit);
+  top: 0;
+  bottom: 0;
+}
+
+.gridGradient {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 90vw;
+  background: linear-gradient(
+    to right,
+    var(--color-pink) 0%,
+    var(--color-blue) 100%
+  );
+  top: 0;
+  bottom: 0;
+}
+
+.gridGradientBorder {
+  grid-row: 1 / 13;
+  margin-bottom: -1px;
+  background: black;
+  border-left: 1px solid transparent;
+  background-clip: content-box;
+}
+
+.gridGradientBorder:last-of-type {
+  margin-right: -1px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 var(--grid-unit);
 }
 
 .grid {
@@ -18,21 +58,6 @@
   position: absolute;
 }
 
-.gridGradient {
-  background: linear-gradient(
-    to right,
-    var(--color-pink) 0%,
-    var(--color-blue) 100%
-  );
-}
-
-.gridBorder {
-  grid-row: 1 / 13;
-  background: black;
-  border-left: 1px solid transparent;
-  background-clip: content-box;
-}
-
 .bgback {
   width: 100%;
   grid-area: 1 / 3 / 7 / 7;
@@ -46,9 +71,13 @@
 .title {
   width: 100%;
   grid-area: 3 / 1 /8 / 11;
+  margin-left: -8px;
 }
 
 .text {
   width: 100%;
   grid-area: 7 / 9 / 13 / 13;
+}
+
+.postGrid {
 }
