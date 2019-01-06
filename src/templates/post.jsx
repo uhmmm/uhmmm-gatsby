@@ -2,10 +2,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../layout'
+import Post from '../components/Post/Post'
 import UserInfo from '../components/UserInfo/UserInfo'
 import Disqus from '../components/Disqus/Disqus'
+import Navbar from '../components/Navbar/Navbar'
 import PostTags from '../components/PostTags/PostTags'
 import SocialLinks from '../components/SocialLinks/SocialLinks'
+import Title from '../components/Title/Title'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
 import './b16-tomorrow-dark.css'
@@ -29,16 +32,15 @@ export default class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-              {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
-            </div>
-            {/* <UserInfo config={config} /> */}
-            {/* <Disqus postNode={postNode} /> */}
-          </div>
+
+          <Navbar />
+          <Title name={post.title} />
+          <Post post={post} postNode={postNode} />
+          <PostTags tags={post.tags} />
+
+          {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
+          {/* <UserInfo config={config} /> */}
+          {/* <Disqus postNode={postNode} /> */}
         </div>
       </Layout>
     )

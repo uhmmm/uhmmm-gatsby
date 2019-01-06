@@ -19,9 +19,12 @@ export default class MainLayout extends React.Component {
         </Helmet>
         {/* DO NOT PLACE ANYTHING VISISBLE BEFORE THE GRADIENT */}
         <Gradient />
-        <Bar type="horizontal" />
-        {children}
-        <Bar type="horizontal" />
+        {/* AND DO NOT REMOVE THIS CONTAINER: POSITION RELATIVE OVERLAPS ABSOLUTE, DOCUMENTFLOW DOES NOT */}
+        <div className={styles.container}>
+          <Bar type="horizontal" color="dark" />
+          {children}
+          <Bar type="horizontal" color="dark" />
+        </div>
       </div>
     )
   }

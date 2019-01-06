@@ -1,0 +1,19 @@
+.outer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+  width: var(--grid-max-width);
+}
+
+.title {
+  display: block;
+  grid-column: span 8;
+  width: 100%;
+  padding-bottom: calc(var(--grid-unit) * 5);
+}
