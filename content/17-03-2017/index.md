@@ -1,23 +1,19 @@
 ---
-title: "The Butterfly of the Edge"
-cover: "https://unsplash.it/1152/300/?random?TheButterflyoftheEdge"
-category: "tech"
-date: "17/03/2017"
+title: 'The Butterfly of the Edge'
+cover: 'https://unsplash.it/1152/300/?random?TheButterflyoftheEdge'
+category: 'tech'
+date: '17/03/2017'
 tags:
-    - programming
-    - more tags
-    - testing
-    - another one
-    - stuff
-    - other
+  - Proposed
 ---
+
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
 
 ## Cognoscenti audeat ulterius sublimia terga potiorque saxo
 
 Lorem markdownum, quid fuerat Procne saxo asperitas variarum Iuno humili
 sermone! Tibi Oileos [unda](http://nuncet.org/hic-gens.php), lux celeberrima
-heros inlustre Copia, *humo*: huius.
+heros inlustre Copia, _humo_: huius.
 
 Ecce ruris resupino pugnat nudaque certum piacula componar advertite homines
 terris: iam. Huc amnem cura lustrabere pro videt ferat lupi quoque tepido
@@ -27,7 +23,7 @@ amplexa aures es subito ad sagittis silvis lacrimans.
 
 Penetravit velocius. [Sed usum notissima](http://quamlaevum.com/parnasia) pinus
 monimenta populo dubitavit latices quoque, nido parant? Argumenta regem
-pererrant avellere ore *grates* stirpem. Toto potes, non malo est argumentum
+pererrant avellere ore _grates_ stirpem. Toto potes, non malo est argumentum
 gyrum, nec cernes prosunt, [laudemur
 quis](http://www.ipse-in.org/meritosenis.html) ardescunt cervicis. Quamvis mens,
 pastae, vimine, quid urbesque vidi, quae fuit strictis radere grandaevique
@@ -53,7 +49,7 @@ fore spinae nulla, tuus.
 - Deorum adfata depressitque fortuna conlapsosque conorque
 - Ramum o
 
-Iacentes sunt. *Fugio et illo*, non Nam et esse foret genu coercuit vana forcipe
+Iacentes sunt. _Fugio et illo_, non Nam et esse foret genu coercuit vana forcipe
 funeribus Achelous fugae Eurytidae moram. Tantique mei virga gestu, omnia qui
 fatale at firmat, aut est non invida totidemque fulserunt ungula. **Dignus
 apro** incubat qui! Torserat conplexa cum, Rhoetus tibi ignes crudelis marinae.
