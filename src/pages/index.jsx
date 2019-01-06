@@ -10,6 +10,7 @@ import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
 import bgback from './bg-back.png'
 import bgfront from './bg-front.png'
+import bgtop from './bar.png'
 import title from './title.png'
 
 class Index extends React.Component {
@@ -33,6 +34,11 @@ class Index extends React.Component {
             <div className={styles.gridGradientBorder} />
             <div className={styles.gridGradientBorder} />
             <div className={styles.gridGradientBorder} />
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.bgtopGrid}>
+            <img className={styles.bgtop} src={bgtop} />
           </div>
         </div>
 
@@ -69,6 +75,11 @@ class Index extends React.Component {
 
           <div className={styles.postGrid}>
             <PostListing postEdges={postEdges} />
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.bgtopGrid}>
+            <img className={styles.bgtop} src={bgtop} />
           </div>
         </div>
       </Layout>

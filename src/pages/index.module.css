@@ -19,8 +19,8 @@
     var(--color-pink) 0%,
     var(--color-blue) 100%
   );
-  top: -500px;
-  bottom: -500px;
+  top: 0;
+  bottom: 0;
 }
 
 .gridGradientBorder {
@@ -52,6 +52,17 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
+}
+
+.bgtopGrid {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.bgtop {
+  width: 100%;
+  grid-column: 1 / 9;
 }
 
 .positionedGrid {

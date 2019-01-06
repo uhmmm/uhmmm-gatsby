@@ -52,6 +52,7 @@ body {
   overflow: scroll;
   margin: 0;
   background: var(--color-dark);
+  height: 100%;
 }
 
 h1,
