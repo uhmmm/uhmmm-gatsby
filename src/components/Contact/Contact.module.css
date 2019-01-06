@@ -2,6 +2,7 @@
   display: grid;
   width: var(--grid-max-width);
   grid-template-columns: var(--grid-columns);
+  padding-bottom: calc(var(--grid-unit) * 5);
 }
 
 .contact {

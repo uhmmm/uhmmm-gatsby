@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: var(--grid-max-width);
-  padding-bottom: calc(var(--grid-unit) * 5);
+  padding-bottom: calc(var(--grid-unit) * 10);
 }
 
 .post {

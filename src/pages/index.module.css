@@ -45,6 +45,10 @@
   padding: 0 var(--grid-unit);
 }
 
+.showcase {
+  margin-bottom: calc(var(--grid-unit) * 5);
+}
+
 .grid {
   position: relative;
   width: 90vw;

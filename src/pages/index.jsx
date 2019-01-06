@@ -47,7 +47,7 @@ class Index extends React.Component {
           <Navbar />
         </div>
 
-        <div className={styles.container}>
+        <div className={cx(styles.container)}>
           <div className={cx(styles.grid, styles.positionedGrid)}>
             <img className={styles.bgback} src={bgback} />
           </div>
@@ -57,7 +57,7 @@ class Index extends React.Component {
           <div className={cx(styles.grid, styles.positionedGrid)}>
             <img className={styles.title} src={title} />
           </div>
-          <div className={styles.grid}>
+          <div className={cx(styles.grid, styles.showcase)}>
             <div className={styles.text}>
               <p>
                 Uhmmm develops digital tools for journalists and academics to
