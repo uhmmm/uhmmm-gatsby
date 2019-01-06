@@ -1,0 +1,11 @@
+.outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  width: var(--grid-max-width);
+  padding-bottom: calc(var(--grid-unit) * 2);
+}
