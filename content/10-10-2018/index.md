@@ -3,6 +3,9 @@ title: '888zoeker'
 cover: 'https://unsplash.it/400/300/?random?BoldMage'
 date: '10/10/2018'
 category: 'tech'
+authors:
+  - Erik van Zummeren
+  - Robert-Jan Korteschiel
 tags:
   - Launched
 description: 'The 888zoeker is a niche search engine that indexes the content of the Dutch public broadcasting system.'

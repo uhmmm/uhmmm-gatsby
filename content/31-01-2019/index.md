@@ -3,6 +3,9 @@ title: '888mailer'
 cover: 'https://unsplash.it/400/300/?random?BoldMage'
 date: '31/01/2019'
 category: 'tech'
+authors:
+  - Erik van Zummeren
+  - Robert-Jan Korteschiel
 tags:
   - Proposed
 description: '888zoeker is only a way to actively explore, but not to monitor. 888mailer makes passive monitoring possible.'

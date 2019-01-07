@@ -6,14 +6,16 @@ import Post from '../components/Post/Post'
 import UserInfo from '../components/UserInfo/UserInfo'
 import Disqus from '../components/Disqus/Disqus'
 import Navbar from '../components/Navbar/Navbar'
-import PostTags from '../components/PostTags/PostTags'
 import SocialLinks from '../components/SocialLinks/SocialLinks'
 import Title from '../components/Title/Title'
+import Tag from '../components/Tag/Tag'
+import Chip from '../components/Chip/Chip'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
 import './b16-tomorrow-dark.css'
 
 import styles from './post.module.css'
+import { node } from 'prop-types'
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -33,12 +35,16 @@ export default class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-
           <Navbar />
           <Title name={post.title} />
           <div className={styles.outer}>
             <div className={styles.container}>
-              <PostTags tags={post.tags} />
+              <div className={styles.tags}>
+                {post.tags && post.tags.map(tag => <Tag key={tag} tag={tag} />)}
+                <Chip color="blue">
+                  {`Door ${post.authors.join(', ')}`.toUpperCase()}
+                </Chip>
+              </div>
             </div>
           </div>
 
@@ -66,6 +72,7 @@ export const pageQuery = graphql`
         date
         category
         tags
+        authors
       }
       fields {
         nextTitle

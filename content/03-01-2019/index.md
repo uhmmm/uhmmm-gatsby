@@ -3,6 +3,9 @@ title: 'ArchiWoZ'
 cover: 'https://unsplash.it/1152/300/?random?BirchintheRoses'
 date: '03/01/2019'
 category: 'tech'
+authors:
+  - Erik van Zummeren
+  - Robert-Jan Korteschiel
 tags:
   - Proposed
 description: 'The 888zoeker is a niche search engine that indexes the content of the Dutch public broadcasting system.'

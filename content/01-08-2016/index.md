@@ -3,6 +3,9 @@ title: 'HDAT v1'
 cover: 'https://unsplash.it/1152/300/?random?TheButterflyoftheEdge'
 category: 'tech'
 date: '01/08/2016'
+authors:
+  - Erik van Zummeren
+  - Robert-Jan Korteschiel
 tags:
   - Launched
 description: 'A visualization of the tradingnetwork of the Dutch East India Company.'
