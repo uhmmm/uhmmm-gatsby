@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import PostTags from '../PostTags/PostTags'
+import Tag from '../Tag/Tag'
 
 import styles from './PostListing.module.css'
 
@@ -31,7 +31,7 @@ class PostListing extends React.Component {
             postList.map(post => (
               <div className={styles.post} key={post.title}>
                 <div className={styles.tags}>
-                  <PostTags tags={post.tags} />
+                  {post.tags && post.tags.map(tag => <Tag key={tag} tag={tag} />)}
                 </div>
                 <Link to={post.path}>
                   <h1 className={styles.title}>{post.title}</h1>
