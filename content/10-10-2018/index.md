@@ -1,7 +1,7 @@
 ---
 title: '888zoeker'
 cover: 'https://unsplash.it/400/300/?random?BoldMage'
-date: '10/10/2018'
+date: '2018/10/10'
 category: 'tech'
 authors:
   - Erik van Zummeren
