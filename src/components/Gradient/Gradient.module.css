@@ -18,10 +18,10 @@
   background: repeating-linear-gradient(
       30deg,
       transparent 0,
-      transparent 300px,
-      black 300px,
-      black 800px,
-      transparent 800px
+      transparent 200px,
+      black 400px,
+      black 700px,
+      transparent 900px
     ),
     repeating-linear-gradient(
       to bottom,
