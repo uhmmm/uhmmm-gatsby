@@ -42,7 +42,7 @@ export default class PostTemplate extends React.Component {
               <div className={styles.tags}>
                 {post.tags && post.tags.map(tag => <Tag key={tag} tag={tag} />)}
                 <Chip color="blue">
-                  {`Door ${post.authors.join(', ')}`.toUpperCase()}
+                  {`Door ${post.authors.join(', ')}`.toUpperCase()}, {post.date}
                 </Chip>
               </div>
             </div>
@@ -75,12 +75,7 @@ export const pageQuery = graphql`
         authors
       }
       fields {
-        nextTitle
-        nextSlug
-        prevTitle
-        prevSlug
         slug
-        date
       }
     }
   }

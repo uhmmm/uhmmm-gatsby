@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Post.module.css'
 
-export default ({ post, postNode }) => (
+const Post = ({ post, postNode }) => (
   <div className={styles.outer}>
     <div className={styles.grid}>
       <div
@@ -12,3 +12,5 @@ export default ({ post, postNode }) => (
     </div>
   </div>
 )
+
+export default Post

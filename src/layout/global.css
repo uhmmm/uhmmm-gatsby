@@ -27,7 +27,7 @@
 
   --type-base: 18px;
   --type-title: 6rem;
-  --type-header: 3rem;
+  --type-header: 3.5rem;
   --type-subheader: 2rem;
   --type-largebody: 1.2rem;
   --type-body: 1rem;
@@ -81,6 +81,19 @@ li {
   font-family: var(--type-family-body);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--type-family-header);
+}
+
+h1 {
+  font-size: var(--type-header);
+}
+
 p {
   margin-bottom: var(--grid-unit);
 }
@@ -89,13 +102,4 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--type-family-header);
 }
