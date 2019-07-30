@@ -9,9 +9,7 @@ import config from '../../data/SiteConfig'
 import './global.css'
 import styles from './index.module.css'
 
-export default class MainLayout extends React.Component {
-  render() {
-    const { children } = this.props
+const MainLayout = ({children})=>{
     return (
       <div className={styles.container}>
         <Helmet>
@@ -21,11 +19,16 @@ export default class MainLayout extends React.Component {
         <Gradient />
         {/* AND DO NOT REMOVE THIS CONTAINER: POSITION RELATIVE OVERLAPS ABSOLUTE, DOCUMENTFLOW DOES NOT */}
         <div className={styles.container}>
+          <div>
           <Bar type="horizontal" color="dark" />
+          <div>
           {children}
+          </div>
+          </div>
           <Bar type="horizontal" color="dark" />
         </div>
       </div>
     )
-  }
 }
+
+export default MainLayout

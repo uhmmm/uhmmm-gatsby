@@ -9,3 +9,7 @@
   width: var(--grid-max-width);
   padding-bottom: calc(var(--grid-unit) * 2);
 }
+
+.tags {
+  padding: var(--grid-unit) 0 0;
+}

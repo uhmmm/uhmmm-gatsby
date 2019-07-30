@@ -15,11 +15,15 @@
   grid-template-columns: var(--grid-columns);
   grid-template-rows: 1fr;
   width: var(--grid-max-width);
-  background: linear-gradient(
-    to right,
-    var(--color-pink) 0%,
-    var(--color-blue) 100%
-  );
+  background: repeating-linear-gradient(
+      30deg,
+      transparent 0,
+      transparent 500px,
+      black 500px,
+      black 800px,
+      transparent 800px
+    ),
+    linear-gradient(to right, var(--color-pink) 0%, var(--color-blue) 100%);
   top: 0;
   bottom: 0;
   height: 100%;

@@ -4,7 +4,7 @@ import PersonList from '../PersonList/PersonList'
 
 import styles from './Contact.module.css'
 
-export default () => (
+const Contact = () => (
   <div className={styles.outer}>
     <div className={styles.container}>
       <div className={styles.contact}>
@@ -21,3 +21,5 @@ export default () => (
     </div>
   </div>
 )
+
+export default Contact

@@ -24,9 +24,10 @@ export default class PostTemplate extends React.Component {
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID
     }
+    console.log(post.authors)
     return (
       <Layout>
-        <div>
+        <>
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
@@ -36,17 +37,15 @@ export default class PostTemplate extends React.Component {
           <div className={styles.outer}>
             <div className={styles.container}>
               <div className={styles.tags}>
-                {post.tags && post.tags.map(tag => <Tag key={tag} tag={tag} />)}
-                <Chip color="blue">
-                  {`Door ${post.authors.join(', ')}`.toUpperCase()}, {post.date}
-                </Chip>
+                {/* {post.tags && post.tags.map((tag, index) => <Tag key={index} tag={tag} />)} */}
+                {post.authors && <Chip color="blue">By {post.authors[0].toUpperCase()}, {post.date}</Chip>}
               </div>
             </div>
           </div>
 
           <Post post={post} postNode={postNode} />
 
-        </div>
+        </>
       </Layout>
     )
   }

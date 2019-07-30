@@ -21,12 +21,7 @@ export default () => (
     <div className={cx(styles.grid, styles.showcase)}>
       <div className={styles.text}>
         <p>
-          Uhmmm develops digital tools for journalists and academics to aid them
-          in their research.
-        </p>
-        <p>
-          Some of our projects have been self-initiated, while others have been
-          made in partnership.
+          Uhmmm is a small collective that creates tools and narratives for a better (civil) society
         </p>
         <p>
           If you are looking for collaboration please contact us at
