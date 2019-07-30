@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Post.module.css'
 
-const Post = ({ post, postNode }) => (
+const Post = ({ postNode }) => (
   <div className={styles.outer}>
     <div className={styles.grid}>
       <div

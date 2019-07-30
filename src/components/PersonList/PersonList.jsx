@@ -15,7 +15,7 @@ const people = [
   },
   {
     name: 'Robert-Jan Korteschiel',
-    function: 'Full-stack Developer',
+    function: 'Front-End Developer',
     image: rj
   },
   {

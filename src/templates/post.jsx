@@ -25,7 +25,6 @@ export default class PostTemplate extends React.Component {
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID
     }
-    console.log(post.authors)
     return (
       <Layout>
         <>

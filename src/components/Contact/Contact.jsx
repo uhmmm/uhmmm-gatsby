@@ -10,6 +10,11 @@ const Contact = () => (
       <div className={styles.contact}>
         <h3 className={styles.title}>Contact</h3>
         <ul>
+          <li className={styles.text}>Orteliuskade 4G</li>
+          <li className={styles.text}>1057AA Amsterdam</li>
+        </ul>
+        <br />
+        <ul>
           <li className={styles.text}>info@uhmmm.net</li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 ---
 title: 'Foia'
-cover: 'https://unsplash.it/1152/300/?random?FaityWitch'
+cover: ''
 category: 'something'
 date: '2019/05/01'
 authors:
@@ -12,4 +12,4 @@ tags:
 description: 'We are aiming to make the freedom of information act more accessible for journalists, activists and citizens.'
 ---
 
-Getting information from governments is hard. The process of getting information is often heavily regulated and formal. To remedy this we've build a lettergenerator that fixes this problem. 
+INTRODUCTION - Getting information from governments is hard. In the Netherlands we have a law similar to the FOIA-act, however getting information from the government is a tedious process, that can be quite frightening to people who have never so. To make the government a bit more accessible we're currently building a letter generator that generates well written letters. 

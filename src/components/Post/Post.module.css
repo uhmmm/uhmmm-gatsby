@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 0 0 calc(var(--grid-unit) * 5);
 }
 
 .container {
@@ -21,4 +22,8 @@
 
 .body > p:first-of-type {
   /* columns: 2; */
+}
+
+.body img {
+  margin: 0;
 }
