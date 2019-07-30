@@ -13,6 +13,7 @@ import './b16-tomorrow-dark.css'
 
 import styles from './post.module.css'
 
+
 export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext
@@ -37,7 +38,6 @@ export default class PostTemplate extends React.Component {
           <div className={styles.outer}>
             <div className={styles.container}>
               <div className={styles.tags}>
-                {/* {post.tags && post.tags.map((tag, index) => <Tag key={index} tag={tag} />)} */}
                 {post.authors && <Chip color="blue">By {post.authors[0].toUpperCase()}, {post.date}</Chip>}
               </div>
             </div>

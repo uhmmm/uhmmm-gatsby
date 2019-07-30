@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 0 0 calc(var(--grid-unit) * 10);
 }
 
 .container {

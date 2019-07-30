@@ -2,20 +2,22 @@ import React from 'react'
 import Person from '../Person/Person'
 
 import erik from './erik.png'
+import rj from './rj.jpg'
+import reika from './reika.jpg'
 
 import styles from './PersonList.module.css'
 
 export default () => {
   const people = [
     {
-      name: 'Tove Oegema',
-      function: 'Project Manager',
-      image: erik
+      name: 'Reika Chavers',
+      function: 'To be written',
+      image: reika
     },
     {
       name: 'Robert-Jan Korteschiel',
       function: 'Full-stack Developer',
-      image: erik
+      image: rj
     },
     {
       name: 'Erik van Zummeren',
