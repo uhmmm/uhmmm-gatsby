@@ -7,25 +7,25 @@ import reika from './reika.jpg'
 
 import styles from './PersonList.module.css'
 
-export default () => {
-  const people = [
-    {
-      name: 'Reika Chavers',
-      function: 'To be written',
-      image: reika
-    },
-    {
-      name: 'Robert-Jan Korteschiel',
-      function: 'Full-stack Developer',
-      image: rj
-    },
-    {
-      name: 'Erik van Zummeren',
-      function: 'Creative Technologist',
-      image: erik
-    }
-  ]
+const people = [
+  {
+    name: 'Reika Chavers',
+    function: 'To be written',
+    image: reika
+  },
+  {
+    name: 'Robert-Jan Korteschiel',
+    function: 'Full-stack Developer',
+    image: rj
+  },
+  {
+    name: 'Erik van Zummeren',
+    function: 'Creative Technologist',
+    image: erik
+  }
+]
 
+const PersonList = () => {
   return (
     <div className={styles.container}>
       {people.map(person => (
@@ -34,3 +34,5 @@ export default () => {
     </div>
   )
 }
+
+export default PersonList

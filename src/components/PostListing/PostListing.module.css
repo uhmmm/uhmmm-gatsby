@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: var(--grid-max-width);
-  padding-bottom: calc(var(--grid-unit) * 15);
+  padding-bottom: calc(var(--grid-unit) * 20);
 }
 
 .post {
