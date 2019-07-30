@@ -26,7 +26,7 @@
     repeating-linear-gradient(
       to bottom,
       transparent 0px,
-      transparent 1px,
+      transparent 2px,
       black 2px,
       black 8px
     ),
@@ -39,7 +39,7 @@
 .block {
   margin-bottom: -1px;
   background: black;
-  border-left: 1px solid transparent;
+  border-left: 2px solid transparent;
   background-clip: content-box;
 }
 
