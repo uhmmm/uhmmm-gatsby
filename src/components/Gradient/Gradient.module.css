@@ -13,6 +13,7 @@
   position: absolute;
   display: grid;
   grid-template-columns: var(--grid-columns);
+  grid-template-rows: 1fr;
   width: var(--grid-max-width);
   background: linear-gradient(
     to right,
@@ -21,6 +22,7 @@
   );
   top: 0;
   bottom: 0;
+  height: 100%;
 }
 
 .block {

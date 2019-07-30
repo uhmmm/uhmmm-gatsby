@@ -3,10 +3,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../layout'
 import Post from '../components/Post/Post'
-import UserInfo from '../components/UserInfo/UserInfo'
-import Disqus from '../components/Disqus/Disqus'
 import Navbar from '../components/Navbar/Navbar'
-import SocialLinks from '../components/SocialLinks/SocialLinks'
 import Title from '../components/Title/Title'
 import Tag from '../components/Tag/Tag'
 import Chip from '../components/Chip/Chip'
@@ -15,7 +12,6 @@ import config from '../../data/SiteConfig'
 import './b16-tomorrow-dark.css'
 
 import styles from './post.module.css'
-import { node } from 'prop-types'
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -50,9 +46,6 @@ export default class PostTemplate extends React.Component {
 
           <Post post={post} postNode={postNode} />
 
-          {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
-          {/* <UserInfo config={config} /> */}
-          {/* <Disqus postNode={postNode} /> */}
         </div>
       </Layout>
     )
