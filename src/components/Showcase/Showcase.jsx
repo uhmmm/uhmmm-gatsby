@@ -25,7 +25,7 @@ export default () => (
         </p>
         <p>
           If you are looking for collaboration please contact us at
-          info@uhmmm.io
+          info@uhmmm.net
         </p>
       </div>
     </div>
