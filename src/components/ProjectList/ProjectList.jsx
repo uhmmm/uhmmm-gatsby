@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Tag from '../Tag/Tag'
 
-import styles from './PostListing.module.css'
+import styles from './ProjectList.module.css'
 
 class PostListing extends React.Component {
   getPostList() {

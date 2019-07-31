@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Layout from '../layout'
-import PostListing from '../components/PostListing/PostListing'
+import PostListing from '../components/ProjectList/ProjectList'
 import Showcase from '../components/Showcase/Showcase'
 import Contact from '../components/Contact/Contact'
 import Navbar from '../components/Navbar/Navbar'

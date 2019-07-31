@@ -5,11 +5,9 @@ import Layout from '../layout'
 import Post from '../components/Post/Post'
 import Navbar from '../components/Navbar/Navbar'
 import Title from '../components/Title/Title'
-import Tag from '../components/Tag/Tag'
 import Chip from '../components/Chip/Chip'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
-import './b16-tomorrow-dark.css'
 
 import styles from './post.module.css'
 
