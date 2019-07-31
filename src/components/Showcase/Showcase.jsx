@@ -10,17 +10,17 @@ import Title from '../Title/Title'
 export default () => (
   <div className={cx(styles.container)}>
     <div className={cx(styles.grid, styles.positionedGrid)}>
-      <img className={styles.bgback} src={bgback} />
+      <img className={styles.bgback} src={bgback} alt="" />
     </div>
     <div className={cx(styles.grid, styles.positionedGrid)}>
-      <img className={styles.bgfront} src={bgfront} />
+      <img className={styles.bgfront} src={bgfront} alt="" />
     </div>
     <div className={cx(styles.grid, styles.positionedGrid)}>
       <div className={styles.titleContainer}>
-        <Title name="Digital Documentaries and Tools for (civil) Society" />
+        <Title name="Digital Documentaries and Tools for Society" />
       </div>
     </div>
-    <div className={cx(styles.grid, styles.showcase)}>
+    <div className={styles.grid}>
       <div className={styles.text}>
         <p>
           Uhmmm is a small collective that creates tools and narratives for a

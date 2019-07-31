@@ -11,7 +11,7 @@
 .bgtopGrid {
   width: 90vw;
   display: grid;
-  grid-template-columns: var(--grid-columns);
+  grid-template-columns: repeat(12, var(--grid-columns-width));
 }
 
 .bgtop {
