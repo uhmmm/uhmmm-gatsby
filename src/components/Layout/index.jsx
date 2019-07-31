@@ -11,12 +11,12 @@ import styles from './index.module.css'
 
 const MainLayout = ({ children }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.outer}>
       <Helmet>
         <meta name="description" content={config.siteDescription} />
       </Helmet>
       <Gradient />
-      <div className={styles.container}>
+      <div className={styles.inner}>
         <div>
           <Bar type="horizontal" color="dark" />
           <div>{children}</div>

@@ -3,30 +3,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 0 var(--grid-unit);
+  width: 120vw;
   top: 0;
   bottom: 0;
 }
 
 .under {
   position: absolute;
-  width: var(--grid-max-width);
+  width: 100%;
   background: repeating-linear-gradient(
       to right,
       black 0%,
-      transparent 5%,
-      transparent 95%,
+      transparent 1%,
+      transparent 99%,
       black 100%
     ),
-    repeating-linear-gradient(
-      30deg,
+    /* repeating-linear-gradient(
+      120deg,
       transparent 0,
       transparent 200px,
       black 400px,
       black 700px,
       transparent 900px
-    ),
+    ), */
+      repeating-linear-gradient(
+        30deg,
+        transparent 0,
+        transparent 200px,
+        black 400px,
+        black 700px,
+        transparent 900px
+      ),
     repeating-linear-gradient(
       to bottom,
       transparent 0px,
@@ -49,22 +56,30 @@
 
 .over {
   position: absolute;
-  width: var(--grid-max-width);
+  width: 100%;
   background: repeating-linear-gradient(
       to right,
       black 0%,
-      transparent 5%,
-      transparent 95%,
+      transparent 1%,
+      transparent 99%,
       black 100%
     ),
-    repeating-linear-gradient(
-      30deg,
+    /* repeating-linear-gradient(
+      120deg,
       transparent 0,
       transparent 200px,
       black 400px,
       black 700px,
       transparent 900px
-    ),
+    ), */
+      repeating-linear-gradient(
+        30deg,
+        transparent 0,
+        transparent 200px,
+        black 400px,
+        black 700px,
+        transparent 900px
+      ),
     repeating-linear-gradient(
       to right,
       transparent 0px,
