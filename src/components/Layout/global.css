@@ -50,11 +50,10 @@
 html {
   font-size: var(--type-base);
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body {
-  overflow: scroll;
   margin: 0;
   background: var(--color-dark);
   height: 100%;

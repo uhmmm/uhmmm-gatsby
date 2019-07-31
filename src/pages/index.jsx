@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
@@ -15,20 +15,31 @@ import styles from './index.module.css'
 
 const Index = ({ data }) => {
   const postEdges = data.allMarkdownRemark.edges
+
+  const topRef = useRef(null)
+  const postsRef = useRef(null)
+  const contactRef = useRef(null)
+
   return (
     <Layout>
       <Helmet title={config.siteTitle} />
       <SEO />
-      <div>
-        <Navbar />
+      <div ref={topRef}>
+        <Navbar
+          navRefs={{
+            topRef,
+            postsRef,
+            contactRef
+          }}
+        />
       </div>
       <div>
         <Showcase />
       </div>
-      <div>
+      <div ref={postsRef}>
         <PostListing postEdges={postEdges} />
       </div>
-      <div>
+      <div ref={contactRef}>
         <Contact />
       </div>
     </Layout>

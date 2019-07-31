@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styles from './Navbar.module.css'
 
-const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop)
+const scrollToRef = ref => {
+  window.scrollTo(0, ref.current.offsetTop)
+}
 
 const Navbar = ({ navRefs }) => {
   return (
@@ -21,7 +23,13 @@ const Navbar = ({ navRefs }) => {
             projects
           </Link>
 
-          <Link to="/" className={styles.link}>
+          <Link
+            to="/"
+            className={styles.link}
+            onClick={() => {
+              scrollToRef(navRefs.contactRef)
+            }}
+          >
             contact
           </Link>
         </div>

@@ -15,10 +15,8 @@ const MainLayout = ({ children }) => {
       <Helmet>
         <meta name="description" content={config.siteDescription} />
       </Helmet>
-      {/* DO NOT PLACE ANYTHING VISISBLE BEFORE THE GRADIENT */}
       <Gradient />
-      {/* AND DO NOT REMOVE THIS CONTAINER: POSITION RELATIVE OVERLAPS ABSOLUTE, DOCUMENTFLOW DOES NOT */}
-      <div className={styles.container} id="about">
+      <div className={styles.container}>
         <div>
           <Bar type="horizontal" color="dark" />
           <div>{children}</div>
