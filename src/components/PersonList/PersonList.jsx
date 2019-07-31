@@ -2,8 +2,8 @@ import React from 'react'
 import Person from '../Person/Person'
 
 import erik from './erik.png'
-import rj from './rj.jpg'
-import reika from './reika.jpg'
+import rj from './rj.png'
+import reika from './reika.png'
 
 import styles from './PersonList.module.css'
 
