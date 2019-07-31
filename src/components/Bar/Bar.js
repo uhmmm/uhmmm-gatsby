@@ -5,8 +5,6 @@ import styles from './Bar.module.css'
 
 export default ({ type }) => (
   <div className={styles.container}>
-    <div className={styles.bgtopGrid}>
-      <img className={styles.bgtop} src={bgtop} />
-    </div>
+    <img className={styles.bgtop} src={bgtop} />
   </div>
 )

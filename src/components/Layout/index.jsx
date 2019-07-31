@@ -7,6 +7,7 @@ import Bar from '../Bar/Bar'
 import config from '../../../data/SiteConfig'
 
 import './global.css'
+import './variables.css'
 import styles from './index.module.css'
 
 const MainLayout = ({ children }) => {

@@ -1,28 +1,22 @@
 .outer {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  /* grid because flexbox crops */
+  display: grid;
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
+  justify-content: center;
 }
 
 .outerGrid {
-  position: relative;
-  width: var(--grid-outer-width);
   display: grid;
-  grid-template-columns: repeat(auto-fill, var(--grid-columns-width));
+  width: var(--grid-outer-width);
+  grid-template-columns: var(--grid-outer);
+  position: relative;
 }
-
-/* .innerGrid {
-  width: var(--grid-max-width);
-  grid-template-columns: repeat(12, var(--grid-columns-width));
-  grid-column: 3 / 13;
-} */
 
 .inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-column: 2 / 14;
+  grid-column: 3 / 14;
 }

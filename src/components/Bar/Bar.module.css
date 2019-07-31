@@ -1,15 +1,9 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(12, var(--grid-columns-width));
   width: 100%;
-}
-
-.bgtopGrid {
-  display: grid;
   grid-template-columns: repeat(12, var(--grid-columns-width));
 }
 
 .bgtop {
-  width: 100%;
   grid-column: 1 / 9;
 }
