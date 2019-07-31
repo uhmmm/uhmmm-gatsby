@@ -25,7 +25,7 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList()
     return (
-      <div className={styles.outer}>
+      <div className={styles.outer} id="projects">
         <div className={styles.container}>
           {/* Your post list here. */
             postList.map(post => (

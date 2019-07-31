@@ -13,20 +13,26 @@ import config from '../../data/SiteConfig'
 
 import styles from './index.module.css'
 
-class Index extends React.Component {
-  render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges
-    return (
-      <Layout>
-        <Helmet title={config.siteTitle} />
-        <SEO />
+const Index = ({ data }) => {
+  const postEdges = data.allMarkdownRemark.edges
+  return (
+    <Layout>
+      <Helmet title={config.siteTitle} />
+      <SEO />
+      <div>
         <Navbar />
+      </div>
+      <div>
         <Showcase />
+      </div>
+      <div>
         <PostListing postEdges={postEdges} />
+      </div>
+      <div>
         <Contact />
-      </Layout>
-    )
-  }
+      </div>
+    </Layout>
+  )
 }
 
 export default Index

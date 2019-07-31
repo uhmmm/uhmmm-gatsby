@@ -4,15 +4,11 @@
 }
 
 .container {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: var(--grid-max-width);
   padding: var(--grid-unit) 0 calc(var(--grid-unit) * 5);
-}
-
-.logo {
 }
 
 .logoText {

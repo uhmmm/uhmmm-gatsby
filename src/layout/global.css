@@ -42,7 +42,7 @@
   --color-blue: #00d3ba;
 
   --grid-unit: 1rem;
-  --grid-max-width: 90vw;
+  --grid-max-width: 84vw;
   --grid-columns-width: 7vw;
   --grid-columns: repeat(12, 1fr);
 }
