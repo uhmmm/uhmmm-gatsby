@@ -4,20 +4,21 @@
   display: flex;
   justify-content: center;
 }
+
 .container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, var(--grid-columns-width));
   width: var(--grid-max-width);
   padding-bottom: calc(var(--grid-unit) * 20);
 }
 
 .post {
   grid-area: span 1 / span 4;
-  padding-right: var(--grid-unit);
+  padding-right: calc(var(--grid-unit) * 2);
 }
 
 .title {
-  padding: calc(var(--grid-unit) * 2) 0 var(--grid-unit);
+  padding: calc(var(--grid-unit) / 2) 0 var(--grid-unit);
 }
 
 .tags {

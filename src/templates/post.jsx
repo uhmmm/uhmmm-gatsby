@@ -13,7 +13,6 @@ import './b16-tomorrow-dark.css'
 
 import styles from './post.module.css'
 
-
 export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext
@@ -33,17 +32,25 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <Navbar />
-          <Title name={post.title} />
           <div className={styles.outer}>
             <div className={styles.container}>
+              <Title name={post.title} />
               <div className={styles.tags}>
-                {post.authors && <Chip color="blue">By {post.authors[0].toUpperCase()}, {post.date}</Chip>}
+                {post.authors && (
+                  <Chip color="blue">
+                    By 
+                    {' '}
+                    {post.authors[0].toUpperCase()}
+, 
+                    {' '}
+                    {post.date}
+                  </Chip>
+                )}
               </div>
             </div>
           </div>
 
           <Post post={post} postNode={postNode} />
-
         </>
       </Layout>
     )
