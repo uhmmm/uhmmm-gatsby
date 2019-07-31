@@ -27,21 +27,27 @@ class PostListing extends React.Component {
     return (
       <div className={styles.outer} id="projects">
         <div className={styles.container}>
-          {/* Your post list here. */
-            postList.map(post => (
-              <div className={styles.post} key={post.title}>
+          {postList.map(post => (
+            <div className={styles.post} key={post.title}>
+              <div className={styles.post__section}>
+                {/* <img className={styles.post__img} src={bgfront} alt="" /> */}
+              </div>
+
+              <div className={styles.post__section}>
                 <div className={styles.tags}>
                   {post.tags &&
-                  post.tags.map((tag, index) => (
-                    <Chip key={index} text={tag} color="pink" />
-                  ))}
+                    post.tags.map((tag, index) => (
+                      <Chip key={index} text={tag} color="pink" />
+                    ))}
                 </div>
-                <Link to={post.path}>
-                  <h1 className={styles.title}>{post.title}</h1>
-                  <p>{post.description}</p>
-                </Link>
               </div>
-            ))}
+
+              <Link to={post.path}>
+                <h1 className={styles.title}>{post.title}</h1>
+                <p>{post.description}</p>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     )
