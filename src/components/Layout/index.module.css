@@ -7,8 +7,22 @@
   overflow: hidden;
 }
 
+.outerGrid {
+  position: relative;
+  width: var(--grid-outer-width);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--grid-columns-width));
+}
+
+/* .innerGrid {
+  width: var(--grid-max-width);
+  grid-template-columns: repeat(12, var(--grid-columns-width));
+  grid-column: 3 / 13;
+} */
+
 .inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  grid-column: 2 / 14;
 }

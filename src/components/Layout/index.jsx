@@ -15,13 +15,15 @@ const MainLayout = ({ children }) => {
       <Helmet>
         <meta name="description" content={config.siteDescription} />
       </Helmet>
-      <Gradient />
-      <div className={styles.inner}>
-        <div>
+      <div className={styles.outerGrid}>
+        <Gradient />
+        <div className={styles.inner}>
+          <div>
+            <Bar type="horizontal" color="dark" />
+            <div>{children}</div>
+          </div>
           <Bar type="horizontal" color="dark" />
-          <div>{children}</div>
         </div>
-        <Bar type="horizontal" color="dark" />
       </div>
     </div>
   )
