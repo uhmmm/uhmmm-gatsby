@@ -17,19 +17,8 @@
   width: 90vw;
   height: 90vh;
   display: grid;
-  grid-template-columns: var(--grid-columns);
-  grid-template-rows: repeat(9, 1fr);
-}
-
-.bgtopGrid {
-  width: 90vw;
-  display: grid;
-  grid-template-columns: var(--grid-columns);
-}
-
-.bgtop {
-  width: 100%;
-  grid-column: 1 / 9;
+  grid-template-columns: repeat(12, 8vw);
+  grid-template-rows: repeat(9, 8vw);
 }
 
 .positionedGrid {

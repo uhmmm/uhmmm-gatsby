@@ -5,7 +5,7 @@ import styles from './Showcase.module.css'
 
 import bgback from './bg-back2x.png'
 import bgfront from './bg-front2x.png'
-import title from './title2x.png'
+import Title from '../Title/Title'
 
 export default () => (
   <div className={cx(styles.container)}>
@@ -16,7 +16,8 @@ export default () => (
       <img className={styles.bgfront} src={bgfront} />
     </div>
     <div className={cx(styles.grid, styles.positionedGrid)}>
-      <img className={styles.title} src={title} />
+      {/* <img className={styles.title} src={title} /> */}
+      <Title name={"Digital Documentaries and Tools for (civil) Society"}/>
     </div>
     <div className={cx(styles.grid, styles.showcase)}>
       <div className={styles.text}>
