@@ -1,15 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Gradient from '../components/Gradient/Gradient'
-import Bar from '../components/Bar/Bar'
+import Gradient from '../Gradient/Gradient'
+import Bar from '../Bar/Bar'
 
-import config from '../../data/SiteConfig'
+import config from '../../../data/SiteConfig'
 
 import './global.css'
 import styles from './index.module.css'
-
-import * as Scroll from 'react-scroll'
 
 const MainLayout = ({ children }) => {
   return (

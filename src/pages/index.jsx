@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
-import Layout from '../layout'
+import Layout from '../components/Layout'
 import PostListing from '../components/ProjectList/ProjectList'
 import Showcase from '../components/Showcase/Showcase'
 import Contact from '../components/Contact/Contact'
