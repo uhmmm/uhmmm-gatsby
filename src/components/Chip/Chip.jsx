@@ -3,8 +3,8 @@ import cx from 'classnames'
 
 import styles from './Chip.module.css'
 
-export default ({ children, color }) => (
+export default ({ text, color }) => (
   <div className={cx(styles.container, styles[color])}>
-    <span>{children}</span>
+    <span>{text}</span>
   </div>
 )

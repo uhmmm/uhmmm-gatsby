@@ -32,7 +32,9 @@ class PostListing extends React.Component {
               <div className={styles.post} key={post.title}>
                 <div className={styles.tags}>
                   {post.tags &&
-                  post.tags.map(tag => <Chip key={tag} tag={tag} />)}
+                  post.tags.map((tag, index) => (
+                    <Chip key={index} text={tag} color="pink" />
+                  ))}
                 </div>
                 <Link to={post.path}>
                   <h1 className={styles.title}>{post.title}</h1>
