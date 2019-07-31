@@ -7,7 +7,7 @@ export default ({ person }) => (
     <img className={styles.image} src={person.image} alt="profile" />
     <ul className={styles.details}>
       <li className={styles.name}>{person.name}</li>
-      <li className={styles.function}>{person.function}</li>
+      <li className={styles.function}>{person.email}</li>
     </ul>
   </div>
 )

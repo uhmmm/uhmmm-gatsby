@@ -10,17 +10,17 @@ import styles from './PersonList.module.css'
 const people = [
   {
     name: 'Reika Chavers',
-    function: 'To be written',
+    email: 'reika@uhmmm.net',
     image: reika
   },
   {
     name: 'Robert-Jan Korteschiel',
-    function: 'Front-End Developer',
+    email: 'robert-jan@uhmmm.net',
     image: rj
   },
   {
     name: 'Erik van Zummeren',
-    function: 'Creative Technologist',
+    email: 'erik@uhmmm.net',
     image: erik
   }
 ]

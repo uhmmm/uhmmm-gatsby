@@ -13,7 +13,7 @@
 }
 
 .post {
-  grid-area: span 1 / span 4;
+  grid-column: span 4;
   padding-right: calc(var(--grid-unit) * 2);
 }
 

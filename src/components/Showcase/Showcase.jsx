@@ -17,18 +17,28 @@ export default () => (
     </div>
     <div className={cx(styles.grid, styles.positionedGrid)}>
       <div className={styles.titleContainer}>
-        <Title name="Digital Documentaries and Tools for Society" />
+        <Title name="Digital Environments where academia, journalism & society meets" />
       </div>
     </div>
     <div className={styles.grid}>
       <div className={styles.text}>
         <p>
-          Uhmmm is a small collective that creates tools and narratives for a
-          better (civil) society
+          Uhmmm is commited to develop digital environments for academic,
+          journalists and the public. Some of our projects have been
+          self-initiated, while others have been made in partnership or blabla.
+        </p>
+        <p>
+          If you are looking for collaboration please contact us at
+          info@uhmmm.io
         </p>
         <p>
           If you are looking for collaboration please contact us at
           info@uhmmm.net
+        </p>
+        <p>
+          Daarnaast moet hier nog een paragraaf komen omdat er anders een hele
+          vreemde open ruimte ontstaat en RJ daardoor gaat zeggen dat dingen
+          niet in balans zijn.
         </p>
       </div>
     </div>

@@ -1,5 +1,6 @@
 ---
-title: 'Asian Trade'
+title: 'Historical Dutch-Asiatic Trade'
+shortTitle: 'HDAT'
 cover: ''
 category: 'tech'
 date: '2019/06/01'

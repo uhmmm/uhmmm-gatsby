@@ -13,6 +13,13 @@
   position: absolute;
   width: var(--grid-max-width);
   background: repeating-linear-gradient(
+      to right,
+      black 0%,
+      transparent 5%,
+      transparent 95%,
+      black 100%
+    ),
+    repeating-linear-gradient(
       30deg,
       transparent 0,
       transparent 200px,

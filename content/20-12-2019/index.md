@@ -1,5 +1,6 @@
 ---
-title: 'Foia'
+title: 'Freedom of Information Act'
+shortTitle: 'FOIA'
 cover: ''
 category: 'something'
 date: '2019/05/01'
