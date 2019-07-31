@@ -4,7 +4,7 @@ import cx from 'classnames'
 import styles from './Showcase.module.css'
 
 import bgback from './bg-back2x.png'
-import bgfront from './bg-front2x.png'
+import bgfront from './bg-front-hq.png'
 import Title from '../Title/Title'
 
 export default () => (
