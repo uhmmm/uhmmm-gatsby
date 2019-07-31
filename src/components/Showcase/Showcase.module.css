@@ -10,7 +10,7 @@
 
 .grid {
   position: relative;
-  width: 90vw;
+  width: var(--grid-max-width);
   display: grid;
   grid-template-columns: repeat(12, var(--grid-columns-width));
   grid-template-rows: repeat(8, var(--grid-columns-width));
