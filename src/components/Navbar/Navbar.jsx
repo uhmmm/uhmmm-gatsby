@@ -8,7 +8,7 @@ export default () => (
     <nav className={styles.container}>
       <div className={styles.logo}>
         <Link to="/" className={styles.logoText}>
-          uhmmm.io
+          uhmmm
         </Link>
       </div>
       <div className={styles.links}>
