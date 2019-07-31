@@ -32,7 +32,7 @@
       transparent 0px,
       transparent 2px,
       black 2px,
-      black 8vw
+      black var(--grid-columns-width)
     ),
     linear-gradient(to right, var(--color-pink) 0%, var(--color-blue) 100%);
   top: 0;
@@ -64,7 +64,7 @@
     black 0px,
     black 2px,
     transparent 2px,
-    transparent 8vw
+    transparent var(--grid-columns-width)
   );
   top: 0;
   bottom: 0;

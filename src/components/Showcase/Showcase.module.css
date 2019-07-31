@@ -17,8 +17,8 @@
   width: 90vw;
   height: 90vh;
   display: grid;
-  grid-template-columns: repeat(12, 8vw);
-  grid-template-rows: repeat(9, 8vw);
+  grid-template-columns: repeat(12, var(--grid-columns-width));
+  grid-template-rows: repeat(9, var(--grid-columns-width));
 }
 
 .positionedGrid {
@@ -33,6 +33,10 @@
 .bgfront {
   width: 100%;
   grid-area: 2 / 4 / 8 / 8;
+}
+
+.titleContainer {
+  grid-area: /1 / 8 / 11;
 }
 
 .title {

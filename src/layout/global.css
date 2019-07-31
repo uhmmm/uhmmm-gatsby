@@ -25,7 +25,7 @@
   --type-family-body: 'Flaco mono';
   --type-family-header: 'Sans Sharp';
 
-  --type-base: 18px;
+  --type-base: 14px;
   --type-title: 6rem;
   --type-header: 3.5rem;
   --type-subheader: 2rem;
@@ -43,6 +43,7 @@
 
   --grid-unit: 1rem;
   --grid-max-width: 90vw;
+  --grid-columns-width: 7vw;
   --grid-columns: repeat(12, 1fr);
 }
 
