@@ -22,9 +22,10 @@
   --grid-outer-width: 112vw; /* just enough to exceed window by 2 */
   --grid-max-width: 84vw; /* just enough to give a nice padding */
   --grid-inner-width: 84vw; /* just enough to give a nice padding */
-  --grid-outer-colums: 14; /*  */
+  --grid-outer-colums: 16; /*  */
   --grid-inner-colums: 12; /*  */
-  --grid-columns-width: 7vw;
+  --grid-column-width: 7vw;
+  --grid-columns-width: var(--grid-column-width);
 
   --grid-outer: repeat(var(--grid-outer-colums), var(--grid-columns-width));
   --grid-inner: repeat(var(--grid-inner-colums), var(--grid-columns-width));

@@ -2,11 +2,13 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .under {
   position: absolute;
   width: 100%;
+  height: 100%;
   background: repeating-linear-gradient(
       to right,
       black 0%,
@@ -45,14 +47,12 @@
       black var(--grid-columns-width)
     ),
     linear-gradient(to right, var(--color-pink) 0%, var(--color-blue) 100%);
-  top: 0;
-  bottom: 0;
-  height: 100%;
 }
 
 .over {
   position: absolute;
   width: 100%;
+  height: 100%;
   background: repeating-linear-gradient(
       to right,
       black 0%,
@@ -91,9 +91,6 @@
     transparent 2px,
     transparent var(--grid-columns-width)
   );
-  top: 0;
-  bottom: 0;
-  height: 100%;
 }
 
 /* 

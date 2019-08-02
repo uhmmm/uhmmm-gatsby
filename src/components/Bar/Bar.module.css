@@ -1,9 +1,14 @@
 .container {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(12, var(--grid-columns-width));
+  grid-template-columns: repeat(12, var(--grid-column-width));
 }
 
-.bgtop {
+.imageContainer {
   grid-column: 1 / 9;
+}
+
+.imageDark {
+  display: block;
+  width: 100%;
 }
