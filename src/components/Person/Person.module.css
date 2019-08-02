@@ -26,6 +26,7 @@
 .name {
   font-size: var(--type-subtext);
   line-height: var(--type-subtext-lh);
+  color: var(--color-day);
 }
 
 .function {

@@ -14,6 +14,7 @@
 .subtitle {
   font-family: var(--type-family-title);
   font-size: var(--type-subtitle);
+  color: var(--color-day);
 }
 
 .listHeader__decoration {
@@ -90,8 +91,16 @@
 
 .title {
   padding: calc(var(--grid-unit) / 2) 0 var(--grid-unit);
+  color: var(--color-day);
 }
 
 .tags {
   padding: calc(var(--grid-unit) * 3) 0 0;
+}
+
+.description {
+  font-family: var(--type-family-body);
+  color: var(--color-day);
+  font-size: var(--type-body);
+  line-height: var(--type-body-lh);
 }

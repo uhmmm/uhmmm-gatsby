@@ -63,7 +63,7 @@ const ListItem = ({ post, index }) => {
 
         {/* <Link to={post.slug}> */}
         <h1 className={styles.title}>{post.title}</h1>
-        <p>{post.description}</p>
+        <p className={styles.description}>{post.description}</p>
         {/* </Link> */}
       </div>
 

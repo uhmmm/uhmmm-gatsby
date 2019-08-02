@@ -20,4 +20,8 @@
 }
 
 .text {
+  font-family: var(--type-family-body);
+  font-size: var(--type-body);
+  line-height: var(--type-body-lh);
+  color: var(--color-day);
 }
