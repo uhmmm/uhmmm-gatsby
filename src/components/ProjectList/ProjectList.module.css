@@ -26,9 +26,17 @@
   align-items: center;
 }
 
+.imgSection--right {
+  grid-area: 1 / 9 / 4 / 13;
+}
+
 .img__under {
   grid-area: 1 / 2 / 4 / 5;
   width: 100%;
+}
+
+.imgSection--right > .img__under {
+  grid-area: 1 / 1 / 4 / 4;
 }
 
 .img__over {
@@ -37,7 +45,15 @@
   width: 100%;
 }
 
+.imgSection--right > .img__over {
+  grid-area: 1 / 2 / 4 / 5;
+}
+
 .detailsSection {
+  grid-area: 1 / 1 / 4 / 8;
+}
+
+.detailsSection--right {
   grid-area: 1 / 6 / 4 / 13;
 }
 

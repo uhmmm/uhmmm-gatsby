@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import cx from 'classnames'
+
 import Chip from '../Chip/Chip'
 
 import styles from './ProjectList.module.css'
@@ -18,9 +20,14 @@ const getPostList = postEdges => {
   return postList
 }
 
-const ImageSection = ({ post }) => {
+const ImageSection = ({ post, position }) => {
   return (
-    <div className={styles.imgSection}>
+    <div
+      className={cx(
+        styles.imgSection,
+        position !== 'imgfirst' && styles.imgSectionRight
+      )}
+    >
       <img
         className={styles.img__under}
         src={post.projectImages[0].publicURL}
@@ -35,11 +42,20 @@ const ImageSection = ({ post }) => {
   )
 }
 
-const ListItem = ({ post }) => {
+const ListItem = ({ post, index }) => {
+  const position = (index + 1) % 2 ? 'imgfirst' : 'detailsfirst'
   return (
     <div className={styles.post}>
-      <ImageSection post={post} />
-      <div className={styles.detailsSection}>
+      {position === 'imgfirst' && (
+        <ImageSection post={post} position={position} />
+      )}
+
+      <div
+        className={cx(
+          styles.detailsSection,
+          position === 'imgfirst' && styles.detailsSectionRight
+        )}
+      >
         <div className={styles.tags}>
           {post.tags &&
             post.tags.map(tag => <Chip key={tag} text={tag} color="pink" />)}
@@ -50,6 +66,10 @@ const ListItem = ({ post }) => {
           <p>{post.description}</p>
         </Link>
       </div>
+
+      {position !== 'imgfirst' && (
+        <ImageSection post={post} position={position} />
+      )}
     </div>
   )
 }
@@ -59,8 +79,8 @@ const ProjectList = ({ postEdges }) => {
   return (
     <div className={styles.outer} id="projects">
       <div className={styles.container}>
-        {postList.map(post => (
-          <ListItem key={post.id} post={post} />
+        {postList.map((post, index) => (
+          <ListItem key={post.id} post={post} index={index} />
         ))}
       </div>
     </div>
