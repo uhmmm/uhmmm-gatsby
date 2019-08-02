@@ -38,6 +38,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          id
           fields {
             slug
             date
@@ -47,6 +48,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tags
+            projectImages {
+              publicURL
+            }
             date
             description
           }

@@ -6,15 +6,39 @@
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, var(--grid-columns-width));
   width: var(--grid-max-width);
   padding-bottom: calc(var(--grid-unit) * 20);
 }
 
 .post {
-  grid-column: span 4;
-  padding-right: calc(var(--grid-unit) * 2);
+  display: grid;
+  grid-template-columns: var(--grid-inner);
+  grid-template-rows: repeat(4, var(--grid-columns-width));
+}
+
+.imgSection {
+  grid-area: 1 / 1 / 4 / 5;
+  display: grid;
+  grid-template-columns: repeat(4, var(--grid-columns-width));
+  grid-template-rows: repeat(4, var(--grid-columns-width));
+  position: relative;
+}
+
+.img__under {
+  grid-area: 1 / 2 / 4 / 5;
+  width: 100%;
+}
+
+.img__over {
+  position: absolute;
+  grid-area: 1 / 1 / 4 / 4;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailsSection {
+  grid-area: 1 / 6 / 4 / 13;
 }
 
 .title {
