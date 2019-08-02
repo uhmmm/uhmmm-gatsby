@@ -1,30 +1,27 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import cx from 'classnames'
 import styles from './Navbar.module.css'
 
 const Navbar = () => {
   return (
-    <div className={styles.outer}>
-      <nav className={styles.container}>
-        <div className={styles.logo}>
-          <Link to="/" className={styles.logoText}>
-            uhmmm
-          </Link>
-        </div>
-        <div className={styles.links}>
-          <Link to="/" className={styles.link}>
-            about
-          </Link>
-          <Link to="/" className={styles.link}>
-            projects
-          </Link>
+    <nav className={styles.container}>
+      <div className={styles.logo}>
+        <Link to="/" className={styles.logoText}>
+          uhmmm
+        </Link>
+      </div>
+      <Link to="/" className={cx(styles.link, styles.linkAbout)}>
+        about
+      </Link>
+      <Link to="/" className={cx(styles.link, styles.linkProject)}>
+        projects
+      </Link>
 
-          <Link to="/" className={styles.link}>
-            contact
-          </Link>
-        </div>
-      </nav>
-    </div>
+      <Link to="/" className={cx(styles.link, styles.linkContact)}>
+        contact
+      </Link>
+    </nav>
   )
 }
 

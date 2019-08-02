@@ -1,14 +1,13 @@
-.outer {
-  display: flex;
-  justify-content: center;
+.container {
+  display: grid;
+  grid-template-columns: var(--grid-inner-column-template);
+  grid-template-rows: var(--grid-row-template);
+  grid-auto-rows: var(--grid-size);
+  align-items: center;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: var(--grid-max-width);
-  padding: var(--grid-unit) 0 calc(var(--grid-unit) * 5);
+.logo {
+  grid-area: 1 / 1 / 2 / 4;
 }
 
 .logoText {
@@ -17,15 +16,24 @@
   font-weight: 100;
 }
 
-.links {
-  display: flex;
-}
-
 .link {
   font-family: var(--type-family-body);
   font-size: var(--type-body);
-  padding: 0 calc(var(--grid-unit) * 2) 0 0;
   font-weight: 100;
+  justify-self: center;
+  align-self: center;
+}
+
+.linkAbout {
+  grid-area: 1 / 11 / 2 / 12;
+}
+
+.linkProject {
+  grid-area: 1 / 12 / 2 / 13;
+}
+
+.linkContact {
+  grid-area: 2 / 11 / 3 / 12;
 }
 
 .link:last-of-type {
