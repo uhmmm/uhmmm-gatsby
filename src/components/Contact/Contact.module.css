@@ -9,20 +9,21 @@
   display: grid;
   width: var(--grid-max-width);
   grid-template-columns: var(--grid-inner);
-  padding-bottom: calc(var(--grid-unit) * 5);
 }
 
 .contact {
   grid-column: span 3;
+  padding: 0 calc(var(--grid-unit) * 3) var(--grid-size) 0;
 }
 
 .title {
-  font-size: var(--type-subheader);
+  font-size: var(--type-subtitle);
   padding-bottom: var(--grid-unit);
 }
 
 .text {
-  font-size: var(--type-body);
+  font-size: var(--type-subtext);
+  line-height: var(--type-subtext-lh);
 }
 
 .people {

@@ -1,14 +1,21 @@
 :root {
-  --type-family-body: 'Flaco mono';
-  --type-family-header: 'Sans Sharp';
+  --type-family-body: 'Untitled Sans';
+  --type-family-title: 'Sans Sharp';
+  --type-family-header: 'Untitled Sans';
 
   --type-base: 14px;
+
   --type-title: 5rem;
-  --type-header: 2rem;
-  --type-subheader: 2rem;
-  --type-largebody: 1.2rem;
-  --type-body: 1rem;
-  --type-subtext: 0.9rem;
+  --type-title-lh: 6rem;
+  --type-subtitle: 2rem;
+  --type-subtitle-lh: 2rem;
+
+  --type-header: 2.3rem;
+  --type-header-lh: 3rem;
+  --type-body: 2rem;
+  --type-body-lh: 2.5rem;
+  --type-subtext: 1.2rem;
+  --type-subtext-lh: 1.8rem;
 
   --color-dark: black;
   --color-grey: grey;

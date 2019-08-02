@@ -4,7 +4,7 @@
 .title {
   display: block;
 
-  font-family: var(--type-family-header);
+  font-family: var(--type-family-title);
   font-size: calc(var(--grid-size) / 1.25);
   line-height: calc(var(--grid-size) / 1.25);
   font-weight: normal;

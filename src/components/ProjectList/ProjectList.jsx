@@ -61,10 +61,10 @@ const ListItem = ({ post, index }) => {
             post.tags.map(tag => <Chip key={tag} text={tag} color="pink" />)}
         </div>
 
-        <Link to={post.slug}>
-          <h1 className={styles.title}>{post.title}</h1>
-          <p>{post.description}</p>
-        </Link>
+        {/* <Link to={post.slug}> */}
+        <h1 className={styles.title}>{post.title}</h1>
+        <p>{post.description}</p>
+        {/* </Link> */}
       </div>
 
       {position !== 'imgfirst' && (
@@ -79,7 +79,7 @@ const ProjectList = ({ postEdges }) => {
   return (
     <div className={styles.outer} id="projects">
       <div className={styles.listHeader}>
-        <h2>Projects</h2>
+        <h2 className={styles.subtitle}>Projects</h2>
         <div className={styles.listHeader__decoration} />
       </div>
       <div className={styles.listContainer}>

@@ -7,11 +7,12 @@
 }
 
 .image {
-  grid-column: span 1;
   display: block;
+  grid-column: span 1;
   background: white;
   border-radius: 100%;
-  width: 100%;
+  width: 80%;
+  margin: 10%;
 }
 
 .details {
@@ -22,10 +23,12 @@
 
 .name {
   font-size: var(--type-subtext);
+  line-height: var(--type-subtext-lh);
 }
 
 .function {
   font-size: var(--type-subtext);
+  line-height: var(--type-subtext-lh);
 
   color: var(--color-grey);
 }

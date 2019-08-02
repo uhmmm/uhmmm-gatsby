@@ -11,6 +11,11 @@
   grid-template-columns: var(--grid-inner);
 }
 
+.subtitle {
+  font-family: var(--type-family-title);
+  font-size: var(--type-subtitle);
+}
+
 .listHeader__decoration {
   width: 100%;
   height: 100%;

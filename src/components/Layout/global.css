@@ -21,6 +21,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./untitledsans/UntitledSansTest-Regular.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-size: var(--type-base);
   height: 100%;
@@ -53,6 +60,8 @@ p,
 q,
 li {
   font-family: var(--type-family-body);
+  font-size: var(--type-body);
+  line-height: var(--type-body-lh);
 }
 
 h1,
