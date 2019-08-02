@@ -16,9 +16,11 @@
 }
 
 .details {
+  display: flex;
+  flex-direction: column;
   grid-column: span 2;
   padding: 0 calc(var(--grid-unit) / 2);
-  align-items: center;
+  justify-content: center;
 }
 
 .name {
