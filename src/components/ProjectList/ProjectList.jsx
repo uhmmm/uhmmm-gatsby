@@ -78,10 +78,17 @@ const ProjectList = ({ postEdges }) => {
   const postList = getPostList(postEdges)
   return (
     <div className={styles.outer} id="projects">
-      <div className={styles.container}>
+      <div className={styles.listHeader}>
+        <h2>Projects</h2>
+        <div className={styles.listHeader__decoration} />
+      </div>
+      <div className={styles.listContainer}>
         {postList.map((post, index) => (
           <ListItem key={post.id} post={post} index={index} />
         ))}
+      </div>
+      <div className={styles.listHeader}>
+        <div className={styles.listFooter__decoration} />
       </div>
     </div>
   )
