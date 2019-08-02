@@ -1,7 +1,7 @@
 ---
 title: 'Historical Dutch-Asiatic Trade'
 shortTitle: 'HDAT'
-projectImage:
+projectImages:
   - './hdat-under.png'
   - './hdat-over.png'
 cover: ''

@@ -8,20 +8,16 @@ const getPostList = postEdges => {
   const postList = []
   postEdges.forEach(postEdge => {
     postList.push({
-      path: postEdge.node.fields.slug,
-      tags: postEdge.node.frontmatter.tags,
-      cover: postEdge.node.frontmatter.cover,
-      title: postEdge.node.frontmatter.title,
-      date: postEdge.node.fields.date,
+      ...postEdge.node.frontmatter,
+      ...postEdge.node.fields,
       excerpt: postEdge.node.excerpt,
-      description: postEdge.node.frontmatter.description,
       timeToRead: postEdge.node.timeToRead
     })
   })
   return postList
 }
 
-const PostListing = ({ postEdges }) => {
+const ProjectList = ({ postEdges }) => {
   const postList = getPostList(postEdges)
   return (
     <div className={styles.outer} id="projects">
@@ -29,7 +25,7 @@ const PostListing = ({ postEdges }) => {
         {postList.map(post => (
           <div className={styles.post} key={post.title}>
             <div className={styles.post__section}>
-              <img className={styles.post__img} src={bgfront} alt="" />
+              <img className={styles.post__img} src="bgfront" alt="" />
             </div>
 
             <div className={styles.post__section}>
@@ -41,7 +37,7 @@ const PostListing = ({ postEdges }) => {
               </div>
             </div>
 
-            <Link to={post.path}>
+            <Link to={post.slug}>
               <h1 className={styles.title}>{post.title}</h1>
               <p>{post.description}</p>
             </Link>
@@ -52,4 +48,4 @@ const PostListing = ({ postEdges }) => {
   )
 }
 
-export default PostListing
+export default ProjectList

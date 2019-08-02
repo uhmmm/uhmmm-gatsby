@@ -1,7 +1,7 @@
 ---
 title: 'The role of YouTube in the public debate'
 shortTitle: "Youtube's role"
-projectImage:
+projectImages:
   - './youtube-under.png'
   - './youtube-over.png'
 cover: ''

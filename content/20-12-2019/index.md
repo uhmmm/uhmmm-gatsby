@@ -1,7 +1,7 @@
 ---
 title: 'Freedom of Information Act'
 shortTitle: 'FOIA'
-projectImage:
+projectImages:
   - './foia-under.png'
   - './foia-over.png'
 cover: ''

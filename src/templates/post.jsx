@@ -38,8 +38,7 @@ export default class PostTemplate extends React.Component {
                   <Chip color="blue">
                     By 
                     {' '}
-                    {post.authors[0].toUpperCase()}
-, 
+                    {post.authors[0].toUpperCase()} 
                     {' '}
                     {post.date}
                   </Chip>
@@ -64,9 +63,13 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
+        projectImages {
+          publicURL
+        }
         cover
         date
         category
+
         tags
         authors
       }

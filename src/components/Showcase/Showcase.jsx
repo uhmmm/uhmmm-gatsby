@@ -1,14 +1,11 @@
 import React from 'react'
-import cx from 'classnames'
 
 import styles from './Showcase.module.css'
 
-import bgback from './bg-back2x.png'
-import bgfront from './bg-front-hq.png'
 import Title from '../Title/Title'
 
 export default () => (
-  <div className={cx(styles.container)}>
+  <div className={styles.container}>
     <Title name="Digital environments where academia, journalism & society meets" />
     <div className={styles.textContainer}>
       <div>
