@@ -1,20 +1,18 @@
 .container {
-  display: grid;
-  width: 100%;
 }
 
 .title {
-  position: relative;
   display: block;
 
   font-family: var(--type-family-header);
-  font-size: var(--type-title);
+  font-size: calc(var(--grid-size) / 1.25);
+  line-height: calc(var(--grid-size) / 1.25);
   font-weight: normal;
 
   color: white;
 
   background-image: url(./tekstbg-hq.png);
 
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }

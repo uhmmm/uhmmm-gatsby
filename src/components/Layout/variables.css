@@ -20,9 +20,11 @@
 
   --grid-unit: 1rem;
 
+  /* General grid */
   --grid-size: 7vw;
   --grid-row-template: repeat(auto-fill, var(--grid-size));
 
+  /* Outer grid */
   --grid-outer-width: 112vw;
   --grid-outer-columns-count: 16;
   --grid-outer-column-template: repeat(
@@ -30,6 +32,7 @@
     var(--grid-size)
   );
 
+  /* Inner grid */
   --grid-inner-width: 84vw;
   --grid-inner-column-count: 12;
   --grid-inner-column-template: repeat(
@@ -37,7 +40,7 @@
     var(--grid-size)
   );
 
-  /* REMOVE!!! */
+  /* REMOVE!!! BAD NAMES!!! */
   --grid-columns-width: var(--grid-column-width);
   --grid-column-width: var(--grid-size);
   --grid-max-width: var(--grid-inner-width);
