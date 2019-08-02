@@ -11,8 +11,12 @@ const Contact = () => (
       <div className={styles.container}>
         <div className={styles.contact}>
           <h3 className={styles.title}>Contact</h3>
+          <p>
+            Uhmmm is based in Amsterdam and New York. Our headquarters are in
+            Amsterdam.
+          </p>
           <ul>
-            <li className={styles.text}>Uhmmm HQ</li>
+            <li className={styles.text}>Uhmmm.net</li>
             <li className={styles.text}>Orteliuskade 4G</li>
             <li className={styles.text}>1057AA Amsterdam</li>
           </ul>

@@ -1,6 +1,9 @@
 ---
 title: 'The role of YouTube in the public debate'
 shortTitle: "Youtube's role"
+projectImage:
+  - './youtube-under.png'
+  - './youtube-over.png'
 cover: ''
 date: '2018/10/10'
 category: 'tech'

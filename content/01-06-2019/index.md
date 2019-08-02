@@ -1,6 +1,9 @@
 ---
 title: 'Historical Dutch-Asiatic Trade'
 shortTitle: 'HDAT'
+projectImage:
+  - './hdat-under.png'
+  - './hdat-over.png'
 cover: ''
 category: 'tech'
 date: '2019/06/01'

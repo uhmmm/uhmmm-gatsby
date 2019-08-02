@@ -8,7 +8,7 @@
 .container {
   display: grid;
   width: var(--grid-max-width);
-  grid-template-columns: var(--grid-columns);
+  grid-template-columns: var(--grid-inner);
   padding-bottom: calc(var(--grid-unit) * 5);
 }
 

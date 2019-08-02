@@ -1,6 +1,9 @@
 ---
 title: 'Freedom of Information Act'
 shortTitle: 'FOIA'
+projectImage:
+  - './foia-under.png'
+  - './foia-over.png'
 cover: ''
 category: 'something'
 date: '2019/05/01'

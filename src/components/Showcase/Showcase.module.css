@@ -4,7 +4,9 @@
   margin-bottom: calc(var(--grid-unit) * 5);
 }
 
-.titleContainer {
+.textContainer {
+  display: flex;
+  padding: calc(var(--grid-unit) * 3) 0 0;
 }
 
 .text {
