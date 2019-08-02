@@ -24,24 +24,10 @@ const Index = ({ data }) => {
     <Layout>
       <Helmet title={config.siteTitle} />
       <SEO />
-      <div ref={topRef}>
-        <Navbar
-          navRefs={{
-            topRef,
-            postsRef,
-            contactRef
-          }}
-        />
-      </div>
-      <div>
-        <Showcase />
-      </div>
-      <div ref={postsRef}>
-        <PostListing postEdges={postEdges} />
-      </div>
-      <div ref={contactRef}>
-        <Contact />
-      </div>
+      <Navbar />
+      <Showcase />
+      <PostListing postEdges={postEdges} />
+      <Contact />
     </Layout>
   )
 }

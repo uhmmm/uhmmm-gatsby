@@ -14,9 +14,17 @@
   position: relative;
 }
 
-.inner {
+.verticalLayout {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-column: 3 / 14;
+  align-items: center;
+  width: 100%;
+  grid-column: 3 / 15;
+}
+
+.innerGrid {
+  display: grid;
+  width: var(--grid-inner-width);
+  grid-template-columns: var(--grid-outer);
 }

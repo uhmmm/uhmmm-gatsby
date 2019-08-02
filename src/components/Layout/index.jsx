@@ -18,10 +18,10 @@ const MainLayout = ({ children }) => {
       </Helmet>
       <div className={styles.outerGrid}>
         <Gradient />
-        <div className={styles.inner}>
+        <div className={styles.verticalLayout}>
           <div>
             <Bar type="horizontal" color="dark" />
-            <div>{children}</div>
+            {children}
           </div>
           <Bar type="horizontal" color="dark" />
         </div>
