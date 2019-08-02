@@ -12,8 +12,11 @@ export default () => (
     <div className={styles.textContainerLeft}>
       <p>
         Uhmmm is commited to develop digital environments for academic,
-        journalists and the public. Some of our projects have been
-        self-initiated, while others have been made in partnership or blabla.
+        journalists and the public.
+      </p>
+      <p>
+        Some of our projects have been self-initiated, while others have been
+        made in partnership or blabla.
       </p>
       <p>
         If you are looking for collaboration please contact us at info@uhmmm.io
