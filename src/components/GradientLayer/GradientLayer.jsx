@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Gradient.module.css'
+import styles from './GradientLayer.module.css'
 
 export default () => (
   <div className={styles.container}>

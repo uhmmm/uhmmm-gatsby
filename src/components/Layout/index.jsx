@@ -1,8 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Gradient from '../Gradient/Gradient'
-import Bar from '../Bar/Bar'
+import GradientLayer from '../GradientLayer/GradientLayer'
 
 import config from '../../../data/SiteConfig'
 
@@ -17,13 +16,9 @@ const MainLayout = ({ children }) => {
         <meta name="description" content={config.siteDescription} />
       </Helmet>
       <div className={styles.outerGrid}>
-        <Gradient />
+        <GradientLayer />
         <div className={styles.verticalLayout}>
-          <div>
-            <Bar type="horizontal" color="dark" />
-            {children}
-          </div>
-          <Bar type="horizontal" color="dark" />
+          <div>{children}</div>
         </div>
       </div>
     </div>

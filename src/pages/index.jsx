@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
@@ -8,6 +8,7 @@ import Showcase from '../components/Showcase/Showcase'
 import Contact from '../components/Contact/Contact'
 import Navbar from '../components/Navbar/Navbar'
 import SEO from '../components/SEO/SEO'
+import BlocksLayer from '../components/BlocksLayer/BlocksLayer'
 
 import config from '../../data/SiteConfig'
 
@@ -19,6 +20,7 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Helmet title={config.siteTitle} />
+      <BlocksLayer type="index" />
       <SEO />
       <Navbar />
       <Showcase />

@@ -1,0 +1,35 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--grid-outer-width);
+  height: 100%;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: var(--grid-outer);
+  grid-template-rows: repeat(
+    var(--grid-outer-columns),
+    var(--grid-columns-width)
+  );
+}
+
+.blockImgHorizontal {
+  grid-area: 1 / 11 / 2 / 12;
+  width: 100%;
+  height: 100%;
+  background: url(./single-horizontal.png) 100% / 100%;
+}
+
+.blockImgVertical {
+  grid-area: 6 / 13 / 7 / 14;
+  width: 100%;
+  height: 100%;
+  background: url(./single-vertical.png) 100% / 100%;
+}
+
+.blockNav {
+  grid-area: 1 / 1 / 2 / 6;
+  width: 100%;
+  height: 100%;
+  background: url(./five-horizontal.png) 100% / 100%;
+}

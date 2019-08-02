@@ -19,13 +19,16 @@
   --color-blue: #00d3ba;
 
   --grid-unit: 1rem;
-  --grid-outer-width: 112vw; /* just enough to exceed window by 2 */
-  --grid-max-width: 84vw; /* just enough to give a nice padding */
-  --grid-inner-width: 84vw; /* just enough to give a nice padding */
-  --grid-outer-columns: 16; /*  */
-  --grid-inner-columns: 12; /*  */
+
   --grid-column-width: 7vw;
+  --grid-outer-width: 112vw; /* just enough to exceed window by 2 */
+  --grid-outer-columns: 16; /*  */
+  --grid-inner-width: 84vw; /* just enough to give a nice padding */
+  --grid-inner-columns: 12; /*  */
+
+  /* REMOVE!!! */
   --grid-columns-width: var(--grid-column-width);
+  --grid-max-width: 84vw; /* just enough to give a nice padding */
 
   --grid-outer: repeat(var(--grid-outer-columns), var(--grid-columns-width));
   --grid-inner: repeat(var(--grid-inner-columns), var(--grid-columns-width));
