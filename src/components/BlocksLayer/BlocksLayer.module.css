@@ -18,6 +18,7 @@
   width: 100%;
   height: 100%;
   background: url(./single-horizontal.png) 100% / 100%;
+  box-shadow: 0 0 6px rgba(0, 195, 194, 0.5);
 }
 
 .blockImgVertical {
@@ -25,6 +26,7 @@
   width: 100%;
   height: 100%;
   background: url(./single-vertical.png) 100% / 100%;
+  box-shadow: 0 0 6px rgba(0, 195, 194, 0.5);
 }
 
 .blockNav {
@@ -32,4 +34,5 @@
   width: 100%;
   height: 100%;
   background: url(./five-horizontal.png) 100% / 100%;
+  box-shadow: 0 0 6px var(--color-purple);
 }
