@@ -20,16 +20,29 @@
 
   --grid-unit: 1rem;
 
-  --grid-column-width: 7vw;
-  --grid-outer-width: 112vw; /* just enough to exceed window by 2 */
-  --grid-outer-columns: 16; /*  */
-  --grid-inner-width: 84vw; /* just enough to give a nice padding */
-  --grid-inner-columns: 12; /*  */
+  --grid-size: 7vw;
+  --grid-row-template: repeat(auto-fill, var(--grid-size));
+
+  --grid-outer-width: 112vw;
+  --grid-outer-columns-count: 16;
+  --grid-outer-column-template: repeat(
+    var(--grid-outer-columns-count),
+    var(--grid-size)
+  );
+
+  --grid-inner-width: 84vw;
+  --grid-inner-column-count: 12;
+  --grid-inner-column-template: repeat(
+    var(--grid-inner-column-count),
+    var(--grid-size)
+  );
 
   /* REMOVE!!! */
   --grid-columns-width: var(--grid-column-width);
-  --grid-max-width: 84vw; /* just enough to give a nice padding */
-
-  --grid-outer: repeat(var(--grid-outer-columns), var(--grid-columns-width));
-  --grid-inner: repeat(var(--grid-inner-columns), var(--grid-columns-width));
+  --grid-column-width: var(--grid-size);
+  --grid-max-width: var(--grid-inner-width);
+  --grid-outer: var(--grid-outer-column-template);
+  --grid-outer-columns: var(--grid-outer-columns-count);
+  --grid-inner-columns: var(--grid-inner-column-count);
+  --grid-inner: var(--grid-inner-column-template);
 }
