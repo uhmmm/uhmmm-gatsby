@@ -36,7 +36,6 @@ const ImageSection = ({ post }) => {
 }
 
 const ListItem = ({ post }) => {
-  console.log(post)
   return (
     <div className={styles.post}>
       <ImageSection post={post} />
