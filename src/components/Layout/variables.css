@@ -52,7 +52,6 @@
 }
 
 /* major queries */
-
 @media (max-width: 600px) {
   :root {
     --grid-outer-columns-count: 6;
@@ -78,27 +77,8 @@
     --type-base: 8px;
   }
 }
-@media (min-width: 500px) {
-  :root {
-    --type-base: 8px;
-  }
-}
-@media (min-width: 600px) {
-  :root {
-    --type-base: 8px;
-  }
-}
-@media (min-width: 700px) {
-  :root {
-    --type-base: 8px;
-  }
-}
+
 @media (min-width: 800px) {
-  :root {
-    --type-base: 9px;
-  }
-}
-@media (min-width: 900px) {
   :root {
     --type-base: 9px;
   }
@@ -119,35 +99,8 @@
     --type-base: 12px;
   }
 }
-@media (min-width: 1300px) {
-  :root {
-    --type-base: 12px;
-  }
-}
+
 @media (min-width: 1400px) {
-  :root {
-    --type-base: 13px;
-  }
-}
-@media (min-width: 1500px) {
-  :root {
-    --type-base: 13px;
-  }
-}
-
-@media (min-width: 1600px) {
-  :root {
-    --type-base: 13px;
-  }
-}
-
-@media (min-width: 1700px) {
-  :root {
-    --type-base: 13px;
-  }
-}
-
-@media (min-width: 1800px) {
   :root {
     --type-base: 13px;
   }
