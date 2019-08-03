@@ -1,6 +1,5 @@
 :root {
-  --gradient-dot-size: 2px;
-
+  /* color gradients */
   --gradient-color-horizontal: linear-gradient(
     to right,
     var(--color-pink) 0%,
@@ -13,6 +12,47 @@
     var(--color-green) 100%
   );
 
+  /* gradient overlays (can't intersect masks */
+  /* dots */
+  --gradient-dot-size: 2px;
+  --gradient-dot-persquare-count: var(--grid-size) / 10;
+  --gradient-dot-gap: 1vw;
+  --gradient-vertical-dots-overlay: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent var(--gradient-dot-size),
+    black var(--gradient-dot-size),
+    black var(--gradient-dot-gap)
+  );
+
+  --gradient-horizontal-dots-overlay: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent var(--gradient-dot-size),
+    black var(--gradient-dot-size),
+    black var(--gradient-dot-gap)
+  );
+
+  /* page-wide */
+  --gradient-page-vertical-overlay: repeating-linear-gradient(
+    30deg,
+    black 0,
+    black 400px,
+    transparent 500px,
+    transparent 700px,
+    black 900px
+  );
+
+  --gradient-page-horizontal-overlay: repeating-linear-gradient(
+    to right,
+    black 0%,
+    transparent 5%,
+    transparent 95%,
+    black 100%
+  );
+
+  /* grid masks */
+  /* opaque colors (like black) allow the background to pass through */
   --gradient-colomns-mask: repeating-linear-gradient(
     to right,
     black 0px,
@@ -28,39 +68,6 @@
     transparent var(--gradient-dot-size),
     transparent var(--grid-size)
   );
-
-  --gradient-vertical-dots-mask: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent var(--gradient-dot-size),
-    black var(--gradient-dot-size),
-    black 10px
-  );
-
-  --gradient-horizontal-dots-mask: repeating-linear-gradient(
-    to right,
-    transparent 0px,
-    transparent var(--gradient-dot-size),
-    black var(--gradient-dot-size),
-    black 10px
-  );
-
-  --gradient-black-vertical: repeating-linear-gradient(
-    30deg,
-    transparent 0,
-    transparent 200px,
-    black 400px,
-    black 700px,
-    transparent 900px
-  );
-
-  --gradient-black-horizontal: repeating-linear-gradient(
-    to right,
-    black 0%,
-    transparent 5%,
-    transparent 95%,
-    black 100%
-  );
 }
 
 .container {
@@ -68,15 +75,15 @@
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: black;
 }
 
 .under {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--gradient-black-horizontal), var(--gradient-black-vertical),
-    var(--gradient-vertical-dots-mask), var(--gradient-color-horizontal);
+  background: var(--gradient-page-horizontal-overlay),
+    var(--gradient-page-vertical-overlay), var(--gradient-vertical-dots-overlay),
+    var(--gradient-color-horizontal);
   mask-image: var(--gradient-colomns-mask);
 }
 
@@ -84,7 +91,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--gradient-black-horizontal), var(--gradient-black-vertical),
-    var(--gradient-horizontal-dots-mask), var(--gradient-color-vertical);
+  background: var(--gradient-page-horizontal-overlay),
+    var(--gradient-page-vertical-overlay),
+    var(--gradient-horizontal-dots-overlay), var(--gradient-color-vertical);
   mask-image: var(--gradient-rows-mask);
 }

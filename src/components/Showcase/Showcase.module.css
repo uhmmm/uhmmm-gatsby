@@ -12,11 +12,11 @@
 }
 
 .textContainerLeft {
-  grid-area: 4 / 1 / 9 / 5;
+  grid-area: 4 / 1 / 11 / 5;
 }
 
 .textContainerRight {
-  grid-area: 4 / 6 / 9 / 10;
+  grid-area: 4 / 6 / 11 / 10;
 }
 
 .text {
