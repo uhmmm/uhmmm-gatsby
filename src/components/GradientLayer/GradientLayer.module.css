@@ -1,106 +1,90 @@
+:root {
+  --gradient-dot-size: 2px;
+
+  --gradient-color-horizontal: linear-gradient(
+    to right,
+    var(--color-pink) 0%,
+    var(--color-green) 100%
+  );
+
+  --gradient-color-vertical: linear-gradient(
+    to bottom,
+    var(--color-pink) 0%,
+    var(--color-green) 100%
+  );
+
+  --gradient-colomns-mask: repeating-linear-gradient(
+    to right,
+    black 0px,
+    black var(--gradient-dot-size),
+    transparent var(--gradient-dot-size),
+    transparent var(--grid-size)
+  );
+
+  --gradient-rows-mask: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black var(--gradient-dot-size),
+    transparent var(--gradient-dot-size),
+    transparent var(--grid-size)
+  );
+
+  --gradient-vertical-dots-mask: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent var(--gradient-dot-size),
+    black var(--gradient-dot-size),
+    black 10px
+  );
+
+  --gradient-horizontal-dots-mask: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent var(--gradient-dot-size),
+    black var(--gradient-dot-size),
+    black 10px
+  );
+
+  --gradient-black-vertical: repeating-linear-gradient(
+    30deg,
+    transparent 0,
+    transparent 200px,
+    black 400px,
+    black 700px,
+    transparent 900px
+  );
+
+  --gradient-black-horizontal: repeating-linear-gradient(
+    to right,
+    black 0%,
+    transparent 5%,
+    transparent 95%,
+    black 100%
+  );
+}
+
 .container {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -2;
+  background: black;
 }
 
 .under {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-      to right,
-      black 0%,
-      transparent 1%,
-      transparent 99%,
-      black 100%
-    ),
-    /* repeating-linear-gradient(
-      120deg,
-      transparent 0,
-      transparent 200px,
-      black 400px,
-      black 700px,
-      transparent 900px
-    ), */
-      repeating-linear-gradient(
-        30deg,
-        transparent 0,
-        transparent 200px,
-        black 400px,
-        black 700px,
-        transparent 900px
-      ),
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0px,
-      transparent 2px,
-      black 2px,
-      black 10px
-    ),
-    repeating-linear-gradient(
-      to right,
-      transparent 0px,
-      transparent 2px,
-      black 2px,
-      black var(--grid-size)
-    ),
-    linear-gradient(to right, var(--color-pink) 0%, var(--color-green) 100%);
+  background: var(--gradient-black-horizontal), var(--gradient-black-vertical),
+    var(--gradient-vertical-dots-mask), var(--gradient-color-horizontal);
+  mask-image: var(--gradient-colomns-mask);
 }
 
 .over {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-      to right,
-      black 0%,
-      transparent 1%,
-      transparent 99%,
-      black 100%
-    ),
-    /* repeating-linear-gradient(
-      120deg,
-      transparent 0,
-      transparent 200px,
-      black 400px,
-      black 700px,
-      transparent 900px
-    ), */
-      repeating-linear-gradient(
-        30deg,
-        transparent 0,
-        transparent 200px,
-        black 400px,
-        black 700px,
-        transparent 900px
-      ),
-    repeating-linear-gradient(
-      to right,
-      transparent 0px,
-      transparent 2px,
-      black 2px,
-      black 10px
-    ),
-    linear-gradient(to bottom, var(--color-pink) 0%, var(--color-green) 100%);
-  mask-image: repeating-linear-gradient(
-    to bottom,
-    black 0px,
-    black 2px,
-    transparent 2px,
-    transparent var(--grid-size)
-  );
-}
-
-/* 
-.block {
-  margin-bottom: -1px;
-  background: black;
-  border-left: 2px solid transparent;
-  background-clip: content-box;
-} */
-
-.block:last-of-type {
-  margin-right: -1px;
+  background: var(--gradient-black-horizontal), var(--gradient-black-vertical),
+    var(--gradient-horizontal-dots-mask), var(--gradient-color-vertical);
+  mask-image: var(--gradient-rows-mask);
 }
