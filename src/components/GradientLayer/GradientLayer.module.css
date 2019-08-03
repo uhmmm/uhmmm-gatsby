@@ -79,6 +79,7 @@
   z-index: -2;
 }
 
+/* vertical gridlines */
 .under {
   position: absolute;
   width: 100%;
@@ -87,8 +88,10 @@
     var(--gradient-page-vertical-overlay), var(--gradient-vertical-dots-overlay),
     var(--gradient-color-horizontal);
   mask-image: var(--gradient-colomns-mask);
+  mask-position: -1px -1px;
 }
 
+/* horizontal gridlines */
 .over {
   position: absolute;
   width: 100%;
@@ -97,4 +100,5 @@
     var(--gradient-page-vertical-overlay),
     var(--gradient-horizontal-dots-overlay), var(--gradient-color-vertical);
   mask-image: var(--gradient-rows-mask);
+  mask-position: -1px -1px;
 }
