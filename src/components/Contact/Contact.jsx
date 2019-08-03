@@ -5,7 +5,7 @@ import PersonList from '../PersonList/PersonList'
 import styles from './Contact.module.css'
 
 const Contact = () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="contact">
     <div className={styles.contact}>
       <h3 className={styles.title}>contact</h3>
       <p className={styles.text}>

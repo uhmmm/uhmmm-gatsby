@@ -11,14 +11,14 @@ const Navbar = () => {
           uhmmm
         </Link>
       </div>
-      <Link to="/" className={cx(styles.link, styles.linkAbout)}>
+      <Link to="/#about" className={cx(styles.link, styles.linkAbout)}>
         about
       </Link>
-      <Link to="/" className={cx(styles.link, styles.linkProject)}>
+      <Link to="/#projects" className={cx(styles.link, styles.linkProject)}>
         projects
       </Link>
 
-      <Link to="/" className={cx(styles.link, styles.linkContact)}>
+      <Link to="/#contact" className={cx(styles.link, styles.linkContact)}>
         contact
       </Link>
     </nav>

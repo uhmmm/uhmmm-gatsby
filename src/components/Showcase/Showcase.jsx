@@ -5,7 +5,7 @@ import styles from './Showcase.module.css'
 import Title from '../Title/Title'
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="about">
     <div className={styles.titleContainer}>
       <Title name="Digital environments where academia, journalism & society meets" />
     </div>
