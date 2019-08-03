@@ -6,11 +6,8 @@
   height: 100%;
   z-index: -1;
   display: grid;
-  grid-template-columns: var(--grid-outer);
-  grid-template-rows: repeat(
-    var(--grid-outer-columns),
-    var(--grid-columns-width)
-  );
+  grid-template-columns: var(--grid-outer-column-template);
+  grid-template-rows: repeat(auto-fill, var(--grid-size));
 }
 
 .blockImgHorizontal {
@@ -18,7 +15,7 @@
   width: 100%;
   height: 100%;
   background: url(./single-horizontal.png) 100% / 100%;
-  box-shadow: 0 0 6px rgba(0, 195, 194, 0.5);
+  box-shadow: 0 0 6px var(--color-blue-half);
 }
 
 .blockImgVertical {
@@ -26,7 +23,7 @@
   width: 100%;
   height: 100%;
   background: url(./single-vertical.png) 100% / 100%;
-  box-shadow: 0 0 6px rgba(0, 195, 194, 0.5);
+  box-shadow: 0 0 6px var(--color-blue-half);
 }
 
 .blockNav {

@@ -1,31 +1,17 @@
+/* 
+Global CSS
+
+Do the least possible in here, I currently do not like using the cascade as
+it breaks component isolation. Only permeate the component border using CSS variables.
+
+1. Currently I'm only setting elements outsite of React's control, the html and body tag.
+2. Next to that I am unsetting some annoying default browserstyles. 
+3. Thirdly I'm doing some unstyled tests, which forces me to define those properties within components for explicity
+
+*/
+
 * {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: 'Sans Sharp';
-  src: url('./ss-600.otf') format('opentype');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sans Sharp';
-  src: url('./ss-700.otf') format('opentype');
-  font-style: bold;
-}
-
-@font-face {
-  font-family: 'Flaco mono';
-  src: url('./Flaco-Mono.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Untitled Sans';
-  src: url('./untitledsans/UntitledSansTest-Regular.woff') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 html {
@@ -50,32 +36,10 @@ p,
 q,
 li,
 a {
+  /* detection for unstyled text */
   color: red;
-  font-size: 10px;
   margin: 0;
   text-decoration: none;
-}
-
-a,
-p,
-q,
-li {
-  font-family: var(--type-family-body);
-  font-size: var(--type-body);
-  line-height: var(--type-body-lh);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--type-family-header);
-}
-
-h1 {
-  font-size: var(--type-header);
 }
 
 p {

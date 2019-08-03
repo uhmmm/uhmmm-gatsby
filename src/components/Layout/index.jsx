@@ -7,6 +7,7 @@ import config from '../../../data/SiteConfig'
 
 import './global.css'
 import './variables.css'
+import './typography.css'
 import styles from './index.module.css'
 
 const MainLayout = ({ children }) => {

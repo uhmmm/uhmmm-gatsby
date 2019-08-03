@@ -10,7 +10,7 @@
 .outerGrid {
   display: grid;
   width: var(--grid-outer-width);
-  grid-template-columns: var(--grid-outer);
+  grid-template-columns: var(--grid-outer-column-template);
   position: relative;
 }
 

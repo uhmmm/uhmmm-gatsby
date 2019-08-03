@@ -79,7 +79,7 @@ const ProjectList = ({ postEdges }) => {
   return (
     <div className={styles.outer} id="projects">
       <div className={styles.listHeader}>
-        <h2 className={styles.subtitle}>Projects</h2>
+        <h2 className={styles.subtitle}>projects</h2>
         <div className={styles.listHeader__decoration} />
       </div>
       <div className={styles.listContainer}>

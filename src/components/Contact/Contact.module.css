@@ -1,13 +1,6 @@
-.outer {
-  position: relative;
-  width: 100%;
-  display: flex;
-}
-
 .container {
   display: grid;
-  width: var(--grid-max-width);
-  grid-template-columns: var(--grid-inner);
+  grid-template-columns: var(--grid-inner-column-template);
   padding-bottom: var(--grid-size);
 }
 
@@ -23,6 +16,7 @@
 }
 
 .text {
+  font-family: var(--type-family-body);
   font-size: var(--type-subtext);
   line-height: var(--type-subtext-lh);
   color: var(--color-day);

@@ -2,13 +2,13 @@
   position: relative;
   width: 100%;
   justify-content: center;
-  padding-bottom: calc(var(--grid-columns-width) * 2);
+  padding-bottom: calc(var(--grid-size) * 2);
 }
 
 .listHeader {
-  height: var(--grid-columns-width);
+  height: var(--grid-size);
   display: grid;
-  grid-template-columns: var(--grid-inner);
+  grid-template-columns: var(--grid-inner-column-template);
 }
 
 .subtitle {
@@ -22,7 +22,7 @@
   height: 100%;
   grid-area: 1 / 5 / 2 / 6;
   background: var(--color-purple);
-  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.68);
+  box-shadow: 0px 0px 12px var(--color-day-68);
 }
 
 .listFooter__decoration {
@@ -30,7 +30,7 @@
   height: 100%;
   grid-area: 1 / 1 / 2 / 2;
   background: var(--color-purple);
-  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.68);
+  box-shadow: 0px 0px 12px var(--color-day-68);
 }
 
 .listContainer {
@@ -39,19 +39,19 @@
 
 .post {
   display: grid;
-  grid-template-columns: var(--grid-inner);
-  grid-template-rows: repeat(4, var(--grid-columns-width));
+  grid-template-columns: var(--grid-inner-column-template);
+  grid-template-rows: repeat(4, var(--grid-size));
 }
 
 .post:last-of-type {
-  grid-template-rows: repeat(3, var(--grid-columns-width));
+  grid-template-rows: repeat(3, var(--grid-size));
 }
 
 .imgSection {
   grid-area: 1 / 1 / 4 / 5;
   display: grid;
-  grid-template-columns: repeat(4, var(--grid-columns-width));
-  grid-template-rows: repeat(4, var(--grid-columns-width));
+  grid-template-columns: repeat(4, var(--grid-size));
+  grid-template-rows: repeat(4, var(--grid-size));
   position: relative;
   justify-content: center;
   align-items: center;
@@ -90,6 +90,8 @@
 }
 
 .title {
+  font-family: var(--type-family-header);
+  font-size: var(--type-header);
   padding: calc(var(--grid-unit) / 2) 0 var(--grid-unit);
   color: var(--color-day);
 }

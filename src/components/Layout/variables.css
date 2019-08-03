@@ -20,42 +20,32 @@
   --color-dark: black;
   --color-grey: grey;
   --color-day: white;
+  --color-day-68: rgba(255, 255, 255, 0.68);
   --color-purple: #a960ff;
   --color-pink: #ff00ff;
   --color-lightpink: #fff9ff;
-  --color-blue: #00d3ba;
-  --color-green: #17c0c0;
-
-  --grid-unit: 1rem;
+  --color-green: #00d3ba;
+  --color-blue: #17c0c0;
+  --color-blue-half: rgba(0, 195, 194, 0.5);
 
   /* Outer grid */
   --grid-outer-width: 100vw;
   --grid-outer-columns-count: 14;
-
-  --grid-size: calc(var(--grid-outer-width) / var(--grid-outer-columns-count));
-
   --grid-outer-column-template: repeat(
     var(--grid-outer-columns-count),
     var(--grid-size)
   );
 
   /* Inner grid */
-  --grid-inner-width: 84vw;
   --grid-inner-column-count: 12;
+  --grid-inner-width: calc(var(--grid-size) * var(--grid-inner-column-count));
   --grid-inner-column-template: repeat(
     var(--grid-inner-column-count),
     var(--grid-size)
   );
 
-  /* Grid rows */
+  /* General grid stuff */
   --grid-row-template: repeat(auto-fill, var(--grid-size));
-
-  /* REMOVE!!! BAD NAMES!!! */
-  --grid-columns-width: var(--grid-column-width);
-  --grid-column-width: var(--grid-size);
-  --grid-max-width: var(--grid-inner-width);
-  --grid-outer: var(--grid-outer-column-template);
-  --grid-outer-columns: var(--grid-outer-columns-count);
-  --grid-inner-columns: var(--grid-inner-column-count);
-  --grid-inner: var(--grid-inner-column-template);
+  --grid-size: calc(var(--grid-outer-width) / var(--grid-outer-columns-count));
+  --grid-unit: 1rem;
 }

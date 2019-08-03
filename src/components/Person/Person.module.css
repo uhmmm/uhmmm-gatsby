@@ -24,14 +24,15 @@
 }
 
 .name {
+  font-family: var(--type-family-body);
   font-size: var(--type-subtext);
   line-height: var(--type-subtext-lh);
   color: var(--color-day);
 }
 
 .function {
+  font-family: var(--type-family-body);
   font-size: var(--type-subtext);
   line-height: var(--type-subtext-lh);
-
   color: var(--color-grey);
 }
