@@ -46,7 +46,6 @@
   :root {
     --showcase-title-rows: 6;
     --showcase-description-rows: 8;
-    --showcase-columns: 1;
     --showcase-text-column-end: calc(var(--grid-inner-column-count) + 1);
   }
 }

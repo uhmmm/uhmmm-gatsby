@@ -1,3 +1,7 @@
+:root {
+  --project-image-visibility: grid;
+}
+
 .post {
   display: grid;
   grid-template-columns: var(--grid-inner-column-template);
@@ -10,7 +14,7 @@
 
 .imgSection {
   grid-area: 1 / 1 / 4 / 5;
-  display: grid;
+  display: var(--project-image-visibility);
   grid-template-columns: repeat(4, var(--grid-size));
   grid-template-rows: repeat(4, var(--grid-size));
   position: relative;
@@ -66,4 +70,25 @@
   color: var(--color-day);
   font-size: var(--type-body);
   line-height: var(--type-body-lh);
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --project-image-visibility: none;
+  }
+  .post {
+    grid-template-rows: repeat(3, var(--grid-size));
+  }
+  .detailsSection {
+    grid-area: 1 / 1 / 4 / calc(var(--grid-inner-column-count) + 1);
+  }
+}
+
+@media (max-width: 600px) {
+  .post {
+    grid-template-rows: repeat(4, var(--grid-size));
+  }
+  .post:last-of-type {
+    grid-template-rows: repeat(4, var(--grid-size));
+  }
 }
