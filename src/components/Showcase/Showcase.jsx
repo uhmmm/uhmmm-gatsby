@@ -16,19 +16,19 @@ export default () => (
       </p>
       <p className={styles.text}>
         Some of our projects have been self-initiated, while others have been
-        made in partnership or blabla.
+        made in partnership.
       </p>
       <p className={styles.text}>
         If you are looking for collaboration please contact us at info@uhmmm.io
       </p>
-      <p className={styles.text}>
+      {/* <p className={styles.text}>
         If you are looking for collaboration please contact us at info@uhmmm.net
       </p>
       <p className={styles.text}>
         Daarnaast moet hier nog een paragraaf komen omdat er anders een hele
         vreemde open ruimte ontstaat en RJ daardoor gaat zeggen dat dingen niet
         in balans zijn.
-      </p>
+      </p> */}
     </div>
   </div>
 )
