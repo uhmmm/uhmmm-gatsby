@@ -88,7 +88,6 @@
     var(--gradient-page-vertical-overlay), var(--gradient-vertical-dots-overlay),
     var(--gradient-color-horizontal);
   mask-image: var(--gradient-colomns-mask);
-  mask-position: -1px -1px;
 }
 
 /* horizontal gridlines */
@@ -100,5 +99,4 @@
     var(--gradient-page-vertical-overlay),
     var(--gradient-horizontal-dots-overlay), var(--gradient-color-vertical);
   mask-image: var(--gradient-rows-mask);
-  mask-position: -1px -1px;
 }
