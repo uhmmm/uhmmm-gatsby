@@ -15,10 +15,9 @@
 }
 
 .verticalLayout {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  grid-column: 2 / 14;
+  grid-column-start: calc(
+    var(--grid-outer-column-count) - var(--grid-inner-column-count)
+  );
+  grid-column-end: var(--grid-outer-column-count);
 }

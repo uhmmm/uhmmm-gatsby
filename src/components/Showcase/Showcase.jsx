@@ -9,7 +9,7 @@ export default () => (
     <div className={styles.titleContainer}>
       <Title name="Digital environments where academia, journalism & society meets" />
     </div>
-    <div className={styles.textContainerLeft}>
+    <div className={styles.textContainer}>
       <p className={styles.text}>
         Uhmmm is commited to develop digital environments for academic,
         journalists and the public.
@@ -21,8 +21,6 @@ export default () => (
       <p className={styles.text}>
         If you are looking for collaboration please contact us at info@uhmmm.io
       </p>
-    </div>
-    <div className={styles.textContainerRight}>
       <p className={styles.text}>
         If you are looking for collaboration please contact us at info@uhmmm.net
       </p>
