@@ -36,3 +36,13 @@
 .listContainer {
   width: var(--grid-max-width);
 }
+
+@media (max-width: 1100px) {
+  .listHeader__decoration,
+  .listFooter__decoration {
+    display: none;
+  }
+  .outer {
+    padding-bottom: var(--grid-size);
+  }
+}

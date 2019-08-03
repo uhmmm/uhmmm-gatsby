@@ -35,17 +35,10 @@
 
 @media (max-width: 1100px) {
   :root {
-    --showcase-title-rows: 4;
-    --showcase-description-rows: 7;
     --showcase-columns: 1;
-    --showcase-text-column-end: calc(var(--grid-inner-column-count) + 1);
   }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --showcase-title-rows: 6;
-    --showcase-description-rows: 8;
-    --showcase-text-column-end: calc(var(--grid-inner-column-count) + 1);
+  .container {
+    display: flex;
+    flex-direction: column;
   }
 }
