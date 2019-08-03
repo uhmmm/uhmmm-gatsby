@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: var(--grid-inner-column-template);
   grid-auto-rows: var(--grid-size);
+  margin-bottom: var(--grid-size);
 }
 
 .titleContainer {
