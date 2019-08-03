@@ -6,6 +6,7 @@
 
 .contact {
   grid-column: span 3;
+  padding-right: calc(var(--grid-unit) * 3);
 }
 
 .title {
