@@ -28,13 +28,12 @@
 
   --grid-unit: 1rem;
 
-  /* General grid */
-  --grid-size: 7vw;
-  --grid-row-template: repeat(auto-fill, var(--grid-size));
-
   /* Outer grid */
-  --grid-outer-width: 112vw;
-  --grid-outer-columns-count: 16;
+  --grid-outer-width: 100vw;
+  --grid-outer-columns-count: 14;
+
+  --grid-size: calc(var(--grid-outer-width) / var(--grid-outer-columns-count));
+
   --grid-outer-column-template: repeat(
     var(--grid-outer-columns-count),
     var(--grid-size)
@@ -47,6 +46,9 @@
     var(--grid-inner-column-count),
     var(--grid-size)
   );
+
+  /* Grid rows */
+  --grid-row-template: repeat(auto-fill, var(--grid-size));
 
   /* REMOVE!!! BAD NAMES!!! */
   --grid-columns-width: var(--grid-column-width);

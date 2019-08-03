@@ -2,18 +2,17 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 
 .container {
   display: grid;
   width: var(--grid-max-width);
   grid-template-columns: var(--grid-inner);
+  padding-bottom: var(--grid-size);
 }
 
 .contact {
   grid-column: span 3;
-  padding: 0 calc(var(--grid-unit) * 3) var(--grid-size) 0;
 }
 
 .title {

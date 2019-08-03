@@ -22,7 +22,7 @@
 }
 
 .blockImgVertical {
-  grid-area: 6 / 13 / 7 / 14;
+  grid-area: 7 / 12 / 8 / 13;
   width: 100%;
   height: 100%;
   background: url(./single-vertical.png) 100% / 100%;
@@ -30,9 +30,9 @@
 }
 
 .blockNav {
-  grid-area: 1 / 1 / 2 / 6;
+  grid-area: 1 / 1 / 2 / 4;
   width: 100%;
   height: 100%;
-  background: url(./five-horizontal.png) 100% / 100%;
+  background: url(./triple-horizontal.png) 100% / 100%;
   box-shadow: 0 0 6px var(--color-purple);
 }
