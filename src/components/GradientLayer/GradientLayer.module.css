@@ -15,8 +15,10 @@
   /* gradient overlays (can't intersect masks */
   /* dots */
   --gradient-dot-size: 2px;
-  --gradient-dot-persquare-count: var(--grid-size) / 10;
-  --gradient-dot-gap: 1vw;
+  --gradient-dot-persquare-count: 7;
+  --gradient-dot-gap: calc(
+    var(--grid-size) / var(--gradient-dot-persquare-count)
+  );
   --gradient-vertical-dots-overlay: repeating-linear-gradient(
     to bottom,
     transparent 0px,
