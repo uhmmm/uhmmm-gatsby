@@ -8,15 +8,17 @@
 }
 
 .titleContainer {
-  grid-area: 1 / 1 / 4 / 12;
+  grid-area: 1 / 1 / calc(var(--type-title-rows) + 1) / 12;
 }
 
 .textContainerLeft {
-  grid-area: 4 / 1 / 11 / 5;
+  grid-area: calc(var(--type-title-rows) + 1) / 1 /
+    calc(var(--type-title-rows) + 7) / 5;
 }
 
 .textContainerRight {
-  grid-area: 4 / 6 / 11 / 10;
+  grid-area: calc(var(--type-title-rows) + 1) / 6 /
+    calc(var(--type-title-rows) + 7) / 10;
 }
 
 .text {
