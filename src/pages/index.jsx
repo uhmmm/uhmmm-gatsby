@@ -36,7 +36,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       limit: 2000
-      filter: { fileAbsolutePath: { regex: "/(content)/" } }
+      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
       sort: { fields: [fields___date], order: DESC }
     ) {
       edges {
