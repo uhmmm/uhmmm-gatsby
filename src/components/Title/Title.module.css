@@ -11,14 +11,6 @@
 
   color: white;
 
-  /* background-image: url(/title/tekstbg-hq.png); */
-  background-image: image-set(
-    url(/static/1610fc58f7f8025307b7d3875a95226c/5f3f7/tekstbg-hq.png) 300w,
-    url(/static/1610fc58f7f8025307b7d3875a95226c/5c74c/tekstbg-hq.png) 600w,
-    url(/static/1610fc58f7f8025307b7d3875a95226c/b36f0/tekstbg-hq.png) 1200w,
-    url(/static/1610fc58f7f8025307b7d3875a95226c/03059/tekstbg-hq.png) 1800w,
-    url(/static/1610fc58f7f8025307b7d3875a95226c/a3403/tekstbg-hq.png) 1920w
-  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
