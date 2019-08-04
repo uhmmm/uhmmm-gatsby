@@ -7,8 +7,7 @@ import Chip from '../Chip/Chip'
 
 import styles from './Project.module.css'
 
-const ImageSection = ({ post, position }) => {
-  console.log(post.projectImages[0].childImageSharp)
+const ImageSection = ({ project, position }) => {
   return (
     <Media query="(min-width: 1100px)">
       <div
@@ -19,12 +18,12 @@ const ImageSection = ({ post, position }) => {
       >
         <Img
           className={styles.img__under}
-          fluid={post.projectImages[0].childImageSharp.fluid}
+          fluid={project.projectImages[0].childImageSharp.fluid}
           alt=""
         />
         <Img
           className={styles.img__over}
-          fluid={post.projectImages[1].childImageSharp.fluid}
+          fluid={project.projectImages[1].childImageSharp.fluid}
           alt=""
         />
       </div>
@@ -32,12 +31,12 @@ const ImageSection = ({ post, position }) => {
   )
 }
 
-const Project = ({ post, index }) => {
+const Project = ({ project, index }) => {
   const position = (index + 1) % 2 ? 'imgfirst' : 'detailsfirst'
   return (
     <div className={styles.project}>
       {position === 'imgfirst' && (
-        <ImageSection post={post} position={position} />
+        <ImageSection project={project} position={position} />
       )}
 
       <div
@@ -47,18 +46,18 @@ const Project = ({ post, index }) => {
         )}
       >
         <div className={styles.tags}>
-          {post.tags &&
-            post.tags.map(tag => <Chip key={tag} text={tag} color="pink" />)}
+          {project.tags &&
+            project.tags.map(tag => <Chip key={tag} text={tag} color="pink" />)}
         </div>
 
         {/* <Link to={post.slug}> */}
-        <h1 className={styles.title}>{post.title}</h1>
-        <p className={styles.description}>{post.description}</p>
+        <h1 className={styles.title}>{project.title}</h1>
+        <p className={styles.description}>{project.description}</p>
         {/* </Link> */}
       </div>
 
       {position !== 'imgfirst' && (
-        <ImageSection post={post} position={position} />
+        <ImageSection project={project} position={position} />
       )}
     </div>
   )

@@ -4,22 +4,22 @@ import Project from '../Project/Project'
 
 import styles from './ProjectList.module.css'
 
-const getPostList = postEdges => {
-  const postList = []
-  postEdges.forEach(postEdge => {
-    postList.push({
-      ...postEdge.node.frontmatter,
-      ...postEdge.node.fields,
-      excerpt: postEdge.node.excerpt,
-      timeToRead: postEdge.node.timeToRead,
-      id: postEdge.node.id
+const getPostList = projectEdges => {
+  const projectList = []
+  projectEdges.forEach(projectEdge => {
+    projectList.push({
+      ...projectEdge.node.frontmatter,
+      ...projectEdge.node.fields,
+      excerpt: projectEdge.node.excerpt,
+      timeToRead: projectEdge.node.timeToRead,
+      id: projectEdge.node.id
     })
   })
-  return postList
+  return projectList
 }
 
-const ProjectList = ({ postEdges }) => {
-  const postList = getPostList(postEdges)
+const ProjectList = ({ projectEdges }) => {
+  const projectList = getPostList(projectEdges)
   return (
     <div className={styles.outer} id="projects">
       <div className={styles.listHeader}>
@@ -27,8 +27,8 @@ const ProjectList = ({ postEdges }) => {
         <div className={styles.listHeader__decoration} />
       </div>
       <div className={styles.listContainer}>
-        {postList.map((post, index) => (
-          <Project key={post.id} post={post} index={index} />
+        {projectList.map((project, index) => (
+          <Project key={project.id} project={project} index={index} />
         ))}
       </div>
       <div className={styles.listHeader}>

@@ -15,7 +15,7 @@ import config from '../../data/SiteConfig'
 import styles from './index.module.css'
 
 const Index = ({ data }) => {
-  const postEdges = data.allMarkdownRemark.edges
+  const projectEdges = data.allMarkdownRemark.edges
 
   return (
     <Layout>
@@ -24,7 +24,7 @@ const Index = ({ data }) => {
       <SEO />
       <Navbar />
       <Showcase />
-      <ProjectList postEdges={postEdges} />
+      <ProjectList projectEdges={projectEdges} />
       <Contact />
     </Layout>
   )
@@ -36,6 +36,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       limit: 2000
+      filter: { fileAbsolutePath: { regex: "/(content)/" } }
       sort: { fields: [fields___date], order: DESC }
     ) {
       edges {

@@ -15,8 +15,6 @@ tags:
 description: 'The historical Asiatic trading companies present a significant milestone in global trade. There is a lot of data about these companies available through work done by historians. We want to make this immersive through an interactive data-driven documentary and installation.'
 ---
 
-intriguing
-
 INTRODUCTION - The historical Dutch Asiatic trade was an important factor in shaping the world economy until late in the eighteenth century. During this time these seafarers changed their home country and a lot of countries in the Asiatic world, economically and culturally. The Dutch where already a large seafaring nation before the start of the East Asia Company when changes in political circumstances forced them to open new trading routes. However, due to constraints and ingenuity they took a different approach to this trade than other countries. 
 
 This is one of the stories that can be told by the data that has been digitised from historical over de past decades. Many old logs that took days or even weeks to analyse can be viewed on a map in mere seconds. Visualization technology is at a point where it is possible to develop user friendly interaction with this data. There are beautiful stories hidden away in this past and now we have the way to allow everyone to create their own perspective on the material available.  

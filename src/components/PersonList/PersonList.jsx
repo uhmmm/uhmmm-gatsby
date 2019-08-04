@@ -1,4 +1,6 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+
 import Person from '../Person/Person'
 
 import erik from './erik.png'
@@ -25,7 +27,44 @@ const people = [
   }
 ]
 
-const PersonList = () => {
+const personQuery = graphql`
+  query PersonQuery {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(people)/" } }
+      sort: { fields: [fields___date], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            email
+            image {
+              childImageSharp {
+                fluid(
+                  maxWidth: 1000
+                  quality: 100
+                  traceSVG: {
+                    color: "rgba(0,0,0,0)"
+                    turnPolicy: TURNPOLICY_MINORITY
+                    blackOnWhite: false
+                  }
+                ) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                  presentationWidth
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const PersonListRaw = ({ data }) => {
+  console.log('fromlist', people)
+  console.log('fromquery', data)
   return (
     <div className={styles.container}>
       {people.map(person => (
@@ -34,5 +73,12 @@ const PersonList = () => {
     </div>
   )
 }
+
+const PersonList = props => (
+  <StaticQuery
+    query={personQuery}
+    render={data => <PersonListRaw data={data} {...props} />}
+  />
+)
 
 export default PersonList
