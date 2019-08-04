@@ -1,19 +1,14 @@
 @font-face {
   font-family: 'Sans Sharp';
-  src: url('./fonts/ss/ss-600.otf') format('opentype');
+  src: url('./fonts/ss/ss-700.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Sans Sharp';
-  src: url('./fonts/ss/ss-700.otf') format('opentype');
-  font-style: bold;
-}
-
-@font-face {
-  font-family: 'Flaco mono';
-  src: url('./fonts/flaco/Flaco-Mono.ttf') format('truetype');
-  font-weight: normal;
+  src: url('./fonts/ss/ss-600.otf') format('opentype');
+  font-weight: bold;
   font-style: normal;
 }
 
