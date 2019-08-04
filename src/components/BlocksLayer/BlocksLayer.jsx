@@ -1,13 +1,22 @@
 import React from 'react'
+import MediaQuery from 'react-responsive'
 
 import styles from './BlocksLayer.module.css'
 
 const BlockImgHorizontal = () => {
-  return <div className={styles.blockImgHorizontal} />
+  return (
+    <MediaQuery query="(min-width: 600px)">
+      <div className={styles.blockImgHorizontal} />
+    </MediaQuery>
+  )
 }
 
 const BlockImgVertical = () => {
-  return <div className={styles.blockImgVertical} />
+  return (
+    <MediaQuery query="(min-width: 1100px)">
+      <div className={styles.blockImgVertical} />
+    </MediaQuery>
+  )
 }
 
 const BlockNav = () => {
