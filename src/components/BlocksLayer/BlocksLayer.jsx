@@ -1,7 +1,7 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 import { StaticQuery, graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
 
 import styles from './BlocksLayer.module.css'
 
@@ -27,12 +27,7 @@ export const backgroundQuery = graphql`
 const BlockImgHorizontal = ({ image }) => {
   return (
     <MediaQuery query="(min-width: 600px)">
-      <BackgroundImage
-        Tag="div"
-        className={styles.blockImgHorizontal}
-        fluid={image}
-        backgroundColor="#ff00ff"
-      />
+      <Img className={styles.blockImgHorizontal} fluid={image} />
     </MediaQuery>
   )
 }
@@ -40,25 +35,13 @@ const BlockImgHorizontal = ({ image }) => {
 const BlockImgVertical = ({ image }) => {
   return (
     <MediaQuery query="(min-width: 1100px)">
-      <BackgroundImage
-        Tag="div"
-        className={styles.blockImgVertical}
-        fluid={image}
-        backgroundColor="#ff00ff"
-      />
+      <Img className={styles.blockImgVertical} fluid={image} />
     </MediaQuery>
   )
 }
 
 const BlockNav = ({ image }) => {
-  return (
-    <BackgroundImage
-      Tag="div"
-      className={styles.blockNav}
-      fluid={image}
-      backgroundColor="#ff00ff"
-    />
-  )
+  return <Img className={styles.blockNav} fluid={image} />
 }
 
 const BlocksLayerRaw = ({ data }) => {
