@@ -33,6 +33,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-media": "^1.9.2",
     "react-responsive": "^7.0.0",
     "react-scroll": "^1.7.12",
     "react-share": "^3.0.0",
