@@ -1,13 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import cx from 'classnames'
 import Media from 'react-media'
+import Img from 'gatsby-image'
 
 import Chip from '../Chip/Chip'
 
 import styles from './Project.module.css'
 
 const ImageSection = ({ post, position }) => {
+  console.log(post.projectImages[0].childImageSharp)
   return (
     <Media query="(min-width: 1100px)">
       <div
@@ -16,14 +17,14 @@ const ImageSection = ({ post, position }) => {
           position !== 'imgfirst' && styles.imgSectionRight
         )}
       >
-        <img
+        <Img
           className={styles.img__under}
-          src={post.projectImages[0].publicURL}
+          fluid={post.projectImages[0].childImageSharp.fluid}
           alt=""
         />
-        <img
+        <Img
           className={styles.img__over}
-          src={post.projectImages[1].publicURL}
+          fluid={post.projectImages[1].childImageSharp.fluid}
           alt=""
         />
       </div>

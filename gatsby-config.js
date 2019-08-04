@@ -83,7 +83,7 @@ module.exports = {
         display: 'minimal-ui',
         icons: [
           {
-            src: '/logos/logo-1024.png',
+            src: config.siteLogo,
             sizes: '1024x1024',
             type: 'image/png'
           }

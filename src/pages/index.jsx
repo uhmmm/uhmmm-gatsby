@@ -51,7 +51,21 @@ export const pageQuery = graphql`
             title
             tags
             projectImages {
-              publicURL
+              childImageSharp {
+                fluid(
+                  maxWidth: 1000
+                  quality: 100
+                  traceSVG: {
+                    color: "rgba(0,0,0,0)"
+                    turnPolicy: TURNPOLICY_MINORITY
+                    blackOnWhite: false
+                  }
+                ) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                  presentationWidth
+                  tracedSVG
+                }
+              }
             }
             date
             description
