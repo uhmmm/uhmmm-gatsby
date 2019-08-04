@@ -1,6 +1,7 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import styles from './BlocksLayer.module.css'
 
@@ -10,6 +11,7 @@ export const backgroundQuery = graphql`
       edges {
         node {
           id
+          name
           childImageSharp {
             fluid(
               maxWidth: 500
@@ -30,33 +32,39 @@ export const backgroundQuery = graphql`
   }
 `
 
-const BlockImgHorizontal = () => {
+const BlockImgHorizontal = ({ image }) => {
   return (
     <MediaQuery query="(min-width: 600px)">
-      <div className={styles.blockImgHorizontal} />
+      <Img className={styles.blockImgHorizontal} fluid={image} />
     </MediaQuery>
   )
 }
 
-const BlockImgVertical = () => {
+const BlockImgVertical = ({ image }) => {
   return (
     <MediaQuery query="(min-width: 1100px)">
-      <div className={styles.blockImgVertical} />
+      <Img className={styles.blockImgVertical} fluid={image} />
     </MediaQuery>
   )
 }
 
-const BlockNav = () => {
-  return <div className={styles.blockNav} />
+const BlockNav = ({ image }) => {
+  return <Img className={styles.blockNav} fluid={image} />
 }
 
 const BlocksLayerRaw = ({ data }) => {
-  console.log(data)
+  const images = data.allFile.edges.reduce(
+    (acc, image) => ({
+      ...acc,
+      [image.node.name]: image.node.childImageSharp.fluid
+    }),
+    {}
+  )
   return (
     <div className={styles.container}>
-      <BlockNav />
-      <BlockImgHorizontal />
-      <BlockImgVertical />
+      <BlockNav image={images['triple-horizontal']} />
+      <BlockImgHorizontal image={images['single-horizontal']} />
+      <BlockImgVertical image={images['single-vertical']} />
     </div>
   )
 }
