@@ -13,16 +13,8 @@ export const backgroundQuery = graphql`
           id
           name
           childImageSharp {
-            fluid(
-              maxWidth: 500
-              quality: 100
-              traceSVG: {
-                color: "rgba(0,0,0,0)"
-                turnPolicy: TURNPOLICY_MINORITY
-                blackOnWhite: false
-              }
-            ) {
-              ...GatsbyImageSharpFluid_tracedSVG
+            fluid(maxWidth: 500, quality: 100) {
+              ...GatsbyImageSharpFluid
               presentationWidth
             }
           }
