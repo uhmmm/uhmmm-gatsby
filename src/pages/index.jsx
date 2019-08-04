@@ -16,7 +16,6 @@ import styles from './index.module.css'
 
 const Index = ({ data }) => {
   const projectEdges = data.allMarkdownRemark.edges
-
   return (
     <Layout>
       <Helmet title={config.siteTitle} />
@@ -36,7 +35,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       limit: 2000
-      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      filter: { fileAbsolutePath: { regex: "/(data/projects)/" } }
       sort: { fields: [fields___date], order: DESC }
     ) {
       edges {
@@ -49,6 +48,7 @@ export const pageQuery = graphql`
           excerpt
           timeToRead
           frontmatter {
+            name
             title
             tags
             projectImages {
@@ -64,7 +64,6 @@ export const pageQuery = graphql`
                 ) {
                   ...GatsbyImageSharpFluid_tracedSVG
                   presentationWidth
-                  tracedSVG
                 }
               }
             }

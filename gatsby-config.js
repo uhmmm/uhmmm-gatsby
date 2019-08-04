@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
-        path: `${__dirname}/data/projects/`
+        name: 'projects',
+        path: `${__dirname}/data/projects`
       }
     },
     {
