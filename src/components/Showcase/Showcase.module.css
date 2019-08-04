@@ -12,6 +12,10 @@
   grid-template-columns: var(--grid-inner-column-template);
   grid-auto-rows: var(--grid-size);
   margin-bottom: var(--grid-size);
+
+  /* scroll offset */
+  margin-top: calc(-1 * var(--grid-size));
+  padding-top: var(--grid-size);
 }
 
 .titleContainer {
