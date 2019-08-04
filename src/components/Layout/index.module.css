@@ -3,7 +3,6 @@
   display: grid;
   width: 100vw;
   min-height: 100vh;
-  overflow: hidden;
   justify-content: center;
 }
 

@@ -10,7 +10,7 @@ category: 'tech'
 authors:
   - Erik van Zummeren
 tags:
-  - Launched
+  - Pre-production
 description: 'YouTube has a massive effect on our society. Where the public debate was previously held in local venues, in recent times these have more and more shifted towards closed environment such as YouTube. This project aims to make the public debate truly public again by making its content searchable.'
 ---
 

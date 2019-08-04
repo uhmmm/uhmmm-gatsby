@@ -17,7 +17,6 @@ it breaks component isolation. Only permeate the component border using CSS vari
 html {
   font-size: var(--type-base);
   height: 100%;
-  overflow: auto;
 }
 
 body {
