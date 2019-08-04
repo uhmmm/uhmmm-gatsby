@@ -3,29 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Person from '../Person/Person'
 
-import erik from './erik.png'
-import rj from './rj.png'
-import reika from './reika.png'
-
 import styles from './PersonList.module.css'
-
-const people = [
-  {
-    name: 'Reika Chavers',
-    email: 'reika@uhmmm.net',
-    image: reika
-  },
-  {
-    name: 'Robert-Jan Korteschiel',
-    email: 'robert-jan@uhmmm.net',
-    image: rj
-  },
-  {
-    name: 'Erik van Zummeren',
-    email: 'erik@uhmmm.net',
-    image: erik
-  }
-]
 
 const personQuery = graphql`
   query PersonQuery {
@@ -61,13 +39,19 @@ const personQuery = graphql`
     }
   }
 `
+const getPeople = data => {
+  return [
+    ...data.allMarkdownRemark.edges.map(person => {
+      return { ...person.node.frontmatter }
+    })
+  ]
+}
 
 const PersonListRaw = ({ data }) => {
-  console.log('fromlist', people)
-  console.log('fromquery', data)
+  const peopleList = getPeople(data)
   return (
     <div className={styles.container}>
-      {people.map(person => (
+      {peopleList.map(person => (
         <Person key={person.name} person={person} />
       ))}
     </div>
