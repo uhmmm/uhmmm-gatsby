@@ -11,24 +11,23 @@ export default () => (
     </div>
     <div className={styles.textContainer}>
       <p className={styles.text}>
-        Uhmmm is commited to develop digital environments for academic,
-        journalists and the public.
+        We are a small collective that research, design, and code digital
+        environments. Our projects are on the intersection between academia,
+        journalism, and society.
       </p>
       <p className={styles.text}>
-        Some of our projects have been self-initiated, while others have been
-        made in partnership.
+        Most of our projects are self-initiated, but we don't like to build
+        alone. We are always on the lookout for collaborations. If you have an
+        idea on your mind, drop us a mail at
+        <a className={styles.text} href="mailto:info@uhmmm.net">
+          info@uhmmm.net
+        </a>
       </p>
       <p className={styles.text}>
-        If you are looking for collaboration please contact us at info@uhmmm.io
+        In our work, we value inclusive perspectives and creativity. Whatever it
+        is, we try to get there with our partners. Together we create new
+        digital environments.
       </p>
-      {/* <p className={styles.text}>
-        If you are looking for collaboration please contact us at info@uhmmm.net
-      </p>
-      <p className={styles.text}>
-        Daarnaast moet hier nog een paragraaf komen omdat er anders een hele
-        vreemde open ruimte ontstaat en RJ daardoor gaat zeggen dat dingen niet
-        in balans zijn.
-      </p> */}
     </div>
   </div>
 )

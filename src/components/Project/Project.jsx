@@ -31,7 +31,7 @@ const ImageSection = ({ post, position }) => {
 const Project = ({ post, index }) => {
   const position = (index + 1) % 2 ? 'imgfirst' : 'detailsfirst'
   return (
-    <div className={styles.post}>
+    <div className={styles.project}>
       {position === 'imgfirst' && (
         <ImageSection post={post} position={position} />
       )}

@@ -1,5 +1,5 @@
 :root {
-  --showcase-title-rows: 4;
+  --showcase-title-rows: 3;
   --showcase-description-rows: 5;
   --showcase-columns: 2;
   --showcase-text-column-end: 10;
@@ -25,9 +25,19 @@
     var(--showcase-text-column-end);
   columns: var(--showcase-columns);
   column-gap: var(--grid-size);
+  break-inside: avoid-column;
 }
 
 .text {
+  display: block;
+  font-family: var(--type-family-body);
+  font-size: var(--type-body);
+  line-height: var(--type-body-lh);
+  color: var(--color-day);
+}
+
+.link {
+  display: block;
   font-family: var(--type-family-body);
   font-size: var(--type-body);
   line-height: var(--type-body-lh);
@@ -37,6 +47,7 @@
 @media (max-width: 1100px) {
   :root {
     --showcase-columns: 1;
+    --showcase-title-rows: 4;
   }
   .container {
     display: flex;
