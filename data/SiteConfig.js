@@ -1,12 +1,13 @@
 module.exports = {
-  siteTitle: 'Uhmmm - Digital Tools for Journalism and Academia', // Site title.
+  siteTitle: 'Uhmmm - Digital environments', // Site title.
   siteTitleShort: 'Uhmmm', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: 'Uhmmm - Digital Tools for Journalism and Academia', // Alternative site title for SEO.
+  siteTitleAlt:
+    'Uhmmm - Digital environments where academia, journalism & society meets', // Alternative site title for SEO.
   siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
   siteUrl: 'https://uhmmm.net', // Domain of your website without pathPrefix.
   pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
-    'Presentational website for the design and development group Uhmmm, previously known as Research Assistant', // Website description used for RSS feeds/meta description tag.
+    'We are a small collective that research, design, and code digital environments. Our projects are on the intersection between academia, journalism, and society.', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   siteFBAppID: '', // FB Application ID for using app insights
   googleAnalyticsID: 'UA-128077750-3', // GA tracking ID.
