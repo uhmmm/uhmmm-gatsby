@@ -1,20 +1,22 @@
 import React from 'react'
-import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 
 import PersonList from '../PersonList/PersonList'
 
 import styles from './Contact.module.css'
 
-const subtitle = ({ type, grid }) => [
+// const subtitle =
+
+const Subtitle = styled.h2(({ theme: { type, grid } }) => [
   type.templates.subtitle,
   { padding: `0 0 ${grid.unit} 0` }
-]
+])
 
 const Contact = () => {
   return (
     <div className={styles.container} id="contact">
       <div className={styles.contact}>
-        <h2 css={subtitle}>contact</h2>
+        <Subtitle>contact</Subtitle>
         <p className={styles.text}>
           Uhmmm is based in Amsterdam and New York. Our headquarters are in
           Amsterdam.
