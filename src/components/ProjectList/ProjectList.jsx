@@ -21,7 +21,7 @@ const getPostList = projectEdges => {
 const ProjectList = ({ projectEdges }) => {
   const projectList = getPostList(projectEdges)
   return (
-    <div className={styles.outer} id="projects">
+    <div className={styles.container} id="projects">
       <div className={styles.listHeader}>
         <h2 className={styles.subtitle}>projects</h2>
         <div className={styles.listHeader__decoration} />

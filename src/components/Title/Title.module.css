@@ -1,16 +1,11 @@
-.container {
-}
-
 .title {
   display: block;
 
-  font-family: var(--type-family-title);
-  font-size: var(--type-title);
+  font-family: var(--type-title-family);
+  font-size: var(--type-title-size);
   line-height: var(--type-title-lh);
   font-weight: var(--type-title-weight);
-
-  color: white;
-
+  color: var(--type-color);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

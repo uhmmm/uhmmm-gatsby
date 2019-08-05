@@ -11,19 +11,22 @@
 }
 
 .logoText {
-  font-family: var(--type-family-title);
-  font-size: var(--type-subtitle);
+  font-family: var(--type-subtitle-family);
   font-weight: var(--type-subtitle-weight);
-  color: var(--color-day);
+  font-size: var(--type-subtitle-size);
+  line-height: var(--type-subtitle-lh);
+  color: var(--type-color);
 }
 
 .link {
   justify-self: center;
   align-self: center;
-  font-family: var(--type-family-body);
-  font-size: var(--type-subtext);
+
+  font-family: var(--type-subtext-family);
   font-weight: var(--type-subtext-weight);
-  color: var(--color-day);
+  font-size: var(--type-subtext-size);
+  line-height: var(--type-subtext-lh);
+  color: var(--type-color);
 }
 
 .linkAbout {

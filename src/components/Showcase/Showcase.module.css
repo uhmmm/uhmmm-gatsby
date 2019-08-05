@@ -34,19 +34,24 @@
 
 .text {
   display: block;
-  font-family: var(--type-family-body);
-  font-size: var(--type-body);
-  line-height: var(--type-body-lh);
-  color: var(--color-day);
   break-inside: avoid-column;
+
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-lh);
+  color: var(--type-color);
 }
 
 .link {
   display: block;
-  font-family: var(--type-family-body);
-  font-size: var(--type-body);
-  line-height: var(--type-body-lh);
   color: var(--color-day);
+
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-lh);
+  color: var(--type-color);
 }
 
 @media (max-width: 1100px) {
@@ -58,6 +63,7 @@
   .titleContainer {
     padding-bottom: calc(var(--grid-size) / 2);
   }
+
   .container {
     display: flex;
     flex-direction: column;

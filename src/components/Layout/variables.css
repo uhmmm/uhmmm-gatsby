@@ -1,42 +1,5 @@
 :root {
-  --type-base: 13px;
-
-  --type-title-family: 'Sans Sharp';
-  --type-title-size: calc(var(--grid-size) / 1.25); /* view-width typography */
-  --type-title-lh: calc(var(--grid-size) / 1.25); /* view-width typography */
-  --type-title-weight: 900;
-
-  --type-subtitle-family: 'Sans Sharp';
-  --type-subtitle-size: 2rem;
-  --type-subtitle-lh: 2rem;
-  --type-subtitle-weight: 700;
-
-  --type-header-family: 'Untitled Sans';
-  --type-header-size: 2.3rem;
-  --type-header-lh: 3rem;
-  --type-header-weight: 100;
-
-  --type-body-family: 'Untitled Sans';
-  --type-body-size: 2rem;
-  --type-body-lh: 2.5rem;
-  --type-body-weight: 2.5rem;
-
-  --type-subtext-family: 'Untitled Sans';
-  --type-subtext-size: 1.2rem;
-  --type-subtext-lh: 1.8rem;
-  --type-subtext-weight: 1.8rem;
-
-  /* remove */
-  --type-title: var(--type-title-size);
-  --type-subtitle: var(--type-subtitle-size);
-  --type-header: var(--type-header-size);
-  --type-subtext: var(--type-subtext-size);
-  --type-body: var(--type-body-size);
-
-  --type-family-title: 'Sans Sharp';
-  --type-family-header: 'Untitled Sans';
-  --type-family-body: 'Untitled Sans';
-
+  /* colors */
   --color-dark: black;
   --color-grey: grey;
   --color-day: white;
@@ -48,7 +11,38 @@
   --color-blue: #17c0c0;
   --color-blue-half: rgba(0, 195, 194, 0.5);
 
-  /* Outer grid */
+  /* typography */
+  --type-base: 13px;
+
+  --type-title-family: 'Sans Sharp';
+  --type-title-weight: 900;
+  --type-title-size: calc(var(--grid-size) / 1.25); /* view-width typography */
+  --type-title-lh: calc(var(--grid-size) / 1.25); /* view-width typography */
+
+  --type-subtitle-family: 'Sans Sharp';
+  --type-subtitle-weight: 700;
+  --type-subtitle-size: 2rem;
+  --type-subtitle-lh: 2rem;
+
+  --type-header-family: 'Untitled Sans';
+  --type-header-weight: 500;
+  --type-header-size: 2.3rem;
+  --type-header-lh: 3rem;
+
+  --type-body-family: 'Untitled Sans';
+  --type-body-weight: 400;
+  --type-body-size: 2rem;
+  --type-body-lh: 2.5rem;
+
+  --type-subtext-family: 'Untitled Sans';
+  --type-subtext-weight: 400;
+  --type-subtext-size: 1.2rem;
+  --type-subtext-lh: 1.8rem;
+
+  --type-color: var(--color-day);
+  --type-color-grey: var(--color-grey);
+
+  /* outer grid */
   --grid-outer-width: 100vw;
   --grid-outer-column-count: 14;
   --grid-outer-column-template: repeat(
@@ -56,7 +50,7 @@
     var(--grid-size)
   );
 
-  /* Inner grid */
+  /* inner grid */
   --grid-inner-column-count: 12;
   --grid-inner-width: calc(var(--grid-size) * var(--grid-inner-column-count));
   --grid-inner-column-template: repeat(
@@ -64,7 +58,7 @@
     var(--grid-size)
   );
 
-  /* General grid stuff */
+  /* general grid stuff */
   --grid-row-template: repeat(auto-fill, var(--grid-size));
   --grid-size: calc(var(--grid-outer-width) / var(--grid-outer-columns-count));
   --grid-unit: 1rem;

@@ -1,4 +1,4 @@
-.outer {
+.container {
   position: relative;
   width: 100%;
   justify-content: center;
@@ -16,10 +16,11 @@
 }
 
 .subtitle {
-  font-family: var(--type-family-title);
-  font-size: var(--type-subtitle);
+  font-family: var(--type-subtitle-family);
   font-weight: var(--type-subtitle-weight);
-  color: var(--color-day);
+  font-size: var(--type-subtitle-size);
+  line-height: var(--type-subtitle-lh);
+  color: var(--type-color);
 }
 
 .listHeader__decoration {

@@ -1,13 +1,17 @@
 .container {
   display: inline-block;
-  background: var(--color-pink);
   border: 0;
-  color: white;
-  font-family: var(--type-family-body);
-  font-size: var(--type-subtext);
   padding: calc(var(--grid-unit) / 4);
   outline: 0;
   margin: 0 var(--grid-unit) var(--grid-unit) 0;
+
+  background: var(--color-pink);
+
+  font-family: var(--type-subtext-family);
+  font-weight: var(--type-subtext-weight);
+  line-height: var(--type-subtext-lh);
+  font-size: var(--type-subtext-size);
+  color: var(--type-color);
 }
 
 .pink {

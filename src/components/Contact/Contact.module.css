@@ -14,17 +14,20 @@
 }
 
 .title {
-  font-family: var(--type-family-title);
-  font-size: var(--type-subtitle);
-  padding-bottom: var(--grid-unit);
-  color: var(--color-day);
+  font-family: var(--type-subtitle-family);
+  font-weight: var(--type-subtitle-weight);
+  font-size: var(--type-subtitle-size);
+  line-height: var(--type-subtitle-lh);
+  color: var(--type-color);
+  padding: 0 0 var(--grid-unit) 0;
 }
 
 .text {
-  font-family: var(--type-family-body);
-  font-size: var(--type-subtext);
+  font-family: var(--type-subtext-family);
+  font-weight: var(--type-subtext-weight);
   line-height: var(--type-subtext-lh);
-  color: var(--color-day);
+  font-size: var(--type-subtext-size);
+  color: var(--type-color);
 }
 
 .people {
