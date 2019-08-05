@@ -5,25 +5,6 @@ import Img from 'gatsby-image'
 
 import styles from './BlocksLayer.module.css'
 
-export const backgroundQuery = graphql`
-  query backgroundQuery {
-    allFile(filter: { relativeDirectory: { regex: "/background/" } }) {
-      edges {
-        node {
-          id
-          name
-          childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
-              ...GatsbyImageSharpFluid
-              presentationWidth
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
 const BlockImgHorizontal = ({ image }) => {
   return (
     <MediaQuery query="(min-width: 600px)">
@@ -60,6 +41,26 @@ const BlocksLayerRaw = ({ data }) => {
     </div>
   )
 }
+
+// get data into the component
+const backgroundQuery = graphql`
+  query backgroundQuery {
+    allFile(filter: { relativeDirectory: { regex: "/background/" } }) {
+      edges {
+        node {
+          id
+          name
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 100) {
+              ...GatsbyImageSharpFluid
+              presentationWidth
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const BlocksLayer = props => (
   <StaticQuery
