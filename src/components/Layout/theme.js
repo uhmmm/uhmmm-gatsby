@@ -1,52 +1,76 @@
+import { css } from '@emotion/core'
+
 const color = {
   dark: 'black',
   grey: 'grey',
   day: 'white',
-  day68: rgba(255, 255, 255, 0.68),
+  day68: 'rgba(255, 255, 255, 0.68)',
   purple: '#a960ff',
   pink: '#ff00ff',
   lightpink: '#fff9ff',
   green: '#00d3ba',
   blue: ' #17c0c0',
-  blueHalf: rgba(0, 195, 194, 0.5)
+  blueHalf: 'rgba(0, 195, 194, 0.5)'
 }
 
-const type = {
+const typeColors = {
+  day: color.day,
+  grey: color.grey
+}
+
+let type = {
   base: '13px',
-  title: {
-    family: 'Sans Sharp',
-    weight: 900,
-    size: 'calc(var(--grid-size) / 1.25)',
-    lineheight: 'calc(var(--grid-size) / 1.25)'
-  },
-  subtitle: {
-    family: 'Sans Sharp',
-    weight: 700,
-    size: '2rem',
-    lineheight: '2rem'
-  },
-  header: {
-    family: 'Untitled Sans',
-    weight: 500,
-    size: '2.3rem',
-    lineheight: '3rem'
-  },
-  body: {
-    family: 'Untitled Sans',
-    weight: 400,
-    size: '2rem',
-    lineheight: '2.5rem'
-  },
-  subtext: {
-    family: 'Untitled Sans',
-    weight: 400,
-    size: '1.2rem',
-    lineheight: '1.8rem'
-  },
-  color: {
-    day: color.day,
-    grey: color.grey
+  var: {
+    title: {
+      fontFamily: 'Sans Sharp',
+      fontWeight: 900,
+      fontSize: 'calc(var(--grid-size) / 1.25)',
+      lineHeight: 'calc(var(--grid-size) / 1.25)',
+      color: typeColors.day
+    },
+    subtitle: {
+      fontFamily: 'Sans Sharp',
+      fontWeight: 700,
+      fontSize: '2rem',
+      lineHeight: '2rem',
+      color: typeColors.day
+    },
+    header: {
+      fontFamily: 'Untitled Sans',
+      fontWeight: 500,
+      fontSize: '2.3rem',
+      lineHeight: '3rem',
+      color: typeColors.day
+    },
+    body: {
+      fontFamily: 'Untitled Sans',
+      fontWeight: 400,
+      fontSize: '2rem',
+      lineHeight: '2.5rem',
+      color: typeColors.day
+    },
+    subtext: {
+      fontFamily: 'Untitled Sans',
+      fontWeight: 400,
+      fontSize: '1.2rem',
+      lineHeight: '1.8rem',
+      color: typeColors.day
+    },
+    color: typeColors
   }
+}
+
+const templates = {
+  title: css(type.var.title),
+  subtitle: css(type.var.subtitle),
+  header: css(type.var.header),
+  body: css(type.var.body),
+  subtext: css(type.var.subtext)
+}
+
+type = {
+  ...type,
+  templates
 }
 
 const gridSize =
@@ -80,4 +104,5 @@ const theme = {
   grid
 }
 
+console.log(theme)
 export default theme
