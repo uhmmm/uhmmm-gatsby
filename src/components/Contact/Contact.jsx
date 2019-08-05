@@ -9,8 +9,8 @@ const Subtitle = styled.h2(({ theme: { type, grid } }) => [
   type.subtitle,
   { padding: `0 0 ${grid.unit} 0` }
 ])
-
 const Subtext = styled.p(({ theme: { type } }) => [type.subtext])
+const ListItem = styled.li(({ theme: { type } }) => [type.subtext])
 
 const Contact = () => {
   return (
@@ -23,13 +23,11 @@ const Contact = () => {
         </Subtext>
 
         <ul>
-          <li className={styles.text}>Uhmmm.net</li>
-          <li className={styles.text}>Orteliuskade 4G</li>
-          <li className={styles.text}>1057AA Amsterdam</li>
-        </ul>
-        <br />
-        <ul>
-          <li className={styles.text}>info@uhmmm.net</li>
+          <ListItem>Uhmmm.net</ListItem>
+          <ListItem>Orteliuskade 4G</ListItem>
+          <ListItem>1057AA Amsterdam</ListItem>
+          <br />
+          <ListItem>info@uhmmm.net</ListItem>
         </ul>
       </div>
       <div className={styles.people}>

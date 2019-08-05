@@ -1,5 +1,3 @@
-import { css } from '@emotion/core'
-
 const colors = {
   dark: 'black',
   grey: 'grey',
