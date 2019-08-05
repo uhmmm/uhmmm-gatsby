@@ -1,5 +1,4 @@
 import React from 'react'
-import { withTheme } from 'emotion-theming'
 import { css } from '@emotion/core'
 
 import PersonList from '../PersonList/PersonList'
@@ -38,4 +37,4 @@ const Contact = () => {
   )
 }
 
-export default withTheme(Contact)
+export default Contact
