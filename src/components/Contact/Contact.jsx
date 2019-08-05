@@ -6,11 +6,11 @@ import PersonList from '../PersonList/PersonList'
 import styles from './Contact.module.css'
 
 const Subtitle = styled.h2(({ theme: { type, grid } }) => [
-  type.templates.subtitle,
+  type.subtitle,
   { padding: `0 0 ${grid.unit} 0` }
 ])
 
-const Subtext = styled.p(({ theme: { type } }) => [type.templates.subtext])
+const Subtext = styled.p(({ theme: { type } }) => [type.subtext])
 
 const Contact = () => {
   return (

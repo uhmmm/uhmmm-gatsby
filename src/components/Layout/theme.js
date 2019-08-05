@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 
-const color = {
+const colors = {
   dark: 'black',
   grey: 'grey',
   day: 'white',
@@ -14,63 +14,48 @@ const color = {
 }
 
 const typeColors = {
-  day: color.day,
-  grey: color.grey
+  day: colors.day,
+  grey: colors.grey
 }
 
-let type = {
+const type = {
   base: '13px',
-  var: {
-    title: {
-      fontFamily: 'Sans Sharp',
-      fontWeight: 900,
-      fontSize: 'calc(var(--grid-size) / 1.25)',
-      lineHeight: 'calc(var(--grid-size) / 1.25)',
-      color: typeColors.day
-    },
-    subtitle: {
-      fontFamily: 'Sans Sharp',
-      fontWeight: 700,
-      fontSize: '2rem',
-      lineHeight: '2rem',
-      color: typeColors.day
-    },
-    header: {
-      fontFamily: 'Untitled Sans',
-      fontWeight: 500,
-      fontSize: '2.3rem',
-      lineHeight: '3rem',
-      color: typeColors.day
-    },
-    body: {
-      fontFamily: 'Untitled Sans',
-      fontWeight: 400,
-      fontSize: '2rem',
-      lineHeight: '2.5rem',
-      color: typeColors.day
-    },
-    subtext: {
-      fontFamily: 'Untitled Sans',
-      fontWeight: 400,
-      fontSize: '1.2rem',
-      lineHeight: '1.8rem',
-      color: typeColors.day
-    },
-    color: typeColors
-  }
-}
-
-const templates = {
-  title: css(type.var.title),
-  subtitle: css(type.var.subtitle),
-  header: css(type.var.header),
-  body: css(type.var.body),
-  subtext: css(type.var.subtext)
-}
-
-type = {
-  ...type,
-  templates
+  title: {
+    fontFamily: 'Sans Sharp',
+    fontWeight: 900,
+    fontSize: 'calc(var(--grid-size) / 1.25)',
+    lineHeight: 'calc(var(--grid-size) / 1.25)',
+    color: typeColors.day
+  },
+  subtitle: {
+    fontFamily: 'Sans Sharp',
+    fontWeight: 700,
+    fontSize: '2rem',
+    lineHeight: '2rem',
+    color: typeColors.day
+  },
+  header: {
+    fontFamily: 'Untitled Sans',
+    fontWeight: 500,
+    fontSize: '2.3rem',
+    lineHeight: '3rem',
+    color: typeColors.day
+  },
+  body: {
+    fontFamily: 'Untitled Sans',
+    fontWeight: 400,
+    fontSize: '2rem',
+    lineHeight: '2.5rem',
+    color: typeColors.day
+  },
+  subtext: {
+    fontFamily: 'Untitled Sans',
+    fontWeight: 400,
+    fontSize: '1.2rem',
+    lineHeight: '1.8rem',
+    color: typeColors.day
+  },
+  colors: typeColors
 }
 
 const gridSize =
@@ -99,10 +84,9 @@ const grid = {
 }
 
 const theme = {
-  color,
+  colors,
   type,
   grid
 }
 
-console.log(theme)
 export default theme
