@@ -7,14 +7,13 @@
 }
 
 .logo {
-  grid-area: 1 / 1 / 2 / 4;
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 .logoText {
   font-family: var(--type-family-title);
-  font-style: bold;
   font-size: var(--type-subtitle);
-  font-weight: 100;
+  font-weight: var(--type-subtitle-weight);
   color: var(--color-day);
 }
 
@@ -23,7 +22,7 @@
   align-self: center;
   font-family: var(--type-family-body);
   font-size: var(--type-subtext);
-  font-weight: 100;
+  font-weight: var(--type-subtext-weight);
   color: var(--color-day);
 }
 

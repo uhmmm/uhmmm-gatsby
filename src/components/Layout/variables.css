@@ -1,21 +1,41 @@
 :root {
-  --type-family-body: 'Untitled Sans';
-  --type-family-title: 'Sans Sharp';
-  --type-family-header: 'Untitled Sans';
-
   --type-base: 13px;
 
-  --type-title: calc(var(--grid-size) / 1.25);
-  --type-title-lh: calc(var(--grid-size) / 1.25);
-  --type-subtitle: 2rem;
-  --type-subtitle-lh: 2rem;
+  --type-title-family: 'Sans Sharp';
+  --type-title-size: calc(var(--grid-size) / 1.25); /* view-width typography */
+  --type-title-lh: calc(var(--grid-size) / 1.25); /* view-width typography */
+  --type-title-weight: 900;
 
-  --type-header: 2.3rem;
+  --type-subtitle-family: 'Sans Sharp';
+  --type-subtitle-size: 2rem;
+  --type-subtitle-lh: 2rem;
+  --type-subtitle-weight: 700;
+
+  --type-header-family: 'Untitled Sans';
+  --type-header-size: 2.3rem;
   --type-header-lh: 3rem;
-  --type-body: 2rem;
+  --type-header-weight: 100;
+
+  --type-body-family: 'Untitled Sans';
+  --type-body-size: 2rem;
   --type-body-lh: 2.5rem;
-  --type-subtext: 1.2rem;
+  --type-body-weight: 2.5rem;
+
+  --type-subtext-family: 'Untitled Sans';
+  --type-subtext-size: 1.2rem;
   --type-subtext-lh: 1.8rem;
+  --type-subtext-weight: 1.8rem;
+
+  /* remove */
+  --type-title: var(--type-title-size);
+  --type-subtitle: var(--type-subtitle-size);
+  --type-header: var(--type-header-size);
+  --type-subtext: var(--type-subtext-size);
+  --type-body: var(--type-body-size);
+
+  --type-family-title: 'Sans Sharp';
+  --type-family-header: 'Untitled Sans';
+  --type-family-body: 'Untitled Sans';
 
   --color-dark: black;
   --color-grey: grey;

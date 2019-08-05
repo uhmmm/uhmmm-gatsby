@@ -50,7 +50,7 @@
   grid-area: 1 / 6 / 4 / 13;
 }
 
-.title {
+.header {
   font-family: var(--type-family-header);
   font-size: var(--type-header);
   padding: calc(var(--grid-unit) / 2) 0 var(--grid-unit);

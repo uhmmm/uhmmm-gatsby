@@ -7,7 +7,7 @@
   font-family: var(--type-family-title);
   font-size: var(--type-title);
   line-height: var(--type-title-lh);
-  font-weight: normal;
+  font-weight: var(--type-title-weight);
 
   color: white;
 

@@ -18,6 +18,7 @@
 .subtitle {
   font-family: var(--type-family-title);
   font-size: var(--type-subtitle);
+  font-weight: var(--type-subtitle-weight);
   color: var(--color-day);
 }
 

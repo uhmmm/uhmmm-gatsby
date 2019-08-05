@@ -1,6 +1,5 @@
 import React from 'react'
 import cx from 'classnames'
-import MediaQuery from 'react-responsive'
 import Img from 'gatsby-image'
 
 import Chip from '../Chip/Chip'
@@ -9,7 +8,6 @@ import styles from './Project.module.css'
 
 const ImageSection = ({ project, position }) => {
   return (
-    // <MediaQuery query="(min-width: 1100px)">
     <div
       className={cx(
         styles.imgSection,
@@ -27,7 +25,6 @@ const ImageSection = ({ project, position }) => {
         alt=""
       />
     </div>
-    // </MediaQuery>
   )
 }
 
@@ -51,7 +48,7 @@ const Project = ({ project, index }) => {
         </div>
 
         {/* <Link to={post.slug}> */}
-        <h1 className={styles.title}>{project.title}</h1>
+        <h1 className={styles.header}>{project.title}</h1>
         <p className={styles.description}>{project.description}</p>
         {/* </Link> */}
       </div>
