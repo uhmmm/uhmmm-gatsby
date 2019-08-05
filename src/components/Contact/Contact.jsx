@@ -11,13 +11,6 @@ const subtitle = ({ type, grid }) => [
   { padding: `0 0 ${grid.unit} 0` }
 ]
 
-const subtitle2 = ({ type, grid }) => [
-  type.templates.subtitle,
-  css`
-    padding: 0 0 ${grid.unit} 0;
-  `
-]
-
 const Contact = () => {
   return (
     <div className={styles.container} id="contact">
