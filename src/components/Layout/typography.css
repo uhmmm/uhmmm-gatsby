@@ -76,7 +76,7 @@
 @font-face {
   font-family: 'Untitled Sans';
   src: url('./fonts/untitledsans/UntitledSansTest-Bold.woff') format('truetype');
-  font-weight: 600; /* Bold */
+  font-weight: 700; /* Bold */
   font-style: normal;
 }
 
