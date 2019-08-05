@@ -9,18 +9,23 @@ const Subtitle = styled.h2(({ theme: { type, grid } }) => [
   type.subtitle,
   { padding: `0 0 ${grid.unit} 0` }
 ])
-const Subtext = styled.p(({ theme: { type } }) => [type.subtext])
-const ListItem = styled.li(({ theme: { type } }) => [type.subtext])
+const Caption = styled.p(({ theme: { type } }) => [type.caption])
+const ListItem = styled.li(({ theme: { type } }) => [type.caption])
+const MembersContainer = styled.div(({ theme: { media } }) => ({
+  gridColumn: 'span 9',
+  [media.tablet]: { gridColumn: 'span 4' },
+  [media.phone]: { display: 'none' }
+}))
 
 const Contact = () => {
   return (
     <div className={styles.container} id="contact">
       <div className={styles.contact}>
         <Subtitle>contact</Subtitle>
-        <Subtext>
+        <Caption>
           Uhmmm is based in Amsterdam and New York. Our headquarters are in
           Amsterdam.
-        </Subtext>
+        </Caption>
 
         <ul>
           <ListItem>Uhmmm.net</ListItem>
@@ -30,10 +35,10 @@ const Contact = () => {
           <ListItem>info@uhmmm.net</ListItem>
         </ul>
       </div>
-      <div className={styles.people}>
+      <MembersContainer>
         <Subtitle>members</Subtitle>
         <PersonList />
-      </div>
+      </MembersContainer>
     </div>
   )
 }

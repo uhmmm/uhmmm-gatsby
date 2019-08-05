@@ -16,46 +16,6 @@ const typeColors = {
   grey: colors.grey
 }
 
-const type = {
-  base: '13px',
-  title: {
-    fontFamily: 'Sans Sharp',
-    fontWeight: 900,
-    fontSize: 'calc(var(--grid-size) / 1.25)',
-    lineHeight: 'calc(var(--grid-size) / 1.25)',
-    color: typeColors.day
-  },
-  subtitle: {
-    fontFamily: 'Sans Sharp',
-    fontWeight: 700,
-    fontSize: '2rem',
-    lineHeight: '2rem',
-    color: typeColors.day
-  },
-  header: {
-    fontFamily: 'Untitled Sans',
-    fontWeight: 500,
-    fontSize: '2.3rem',
-    lineHeight: '3rem',
-    color: typeColors.day
-  },
-  body: {
-    fontFamily: 'Untitled Sans',
-    fontWeight: 400,
-    fontSize: '2rem',
-    lineHeight: '2.5rem',
-    color: typeColors.day
-  },
-  subtext: {
-    fontFamily: 'Untitled Sans',
-    fontWeight: 400,
-    fontSize: '1.2rem',
-    lineHeight: '1.8rem',
-    color: typeColors.day
-  },
-  colors: typeColors
-}
-
 const gridSize =
   'calc(var(--grid-outer-width) / var(--grid-outer-columns-count))'
 const gridOuterColumnCount = 14
@@ -81,10 +41,62 @@ const grid = {
   unit: '1rem'
 }
 
+const type = {
+  base: '13px',
+  title: {
+    fontFamily: 'Sans Sharp',
+    fontWeight: 900,
+    fontSize: gridSize / 1.25,
+    lineHeight: gridSize / 1.25,
+    color: typeColors.day
+  },
+  subtitle: {
+    fontFamily: 'Sans Sharp',
+    fontWeight: 700,
+    fontSize: '2rem',
+    lineHeight: '2rem',
+    color: typeColors.day
+  },
+  header: {
+    fontFamily: 'Untitled Sans',
+    fontWeight: 500,
+    fontSize: '2.3rem',
+    lineHeight: '3rem',
+    color: typeColors.day
+  },
+  body: {
+    fontFamily: 'Untitled Sans',
+    fontWeight: 400,
+    fontSize: '2rem',
+    lineHeight: '2.5rem',
+    color: typeColors.day
+  },
+  caption: {
+    fontFamily: 'Untitled Sans',
+    fontWeight: 400,
+    fontSize: '1.2rem',
+    lineHeight: '1.8rem',
+    color: typeColors.day
+  },
+  colors: typeColors
+}
+
+const media = {
+  tablet: '@media (min-width: 600px and max-width: 1100px)',
+  phone: '@media (min-width: 0px and max-width: 600px)'
+}
+
+type.caption = {
+  ...type.caption,
+  [media.tablet]: type.body,
+  [media.phone]: type.body
+}
+
 const theme = {
   colors,
   type,
-  grid
+  grid,
+  media
 }
 
 export default theme
