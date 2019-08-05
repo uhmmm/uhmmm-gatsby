@@ -6,26 +6,23 @@ import PersonList from '../PersonList/PersonList'
 
 import styles from './Contact.module.css'
 
-// .title {
-//   font-family: var(--type-subtitle-family);
-//   font-weight: var(--type-subtitle-weight);
-//   font-size: var(--type-subtitle-size);
-//   line-height: var(--type-subtitle-lh);
-//   color: var(--type-color);
-//   padding: 0 0 var(--grid-unit) 0;
-// }
+const subtitle = ({ type, grid }) => [
+  type.templates.subtitle,
+  { padding: `0 0 ${grid.unit} 0` }
+]
+
+const subtitle2 = ({ type, grid }) => [
+  type.templates.subtitle,
+  css`
+    padding: 0 0 ${grid.unit} 0;
+  `
+]
 
 const Contact = () => {
   return (
     <div className={styles.container} id="contact">
       <div className={styles.contact}>
-        <h2
-          css={({ type, grid }) => {
-            return [type.templates.subtitle, { padding: `0 0 ${grid.unit} 0` }]
-          }}
-        >
-          contact
-        </h2>
+        <h2 css={subtitle}>contact</h2>
         <p className={styles.text}>
           Uhmmm is based in Amsterdam and New York. Our headquarters are in
           Amsterdam.
