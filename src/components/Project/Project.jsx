@@ -9,25 +9,25 @@ import styles from './Project.module.css'
 
 const ImageSection = ({ project, position }) => {
   return (
-    <MediaQuery query="(min-width: 1100px)">
-      <div
-        className={cx(
-          styles.imgSection,
-          position !== 'imgfirst' && styles.imgSectionRight
-        )}
-      >
-        <Img
-          className={styles.img__under}
-          fluid={project.projectImages[0].childImageSharp.fluid}
-          alt=""
-        />
-        <Img
-          className={styles.img__over}
-          fluid={project.projectImages[1].childImageSharp.fluid}
-          alt=""
-        />
-      </div>
-    </MediaQuery>
+    // <MediaQuery query="(min-width: 1100px)">
+    <div
+      className={cx(
+        styles.imgSection,
+        position !== 'imgfirst' && styles.imgSectionRight
+      )}
+    >
+      <Img
+        className={styles.img__under}
+        fluid={project.projectImages[0].childImageSharp.fluid}
+        alt=""
+      />
+      <Img
+        className={styles.img__over}
+        fluid={project.projectImages[1].childImageSharp.fluid}
+        alt=""
+      />
+    </div>
+    // </MediaQuery>
   )
 }
 
