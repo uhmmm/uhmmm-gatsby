@@ -24,24 +24,21 @@ type.subtitle = {
   fontFamily: 'Sans Sharp',
   fontWeight: 700,
   fontSize: '2rem',
-  lineHeight: '2rem',
-  color: type.colors.day
+  lineHeight: '2rem'
 }
 
 type.header = {
   fontFamily: 'Untitled Sans',
   fontWeight: 500,
   fontSize: '2.3rem',
-  lineHeight: '3rem',
-  color: typeColors.day
+  lineHeight: '3rem'
 }
 
 type.body = {
   fontFamily: 'Untitled Sans',
   fontWeight: 400,
   fontSize: '2rem',
-  lineHeight: '2.5rem',
-  color: type.colors.day
+  lineHeight: '2.5rem'
 }
 
 type.caption = {
@@ -49,11 +46,8 @@ type.caption = {
   fontWeight: 400,
   fontSize: '1.2rem',
   lineHeight: '1.8rem',
-  color: type.colors.day,
   [media.tablet.q]: type.body,
   [media.phone.q]: type.body
 }
-
-type.body.color = type.colors.day
 
 export default type

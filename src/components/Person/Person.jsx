@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { css } from '@emotion/core'
 import Img from 'gatsby-image'
 
 import styles from './Person.module.css'
@@ -15,8 +14,7 @@ const Container = styled.div({
 
 const ListItem = styled.li([type.caption])
 const ListItemEmail = styled(ListItem)({
-  color: type.colors.grey,
-  [media.tablet.q]: { color: type.colors.grey }
+  color: type.colors.grey
 })
 
 export default ({ person }) => (

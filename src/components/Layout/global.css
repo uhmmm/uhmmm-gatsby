@@ -37,7 +37,7 @@ q,
 li,
 a {
   /* detection for unstyled text */
-  color: red;
+  color: white;
   margin: 0;
   text-decoration: none;
 }
