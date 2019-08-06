@@ -21,9 +21,9 @@ const ContactContainer = styled.div({
 })
 
 const MembersContainer = styled.div({
-  gridColumn: `span calc((${grid.inner.columnCount.cssVar} / 4) * 3)`,
+  gridColumn: `span ${(grid.inner.columnCount.full / 4) * 3}`,
   [media.tablet.q]: {
-    gridColumn: `span calc(${grid.inner.columnCount.cssVar} / 2)`
+    gridColumn: `span ${grid.inner.columnCount.tablet / 2}`
   },
   [media.phone.q]: { display: 'none' }
 })
@@ -52,6 +52,7 @@ const Contact = () => {
       </ContactContainer>
       <MembersContainer>
         <Subtitle>members</Subtitle>
+
         <PersonList />
       </MembersContainer>
     </Container>

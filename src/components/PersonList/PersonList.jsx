@@ -13,6 +13,8 @@ const Container = styled.div({
   [media.phone.q]: { display: 'flex', flexDirection: 'column' }
 })
 
+const PersonContainer = styled.div({ gridColumn: 'span 3' })
+
 const personQuery = graphql`
   query PersonQuery {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(people)/" } }) {
@@ -44,7 +46,9 @@ const PersonList = () => {
   return (
     <Container>
       {peopleList.map(person => (
-        <Person key={person.name} person={person} />
+        <PersonContainer key={person.name}>
+          <Person person={person} />
+        </PersonContainer>
       ))}
     </Container>
   )

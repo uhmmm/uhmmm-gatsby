@@ -17,7 +17,7 @@ type.title = {
   fontWeight: 900,
   fontSize: grid.gridSize / 1.25,
   lineHeight: grid.gridSize / 1.25,
-  color: typeColors.day
+  color: type.colors.day
 }
 
 type.subtitle = {
@@ -25,7 +25,7 @@ type.subtitle = {
   fontWeight: 700,
   fontSize: '2rem',
   lineHeight: '2rem',
-  color: typeColors.day
+  color: type.colors.day
 }
 
 type.header = {
@@ -41,7 +41,7 @@ type.body = {
   fontWeight: 400,
   fontSize: '2rem',
   lineHeight: '2.5rem',
-  color: typeColors.day
+  color: type.colors.day
 }
 
 type.caption = {
@@ -49,9 +49,11 @@ type.caption = {
   fontWeight: 400,
   fontSize: '1.2rem',
   lineHeight: '1.8rem',
-  color: typeColors.day,
+  color: type.colors.day,
   [media.tablet.q]: type.body,
   [media.phone.q]: type.body
 }
+
+type.body.color = type.colors.day
 
 export default type

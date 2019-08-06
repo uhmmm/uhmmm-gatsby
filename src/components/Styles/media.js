@@ -4,6 +4,10 @@ const media = {
     min: 600,
     max: 1100
   },
+  phablet: {
+    q: '@media (max-width: 1100px)',
+    max: 1100
+  },
   phone: {
     q: '@media (min-width: 0px) and (max-width: 600px)',
     min: 0,
