@@ -1,4 +1,6 @@
 import React from 'react'
+import styled from '@emotion/styled'
+
 import cx from 'classnames'
 import Img from 'gatsby-image'
 

@@ -1,9 +1,8 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import styled from '@emotion/styled'
 
 import Person from '../Person/Person'
-
-import styles from './PersonList.module.css'
 
 const personQuery = graphql`
   query PersonQuery {
@@ -19,15 +18,7 @@ const personQuery = graphql`
             email
             image {
               childImageSharp {
-                fluid(
-                  maxWidth: 1000
-                  quality: 100
-                  traceSVG: {
-                    color: "rgba(0,0,0,0)"
-                    turnPolicy: TURNPOLICY_MINORITY
-                    blackOnWhite: false
-                  }
-                ) {
+                fluid(maxWidth: 200, quality: 100) {
                   ...GatsbyImageSharpFluid_tracedSVG
                   presentationWidth
                 }
@@ -40,29 +31,26 @@ const personQuery = graphql`
   }
 `
 const getPeople = data => {
-  return [
-    ...data.allMarkdownRemark.edges.map(person => {
-      return { ...person.node.frontmatter }
-    })
-  ]
+  return data.allMarkdownRemark.edges.map(person => {
+    return { ...person.node.frontmatter }
+  })
 }
 
-const PersonListRaw = ({ data }) => {
-  const peopleList = getPeople(data)
+const Container = styled.div(({ theme: { media } }) => ({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(9, 1fr)',
+  [media.tablet.q]: { display: 'flex', flexDirection: 'column' }
+}))
+
+const PersonList = () => {
+  const peopleList = getPeople(useStaticQuery(personQuery))
   return (
-    <div className={styles.container}>
+    <Container>
       {peopleList.map(person => (
         <Person key={person.name} person={person} />
       ))}
-    </div>
+    </Container>
   )
 }
-
-const PersonList = props => (
-  <StaticQuery
-    query={personQuery}
-    render={data => <PersonListRaw data={data} {...props} />}
-  />
-)
 
 export default PersonList
