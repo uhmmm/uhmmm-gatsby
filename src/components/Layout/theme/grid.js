@@ -1,28 +1,34 @@
-const gridOuterColumnCount = 14
-const gridInnerColumnCount = 12
 const gridOuterWidth = 100
+const gridOuterColumnCount = 14
 const gridSize = gridOuterWidth / gridOuterColumnCount
+
+const gridInnerWidth = 100 - gridSize
+const gridInnerColumnCount = 12
 
 const grid = {
   outer: {
     width: `${gridOuterWidth}vw`,
-    columnCount: gridOuterColumnCount,
-    template: `repeat(
-          ${gridOuterColumnCount},
-        ${gridSize}
-      )`
+    widthRaw: gridOuterWidth,
+    columnCount: gridOuterColumnCount
   },
   inner: {
-    width: '100vw',
-    columnCount: gridInnerColumnCount,
-    template: `repeat(
-          ${gridInnerColumnCount},
-        ${gridSize}
-      )`
+    width: `${gridInnerWidth}vw`,
+    widthRaw: gridInnerWidth,
+    columnCount: gridInnerColumnCount
   },
-  gridSize,
-  rowTemplate: ` repeat(auto-fill, ${gridSize})`,
+  size: `${gridSize}vw`,
+  sizeRaw: gridSize,
   unit: '1rem'
+}
+
+grid.outer.template = {
+  display: `grid`,
+  gridTemplateColumns: `repeat(${grid.outer.columnCount}, ${grid.size})`
+}
+
+grid.inner.template = {
+  display: `grid`,
+  gridTemplateColumns: `repeat(${grid.inner.columnCount}, ${grid.size})`
 }
 
 export default grid

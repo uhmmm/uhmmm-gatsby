@@ -5,12 +5,14 @@ import colors from './colors'
 import type from './typography'
 import grid from './grid'
 import media from './media'
+import util from './util'
 
 const theme = {
   colors,
   type,
   grid,
-  media
+  media,
+  util
 }
 
 export default theme
