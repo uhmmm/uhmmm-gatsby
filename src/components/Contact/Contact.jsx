@@ -5,7 +5,7 @@ import PersonList from '../PersonList/PersonList'
 
 const Container = styled.div(({ theme: { grid, util } }) => [
   grid.inner.template,
-  { paddingBottom: grid.size },
+  { padding: `0 0 ${grid.size} 0` },
   util.scrollOffset
 ])
 
