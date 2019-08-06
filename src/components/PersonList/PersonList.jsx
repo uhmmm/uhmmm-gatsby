@@ -7,7 +7,8 @@ import Person from '../Person/Person'
 const Container = styled.div(({ theme: { media } }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(9, 1fr)',
-  [media.tablet.q]: { display: 'flex', flexDirection: 'column' }
+  [media.tablet.q]: { display: 'flex', flexDirection: 'column' },
+  [media.phone.q]: { display: 'flex', flexDirection: 'column' }
 }))
 
 const personQuery = graphql`

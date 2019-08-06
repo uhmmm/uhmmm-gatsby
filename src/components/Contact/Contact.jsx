@@ -5,20 +5,24 @@ import PersonList from '../PersonList/PersonList'
 
 const Container = styled.div(({ theme: { grid, util } }) => [
   grid.inner.template,
-  { padding: `0 0 ${grid.size} 0` },
+  { padding: `0 0 ${grid.size.cssValue} 0` },
   util.scrollOffset
 ])
 
 const ContactContainer = styled.div(({ theme: { media, grid } }) => ({
-  padding: `0 0 ${grid.size} 0`,
-  gridColumn: `span ${grid.inner.columnCount / 4}`,
-  [media.tablet.q]: { gridColumn: `span ${grid.inner.columnCount / 2}` },
-  [media.phone.q]: { display: 'none' }
+  padding: `0 calc(${grid.unit} *3) ${grid.size.cssVar} 0`,
+  gridColumn: `span ${grid.inner.columnCount.full / 4}`,
+  [media.tablet.q]: {
+    gridColumn: `span ${grid.inner.columnCount.tablet / 2}`
+  },
+  [media.phone.q]: { gridColumn: `span ${grid.inner.columnCount.phone}` }
 }))
 
 const MembersContainer = styled.div(({ theme: { media, grid } }) => ({
-  gridColumn: `span ${(grid.inner.columnCount / 4) * 3}`,
-  [media.tablet.q]: { gridColumn: `span ${grid.inner.columnCount / 2}` },
+  gridColumn: `span calc((${grid.inner.columnCount.cssVar} / 4) * 3)`,
+  [media.tablet.q]: {
+    gridColumn: `span calc(${grid.inner.columnCount.cssVar} / 2)`
+  },
   [media.phone.q]: { display: 'none' }
 }))
 

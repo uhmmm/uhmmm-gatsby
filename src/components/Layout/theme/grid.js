@@ -1,34 +1,75 @@
-const gridOuterWidth = 100
-const gridOuterColumnCount = 14
-const gridSize = gridOuterWidth / gridOuterColumnCount
-
-const gridInnerWidth = 100 - gridSize
-const gridInnerColumnCount = 12
+import media from './media'
 
 const grid = {
   outer: {
-    width: `${gridOuterWidth}vw`,
-    widthRaw: gridOuterWidth,
-    columnCount: gridOuterColumnCount
+    columnCount: {
+      full: 14,
+      tablet: 10,
+      phone: 6
+    },
+    width: {}
   },
   inner: {
-    width: `${gridInnerWidth}vw`,
-    widthRaw: gridInnerWidth,
-    columnCount: gridInnerColumnCount
+    columnCount: {
+      full: 12,
+      tablet: 8,
+      phone: 4
+    },
+    width: {}
   },
-  size: `${gridSize}vw`,
-  sizeRaw: gridSize,
-  unit: '1rem'
+  unit: '1rem',
+  size: {}
 }
 
-grid.outer.template = {
-  display: `grid`,
-  gridTemplateColumns: `repeat(${grid.outer.columnCount}, ${grid.size})`
+// units
+grid.outer.width.base = 100
+grid.outer.width.cssName = '--grid-outer-width'
+grid.outer.width.cssVar = `var(${grid.outer.width.cssName})`
+
+grid.inner.width.cssName = '--grid-inner-width'
+grid.inner.width.cssVar = `var(${grid.inner.width.cssName})`
+
+grid.size.cssName = '--grid-size'
+grid.size.cssVar = `var(${grid.size.cssName})`
+
+grid.outer.columnCount.cssName = '--grid-outer-column-count'
+grid.inner.columnCount.cssName = '--grid-inner-column-count'
+grid.outer.columnCount.cssVar = `var(${grid.outer.columnCount.cssName})`
+grid.inner.columnCount.cssVar = `var(${grid.inner.columnCount.cssName})`
+
+// columns
+grid.vars = {
+  [grid.outer.width.cssName]: `${grid.outer.width.base}vw`,
+  [grid.inner.width
+    .cssName]: `calc(${grid.outer.width.cssVar} - ${grid.outer.columnCount.cssVar})`,
+  [grid.size
+    .cssName]: `calc(${grid.outer.width.cssVar} / ${grid.outer.columnCount.cssVar})`,
+  [grid.outer.columnCount.cssName]: grid.outer.columnCount.full,
+  [grid.inner.columnCount.cssName]: grid.inner.columnCount.full,
+  [media.tablet.q]: {
+    [grid.outer.columnCount.cssName]: grid.outer.columnCount.tablet,
+    [grid.inner.columnCount.cssName]: grid.inner.columnCount.tablet
+  },
+  [media.phone.q]: {
+    [grid.outer.columnCount.cssName]: grid.outer.columnCount.phone,
+    [grid.inner.columnCount.cssName]: grid.inner.columnCount.phone
+  }
 }
 
-grid.inner.template = {
-  display: `grid`,
-  gridTemplateColumns: `repeat(${grid.inner.columnCount}, ${grid.size})`
-}
+grid.outer.template = [
+  grid.vars,
+  {
+    display: `grid`,
+    gridTemplateColumns: `repeat(${grid.outer.columnCount.cssVar}, ${grid.size.cssVar})`
+  }
+]
+
+grid.inner.template = [
+  grid.vars,
+  {
+    display: `grid`,
+    gridTemplateColumns: `repeat(${grid.inner.columnCount.cssVar}, ${grid.size.cssVar})`
+  }
+]
 
 export default grid

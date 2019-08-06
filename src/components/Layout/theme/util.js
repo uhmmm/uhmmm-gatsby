@@ -2,8 +2,8 @@ import grid from './grid'
 
 const util = {
   scrollOffset: {
-    paddingTop: grid.size,
-    marginTop: `${-grid.sizeRaw}vw`
+    paddingTop: grid.size.cssValue,
+    marginTop: `calc(${grid.size.cssValue} * -1)`
   }
 }
 
