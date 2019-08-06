@@ -8,7 +8,7 @@ import './global.css'
 import './variables.css'
 import './typography.css'
 import styles from './index.module.css'
-import theme from './theme'
+import theme from './theme/index'
 
 const MainLayout = ({ children }) => {
   return (

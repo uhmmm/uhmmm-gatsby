@@ -13,8 +13,8 @@ const Caption = styled.p(({ theme: { type } }) => [type.caption])
 const ListItem = styled.li(({ theme: { type } }) => [type.caption])
 const MembersContainer = styled.div(({ theme: { media } }) => ({
   gridColumn: 'span 9',
-  [media.tablet]: { gridColumn: 'span 4' },
-  [media.phone]: { display: 'none' }
+  [media.tablet.q]: { gridColumn: 'span 4' },
+  [media.phone.q]: { display: 'none' }
 }))
 
 const Contact = () => {
