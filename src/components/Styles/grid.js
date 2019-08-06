@@ -21,7 +21,7 @@ const grid = {
   size: {}
 }
 
-// units
+// vars defs
 grid.outer.width.base = 100
 grid.outer.width.cssName = '--grid-outer-width'
 grid.outer.width.cssVar = `var(${grid.outer.width.cssName})`
@@ -37,7 +37,7 @@ grid.inner.columnCount.cssName = '--grid-inner-column-count'
 grid.outer.columnCount.cssVar = `var(${grid.outer.columnCount.cssName})`
 grid.inner.columnCount.cssVar = `var(${grid.inner.columnCount.cssName})`
 
-// columns
+// var declarations with media queries
 grid.vars = {
   [grid.outer.width.cssName]: `${grid.outer.width.base}vw`,
   [grid.inner.width
@@ -56,6 +56,7 @@ grid.vars = {
   }
 }
 
+// include grid vars in a grid declaration
 grid.outer.template = [
   grid.vars,
   {

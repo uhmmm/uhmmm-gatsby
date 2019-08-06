@@ -4,12 +4,14 @@ import styled from '@emotion/styled'
 
 import Person from '../Person/Person'
 
-const Container = styled.div(({ theme: { media } }) => ({
+import { media } from '../Styles'
+
+const Container = styled.div({
   display: 'grid',
   gridTemplateColumns: 'repeat(9, 1fr)',
   [media.tablet.q]: { display: 'flex', flexDirection: 'column' },
   [media.phone.q]: { display: 'flex', flexDirection: 'column' }
-}))
+})
 
 const personQuery = graphql`
   query PersonQuery {

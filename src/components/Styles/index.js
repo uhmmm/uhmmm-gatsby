@@ -7,12 +7,4 @@ import grid from './grid'
 import media from './media'
 import util from './util'
 
-const theme = {
-  colors,
-  type,
-  grid,
-  media,
-  util
-}
-
-export default theme
+export { colors, type, grid, media, util }

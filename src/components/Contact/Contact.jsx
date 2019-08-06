@@ -3,35 +3,34 @@ import styled from '@emotion/styled'
 
 import PersonList from '../PersonList/PersonList'
 
-const Container = styled.div(({ theme: { grid, util } }) => [
+import { media, grid, util, type } from '../Styles'
+
+const Container = styled.div([
   grid.inner.template,
   { padding: `0 0 ${grid.size.cssValue} 0` },
   util.scrollOffset
 ])
 
-const ContactContainer = styled.div(({ theme: { media, grid } }) => ({
+const ContactContainer = styled.div({
   padding: `0 calc(${grid.unit} *3) ${grid.size.cssVar} 0`,
   gridColumn: `span ${grid.inner.columnCount.full / 4}`,
   [media.tablet.q]: {
     gridColumn: `span ${grid.inner.columnCount.tablet / 2}`
   },
   [media.phone.q]: { gridColumn: `span ${grid.inner.columnCount.phone}` }
-}))
+})
 
-const MembersContainer = styled.div(({ theme: { media, grid } }) => ({
+const MembersContainer = styled.div({
   gridColumn: `span calc((${grid.inner.columnCount.cssVar} / 4) * 3)`,
   [media.tablet.q]: {
     gridColumn: `span calc(${grid.inner.columnCount.cssVar} / 2)`
   },
   [media.phone.q]: { display: 'none' }
-}))
+})
 
-const Subtitle = styled.h2(({ theme: { type, grid } }) => [
-  type.subtitle,
-  { padding: `0 0 ${grid.unit} 0` }
-])
+const Subtitle = styled.h2([type.subtitle, { padding: `0 0 ${grid.unit} 0` }])
 
-const ListItem = styled.li(({ theme: { type } }) => [type.caption])
+const ListItem = styled.li([type.caption])
 
 const Contact = () => {
   return (
