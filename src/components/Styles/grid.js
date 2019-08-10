@@ -2,75 +2,59 @@ import media from './media'
 
 const grid = {
   outer: {
-    columnCount: {
+    count: {
       full: 14,
       tablet: 10,
-      phone: 6
+      phone: 6,
+      l: '--grid-outer-column-count'
     },
-    width: {}
+    width: {
+      base: 100,
+      l: '--grid-outer-width'
+    }
   },
   inner: {
-    columnCount: {
+    count: {
       full: 12,
       tablet: 8,
-      phone: 4
+      phone: 4,
+      l: '--grid-inner-column-count'
     },
     width: {}
   },
   unit: '1rem',
-  size: {}
+  size: {
+    l: '--grid-size'
+  }
 }
-
-// vars defs
-grid.outer.width.base = 100
-grid.outer.width.cssName = '--grid-outer-width'
-grid.outer.width.cssVar = `var(${grid.outer.width.cssName})`
-
-grid.inner.width.cssName = '--grid-inner-width'
-grid.inner.width.cssVar = `var(${grid.inner.width.cssName})`
-
-grid.size.cssName = '--grid-size'
-grid.size.cssVar = `var(${grid.size.cssName})`
-
-grid.outer.columnCount.cssName = '--grid-outer-column-count'
-grid.inner.columnCount.cssName = '--grid-inner-column-count'
-grid.outer.columnCount.cssVar = `var(${grid.outer.columnCount.cssName})`
-grid.inner.columnCount.cssVar = `var(${grid.inner.columnCount.cssName})`
 
 // var declarations with media queries
 grid.vars = {
-  [grid.outer.width.cssName]: `${grid.outer.width.base}vw`,
-  [grid.inner.width
-    .cssName]: `calc(${grid.outer.width.cssVar} - ${grid.outer.columnCount.cssVar})`,
-  [grid.size
-    .cssName]: `calc(${grid.outer.width.cssVar} / ${grid.outer.columnCount.cssVar})`,
-  [grid.outer.columnCount.cssName]: grid.outer.columnCount.full,
-  [grid.inner.columnCount.cssName]: grid.inner.columnCount.full,
+  [grid.outer.count.l]: grid.outer.count.full,
+  [grid.inner.count.l]: grid.inner.count.full,
   [media.tablet.q]: {
-    [grid.outer.columnCount.cssName]: grid.outer.columnCount.tablet,
-    [grid.inner.columnCount.cssName]: grid.inner.columnCount.tablet
+    [grid.outer.count.l]: grid.outer.count.tablet,
+    [grid.inner.count.l]: grid.inner.count.tablet
   },
   [media.phone.q]: {
-    [grid.outer.columnCount.cssName]: grid.outer.columnCount.phone,
-    [grid.inner.columnCount.cssName]: grid.inner.columnCount.phone
-  }
+    [grid.outer.count.l]: grid.outer.count.phone,
+    [grid.inner.count.l]: grid.inner.count.phone
+  },
+  [grid.outer.width.l]: `${grid.outer.width.base}vw`,
+  [grid.size.l]: `calc(var(${grid.outer.width.l}) / var(${grid.outer.count.l}))`
 }
 
 // include grid vars in a grid declaration
-grid.outer.template = [
-  grid.vars,
-  {
-    display: `grid`,
-    gridTemplateColumns: `repeat(${grid.outer.columnCount.cssVar}, ${grid.size.cssVar})`
-  }
-]
+grid.outer.template = {
+  ...grid.vars,
+  display: `grid`,
+  gridTemplateColumns: `repeat(var(${grid.outer.count.l}), var(${grid.size.l}))`
+}
 
-grid.inner.template = [
-  grid.vars,
-  {
-    display: `grid`,
-    gridTemplateColumns: `repeat(${grid.inner.columnCount.cssVar}, ${grid.size.cssVar})`
-  }
-]
+grid.inner.template = {
+  ...grid.vars,
+  display: `grid`,
+  gridTemplateColumns: `repeat(var(${grid.inner.count.l}), var(${grid.size.l}))`
+}
 
 export default grid

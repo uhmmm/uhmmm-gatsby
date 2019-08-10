@@ -6,7 +6,7 @@ import styles from './Person.module.css'
 import { grid, media, type } from '../Styles'
 
 const Container = styled.div({
-  gridColumn: grid.inner.columnCount.full,
+  gridColumn: grid.inner.count.full,
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 1fr)',
   [media.phablet.q]: { display: 'flex', flexDirection: 'column' }

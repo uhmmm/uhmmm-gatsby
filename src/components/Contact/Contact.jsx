@@ -5,25 +5,26 @@ import PersonList from '../PersonList/PersonList'
 
 import { media, grid, util, type } from '../Styles'
 
-const Container = styled.div([
-  grid.inner.template,
-  { padding: `0 0 ${grid.size.cssValue} 0` },
-  util.scrollOffset
-])
+const Container = styled.div({
+  ...grid.vars,
+  ...grid.inner.template,
+  paddingBottom: `var(${grid.size.l})`,
+  ...util.scrollOffset
+})
 
 const ContactContainer = styled.div({
-  padding: `0 calc(${grid.unit} *3) ${grid.size.cssVar} 0`,
-  gridColumn: `span ${grid.inner.columnCount.full / 4}`,
+  padding: `0 calc(${grid.unit} *3) var(${grid.size.l}) 0`,
+  gridColumn: `span ${grid.inner.count.full / 4}`,
   [media.tablet.q]: {
-    gridColumn: `span ${grid.inner.columnCount.tablet / 2}`
+    gridColumn: `span ${grid.inner.count.tablet / 2}`
   },
-  [media.phone.q]: { gridColumn: `span ${grid.inner.columnCount.phone}` }
+  [media.phone.q]: { gridColumn: `span ${grid.inner.count.phone}` }
 })
 
 const MembersContainer = styled.div({
-  gridColumn: `span ${(grid.inner.columnCount.full / 4) * 3}`,
+  gridColumn: `span ${(grid.inner.count.full / 4) * 3}`,
   [media.tablet.q]: {
-    gridColumn: `span ${grid.inner.columnCount.tablet / 2}`
+    gridColumn: `span ${grid.inner.count.tablet / 2}`
   },
   [media.phone.q]: { display: 'none' }
 })
@@ -52,7 +53,6 @@ const Contact = () => {
       </ContactContainer>
       <MembersContainer>
         <Subtitle>members</Subtitle>
-
         <PersonList />
       </MembersContainer>
     </Container>
