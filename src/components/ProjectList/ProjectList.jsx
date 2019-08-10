@@ -1,40 +1,61 @@
 import React from 'react'
+import styled from '@emotion/styled'
+import { size } from 'polished'
 
 import Project from '../Project/Project'
 
-import styles from './ProjectList.module.css'
+import { media, type, grid, colors, util } from '../Styles'
 
-const getPostList = projectEdges => {
-  const projectList = []
-  projectEdges.forEach(projectEdge => {
-    projectList.push({
-      ...projectEdge.node.frontmatter,
-      ...projectEdge.node.fields,
-      excerpt: projectEdge.node.excerpt,
-      timeToRead: projectEdge.node.timeToRead,
-      id: projectEdge.node.id
-    })
-  })
-  return projectList
-}
+const Container = styled.div({
+  paddingBottom: `calc(var(${grid.size.l}) * 2)`,
+  ...util.scrollOffset
+})
 
-const ProjectList = ({ projectEdges }) => {
-  const projectList = getPostList(projectEdges)
+const Header = styled.div({
+  ...grid.inner.template,
+  height: `var(${grid.size.l})`,
+  [media.phablet.q]: {
+    height: 'auto'
+  }
+})
+
+const Subtitle = styled.h2({
+  ...type.subtitle
+})
+
+const Decoration = styled.div({
+  ...size('100%'),
+  background: colors.purple,
+  boxShadow: `0px 0px 12px ${colors.day68}`,
+  [media.phablet.q]: {
+    display: 'none'
+  }
+})
+
+const DecorationHeader = styled(Decoration)({
+  gridArea: '1 / 5 / 2 / 6'
+})
+
+const DecorationFooter = styled(Decoration)({
+  gridArea: '1 / 1 / 2 / 2'
+})
+
+const ProjectList = ({ projects }) => {
   return (
-    <div className={styles.container} id="projects">
-      <div className={styles.listHeader}>
-        <h2 className={styles.subtitle}>projects</h2>
-        <div className={styles.listHeader__decoration} />
-      </div>
-      <div className={styles.listContainer}>
-        {projectList.map((project, index) => (
+    <Container id="projects">
+      <Header>
+        <Subtitle>projects</Subtitle>
+        <DecorationHeader />
+      </Header>
+      <div>
+        {projects.map((project, index) => (
           <Project key={project.id} project={project} index={index} />
         ))}
       </div>
-      <div className={styles.listHeader}>
-        <div className={styles.listFooter__decoration} />
-      </div>
-    </div>
+      <Header>
+        <DecorationFooter />
+      </Header>
+    </Container>
   )
 }
 

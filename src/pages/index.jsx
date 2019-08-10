@@ -13,10 +13,22 @@ import GradientLayer from '../components/GradientLayer/GradientLayer'
 
 import config from '../../data/SiteConfig'
 
-import styles from './index.module.css'
+const getPostList = projectEdges => {
+  const projectList = []
+  projectEdges.forEach(projectEdge => {
+    projectList.push({
+      ...projectEdge.node.frontmatter,
+      ...projectEdge.node.fields,
+      excerpt: projectEdge.node.excerpt,
+      timeToRead: projectEdge.node.timeToRead,
+      id: projectEdge.node.id
+    })
+  })
+  return projectList
+}
 
 const Index = ({ data }) => {
-  const projectEdges = data.allMarkdownRemark.edges
+  const projects = getPostList(data.allMarkdownRemark.edges)
   return (
     <Layout>
       <Helmet title={config.siteTitle} />
@@ -25,7 +37,7 @@ const Index = ({ data }) => {
       <SEO />
       <Navbar />
       <Showcase />
-      <ProjectList projectEdges={projectEdges} />
+      <ProjectList projects={projects} />
       <Contact />
     </Layout>
   )
