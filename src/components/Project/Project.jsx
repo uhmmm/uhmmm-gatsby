@@ -1,62 +1,63 @@
 import React from 'react'
-import cx from 'classnames'
-import Img from 'gatsby-image'
+import styled from '@emotion/styled'
 
 import Chip from '../Chip/Chip'
+import ImageSection from './ImageSection'
 
-import styles from './Project.module.css'
+import { media, grid, type, colors } from '../Styles'
 
-const ImageSection = ({ project, position }) => {
-  return (
-    <div
-      className={cx(
-        styles.imgSection,
-        position !== 'imgfirst' && styles.imgSectionRight
-      )}
-    >
-      <Img
-        className={styles.img__under}
-        fluid={project.projectImages[0].childImageSharp.fluid}
-        alt=""
-      />
-      <Img
-        className={styles.img__over}
-        fluid={project.projectImages[1].childImageSharp.fluid}
-        alt=""
-      />
-    </div>
-  )
-}
+const Container = styled.div({
+  display: 'grid',
+  gridTemplateColumns: 'var(--grid-inner-column-template)',
+  gridTemplateRows: 'repeat(5, var(--grid-size))',
+  '&:last-of-type': {
+    gridTemplateRows: 'repeat(3, var(--grid-size))'
+  },
+  [media.phablet.q]: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 'calc(var(--grid-unit) * 2) 0'
+  }
+})
+
+const Details = styled.div(({ layout }) => ({
+  gridArea: layout === 'imgFirst' ? '1 / 6 / 4 / 13' : '1 / 1 / 4 / 8'
+}))
+
+const Heading = styled.h3({
+  padding: 'calc(var(--grid-unit) / 2) 0 var(--grid-unit)',
+  fontFamily: 'var(--type-header-family)',
+  fontSize: 'var(--type-header-size)',
+  fontWeight: 'var(--type-header-weight)',
+  lineHeight: 'var(--type-header-lh)',
+  color: 'var(--type-color)'
+})
+
+const BodyCopy = styled.p({
+  fontFamily: 'var(--type-body-family)',
+  fontWeight: 'var(--type-body-weight)',
+  fontSize: 'var(--type-body-size)',
+  lineHeight: 'var(--type-body-lh)',
+  color: 'var(--type-color)'
+})
 
 const Project = ({ project, index }) => {
-  const position = (index + 1) % 2 ? 'imgfirst' : 'detailsfirst'
+  const layout = (index + 1) % 2 ? 'imgfirst' : 'detailsfirst'
+  const { tags } = project
   return (
-    <div className={styles.project}>
-      {position === 'imgfirst' && (
-        <ImageSection project={project} position={position} />
-      )}
-
-      <div
-        className={cx(
-          styles.detailsSection,
-          position === 'imgfirst' && styles.detailsSectionRight
-        )}
-      >
-        <div className={styles.tags}>
-          {project.tags &&
-            project.tags.map(tag => <Chip key={tag} text={tag} color="pink" />)}
+    <Container>
+      <ImageSection project={project} layout={layout} />
+      <Details layout={layout}>
+        <div>
+          {tags && tags.map(tag => <Chip key={tag} text={tag} color="pink" />)}
         </div>
 
         {/* <Link to={post.slug}> */}
-        <h1 className={styles.header}>{project.title}</h1>
-        <p className={styles.description}>{project.description}</p>
+        <Heading>{project.title}</Heading>
+        <BodyCopy>{project.description}</BodyCopy>
         {/* </Link> */}
-      </div>
-
-      {position !== 'imgfirst' && (
-        <ImageSection project={project} position={position} />
-      )}
-    </div>
+      </Details>
+    </Container>
   )
 }
 
