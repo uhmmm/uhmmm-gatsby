@@ -2,7 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Img from 'gatsby-image'
 
-import styles from './Person.module.css'
 import { grid, media, type } from '../Styles'
 
 const Container = styled.div({
@@ -17,16 +16,34 @@ const ListItemEmail = styled(ListItem)({
   color: type.colors.grey
 })
 
+const ImgStyled = styled(Img)({
+  display: 'block',
+  gridColumn: 'span 1',
+  background: 'white',
+  borderRadius: '100%',
+  width: '80%',
+  margin: '10%',
+  [media.phablet.q]: {
+    display: 'none'
+  }
+})
+
+const DetailsList = styled.ul({
+  display: 'flex',
+  flexDirection: 'column',
+  gridColumn: 'span 2',
+  justifyContent: 'center',
+  [media.phablet.q]: {
+    paddingBottom: 'var(--grid-unit)'
+  }
+})
+
 export default ({ person }) => (
   <Container>
-    <Img
-      className={styles.image}
-      fluid={person.image.childImageSharp.fluid}
-      alt="profile"
-    />
-    <ul className={styles.details}>
+    <ImgStyled fluid={person.image.childImageSharp.fluid} alt="profile" />
+    <DetailsList>
       <ListItem>{person.name}</ListItem>
       <ListItemEmail>{person.email}</ListItemEmail>
-    </ul>
+    </DetailsList>
   </Container>
 )
