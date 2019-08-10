@@ -7,8 +7,7 @@ import ImageSection from './ImageSection'
 import { media, grid, type, colors } from '../Styles'
 
 const Container = styled.div({
-  display: 'grid',
-  gridTemplateColumns: 'var(--grid-inner-column-template)',
+  ...grid.inner.template,
   gridTemplateRows: 'repeat(5, var(--grid-size))',
   '&:last-of-type': {
     gridTemplateRows: 'repeat(3, var(--grid-size))'
@@ -20,25 +19,18 @@ const Container = styled.div({
   }
 })
 
-const Details = styled.div(({ layout }) => ({
-  gridArea: layout === 'imgFirst' ? '1 / 6 / 4 / 13' : '1 / 1 / 4 / 8'
-}))
+const Details = styled.div(({ layout }) => {
+  return {
+    gridArea: layout === 'imgfirst' ? '1 / 6 / 4 / 13' : '1 / 1 / 4 / 8'
+  }
+})
 
-const Heading = styled.h3({
-  padding: 'calc(var(--grid-unit) / 2) 0 var(--grid-unit)',
-  fontFamily: 'var(--type-header-family)',
-  fontSize: 'var(--type-header-size)',
-  fontWeight: 'var(--type-header-weight)',
-  lineHeight: 'var(--type-header-lh)',
-  color: 'var(--type-color)'
+const Header = styled.h3({
+  ...type.header
 })
 
 const BodyCopy = styled.p({
-  fontFamily: 'var(--type-body-family)',
-  fontWeight: 'var(--type-body-weight)',
-  fontSize: 'var(--type-body-size)',
-  lineHeight: 'var(--type-body-lh)',
-  color: 'var(--type-color)'
+  ...type.body
 })
 
 const Project = ({ project, index }) => {
@@ -53,7 +45,7 @@ const Project = ({ project, index }) => {
         </div>
 
         {/* <Link to={post.slug}> */}
-        <Heading>{project.title}</Heading>
+        <Header>{project.title}</Header>
         <BodyCopy>{project.description}</BodyCopy>
         {/* </Link> */}
       </Details>
