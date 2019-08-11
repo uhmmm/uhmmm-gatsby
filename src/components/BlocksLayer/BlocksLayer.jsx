@@ -9,7 +9,7 @@ import { grid, media } from '../Styles'
 const Container = styled.div({
   ...grid.outer.template,
   ...cover(),
-  zIndex: '-1'
+  zIndex: '-2'
 })
 
 const Block = styled(Img)(({ area, shadowColor, hide }) => ({
@@ -29,6 +29,7 @@ const BlocksLayerRaw = ({ data }) => {
     }),
     {}
   )
+
   return (
     <Container>
       <Block
