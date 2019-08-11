@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
-import styles from './Title.module.css'
+import styled from '@emotion/styled'
+import { type, colors } from '../Styles'
 
 export const titleQuery = graphql`
   query titleQuery {
@@ -11,7 +11,7 @@ export const titleQuery = graphql`
           id
           name
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 1200, quality: 100) {
               ...GatsbyImageSharpFluid
               presentationWidth
             }
@@ -22,8 +22,21 @@ export const titleQuery = graphql`
   }
 `
 
-const TitleQuery = ({ name, data }) => {
-  const images = data.allFile.edges.reduce(
+const Header = styled.h1(({ image }) => ({
+  display: 'block',
+  ...type.title,
+  color: colors.day,
+  backgroundImage: `url(${image})`,
+
+  backgroundClip: 'text',
+  WebkitBackgroundClip: 'text',
+
+  textFillColor: 'transparent',
+  WebkitTextFillColor: 'transparent'
+}))
+
+const Title = ({ name, AllImages }) => {
+  const images = AllImages.allFile.edges.reduce(
     (acc, image) => ({
       ...acc,
       [image.node.name]: image.node.childImageSharp.fluid
@@ -31,27 +44,14 @@ const TitleQuery = ({ name, data }) => {
     {}
   )
   const image = images['tekstbg-hq'].src
-
-  return (
-    <h1
-      className={styles.title}
-      style={{
-        backgroundImage: `url(${image})`,
-        color: 'red'
-      }}
-    >
-      {name}
-    </h1>
-  )
+  return <Header image={image}>{name}</Header>
 }
 
-const Title = props => {
-  return (
-    <StaticQuery
-      query={titleQuery}
-      render={data => <TitleQuery data={data} {...props} />}
-    />
-  )
-}
+const TitleContainer = props => (
+  <StaticQuery
+    query={titleQuery}
+    render={AllImages => <Title AllImages={AllImages} {...props} />}
+  />
+)
 
-export default Title
+export default TitleContainer

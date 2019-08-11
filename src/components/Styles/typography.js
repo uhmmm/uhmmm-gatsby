@@ -15,9 +15,8 @@ const type = {
 type.title = {
   fontFamily: 'Sans Sharp',
   fontWeight: 900,
-  fontSize: grid.gridSize / 1.25,
-  lineHeight: grid.gridSize / 1.25,
-  color: type.colors.day
+  fontSize: `calc(var(${grid.size.l}) / 1.25)`,
+  lineHeight: `calc(var(${grid.size.l}) / 1.25)`
 }
 
 type.subtitle = {

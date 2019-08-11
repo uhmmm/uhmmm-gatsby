@@ -4,12 +4,12 @@ import styled from '@emotion/styled'
 import Chip from '../Chip/Chip'
 import ImageSection from './ImageSection'
 
-import { media, grid, type, colors } from '../Styles'
+import { media, grid, type } from '../Styles'
 
 const Container = styled.div({
   ...grid.inner.template,
   gridTemplateRows: 'repeat(5, var(--grid-size))',
-  '&:last-of-type': {
+  ':last-of-type': {
     gridTemplateRows: 'repeat(3, var(--grid-size))'
   },
   [media.phablet.q]: {
