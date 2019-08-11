@@ -53,7 +53,6 @@ const Container = styled.div({
   zIndex: '-3'
 })
 
-/* vertical gridlines */
 const Layer = styled.div(({ background }) => ({
   ...cover(),
   ...background
