@@ -45,7 +45,6 @@ grid.vars = {
 }
 
 // include grid vars in a grid declaration
-console.log(grid)
 grid.outer.template = {
   ...grid.vars,
   display: `grid`,

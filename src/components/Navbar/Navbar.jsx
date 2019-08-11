@@ -19,7 +19,9 @@ const StyledLink = styled(Link)(({ position }) => ({
   gridArea: position,
   justifySelf: 'center',
   alignSelf: 'center',
+
   ...type.caption,
+
   [media.phablet.q]: {
     display: 'none'
   }

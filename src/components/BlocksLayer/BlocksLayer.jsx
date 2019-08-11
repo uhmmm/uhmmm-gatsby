@@ -1,29 +1,25 @@
 import React from 'react'
-import MediaQuery from 'react-responsive'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from '@emotion/styled'
+import { size, cover } from 'polished'
 
-import styles from './BlocksLayer.module.css'
+import { grid, media } from '../Styles'
 
-const BlockImgHorizontal = ({ image }) => {
-  return (
-    <MediaQuery query="(min-width: 600px)">
-      <Img className={styles.blockImgHorizontal} fluid={image} />
-    </MediaQuery>
-  )
-}
+const Container = styled.div({
+  ...grid.outer.template,
+  ...cover(),
+  zIndex: '-1'
+})
 
-const BlockImgVertical = ({ image }) => {
-  return (
-    <MediaQuery query="(min-width: 1100px)">
-      <Img className={styles.blockImgVertical} fluid={image} />
-    </MediaQuery>
-  )
-}
-
-const BlockNav = ({ image }) => {
-  return <Img className={styles.blockNav} fluid={image} />
-}
+const Block = styled(Img)(({ area, shadowColor, hide }) => ({
+  gridArea: area,
+  ...size('100%'),
+  boxShadow: `0 0 6px ${shadowColor}`,
+  [media.phablet.q]: {
+    display: hide && 'none'
+  }
+}))
 
 const BlocksLayerRaw = ({ data }) => {
   const images = data.allFile.edges.reduce(
@@ -34,15 +30,28 @@ const BlocksLayerRaw = ({ data }) => {
     {}
   )
   return (
-    <div className={styles.container}>
-      <BlockNav image={images['triple-horizontal']} />
-      <BlockImgHorizontal image={images['single-horizontal']} />
-      <BlockImgVertical image={images['single-vertical']} />
-    </div>
+    <Container>
+      <Block
+        fluid={images['triple-horizontal']}
+        area="1 / 1 / 2 / 4"
+        shadowColor="var(--color-purple)"
+      />
+      <Block
+        fluid={images['single-horizontal']}
+        area="1 / 10 / 2 / 11"
+        shadowColor="var(--color-blue-half)"
+        hide
+      />
+      <Block
+        fluid={images['single-vertical']}
+        area="7 / 12 / 8 / 13"
+        shadowColor="var(--color-blue-half)"
+        hide
+      />
+    </Container>
   )
 }
 
-// get data into the component
 const backgroundQuery = graphql`
   query backgroundQuery {
     allFile(filter: { relativeDirectory: { regex: "/background/" } }) {
