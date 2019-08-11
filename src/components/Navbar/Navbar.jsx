@@ -1,27 +1,44 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import cx from 'classnames'
-import styles from './Navbar.module.css'
+import styled from '@emotion/styled'
+
+import { media, grid, type } from '../Styles'
+
+const Container = styled.nav({
+  ...grid.inner.template,
+  gridTemplateRows: 'repeat(2, var(--grid-size))',
+  alignItems: 'center'
+})
+
+const LogoLink = styled(Link)({
+  gridArea: '1 / 1 / 2 / 3',
+  ...type.subtitle
+})
+
+const StyledLink = styled(Link)(({ position }) => ({
+  gridArea: position,
+  justifySelf: 'center',
+  alignSelf: 'center',
+  ...type.caption,
+  [media.phablet.q]: {
+    display: 'none'
+  }
+}))
 
 const Navbar = () => {
   return (
-    <nav className={styles.container}>
-      <div className={styles.logo}>
-        <Link to="/" className={styles.logoText}>
-          uhmmm
-        </Link>
-      </div>
-      <Link to="/#about" className={cx(styles.link, styles.linkAbout)}>
+    <Container>
+      <LogoLink to="/">uhmmm</LogoLink>
+      <StyledLink to="/#about" position="1 / 11 / 2 / 12">
         about
-      </Link>
-      <Link to="/#projects" className={cx(styles.link, styles.linkProject)}>
+      </StyledLink>
+      <StyledLink to="/#projects" position="1 / 12 / 2 / 13">
         projects
-      </Link>
-
-      <Link to="/#contact" className={cx(styles.link, styles.linkContact)}>
+      </StyledLink>
+      <StyledLink to="/#contact" position="2 / 11 / 3 / 12">
         contact
-      </Link>
-    </nav>
+      </StyledLink>
+    </Container>
   )
 }
 
