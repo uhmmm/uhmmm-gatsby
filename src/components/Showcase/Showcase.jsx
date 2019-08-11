@@ -1,33 +1,65 @@
 import React from 'react'
+import styled from '@emotion/styled'
 
-import styles from './Showcase.module.css'
+import { grid, type, util, media } from '../Styles'
 
 import Title from '../Title/Title'
 
+const Container = styled.div({
+  ...grid.inner.template,
+  marginBottom: `var(${grid.size.l})`,
+  ...util.scrollOffset,
+
+  [media.phablet.q]: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
+})
+
+const TitleContainer = styled.div({
+  gridArea: `1 / 1 / 4 / ${grid.inner.count.full + 1}`,
+  [media.phablet.q]: {
+    paddingBottom: `calc(var(${grid.size.l}) / 2)`
+  }
+})
+
+const TextContainer = styled.div({
+  gridArea: `4 / 1 / 10 / 10`,
+  columns: 2,
+  columnGap: `var(${grid.size.l})`,
+  [media.phablet.q]: {
+    columns: 1
+  }
+})
+
+const BodyCopy = styled.p({
+  display: 'block',
+  breakInside: 'avoid-column',
+  ...type.body
+})
+
 export default () => (
-  <div className={styles.container} id="about">
-    <div className={styles.titleContainer}>
+  <Container id="about">
+    <TitleContainer>
       <Title name="Digital environments where academia, journalism & society meets" />
-    </div>
-    <div className={styles.textContainer}>
-      <p className={styles.text}>
+    </TitleContainer>
+    <TextContainer>
+      <BodyCopy>
         We are a small collective that research, design, and code digital
         environments. Our projects are on the intersection between academia,
         journalism, and society.
-      </p>
-      <p className={styles.text}>
+      </BodyCopy>
+      <BodyCopy>
         Most of our projects are self-initiated, but we don't like to build
         alone. We are always on the lookout for collaborations. If you have an
-        idea on your mind, drop us a mail at
-        <a className={styles.text} href="mailto:info@uhmmm.net">
-          info@uhmmm.net
-        </a>
-      </p>
-      <p className={styles.text}>
+        idea on your mind, drop us a
+        <a href="mailto:info@uhmmm.net"> mail!</a>
+      </BodyCopy>
+      <BodyCopy>
         In our work, we value inclusive perspectives and creativity. Whatever it
         is, we try to get there with our partners. Together we create new
         digital environments.
-      </p>
-    </div>
-  </div>
+      </BodyCopy>
+    </TextContainer>
+  </Container>
 )

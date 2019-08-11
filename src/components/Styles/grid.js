@@ -45,16 +45,19 @@ grid.vars = {
 }
 
 // include grid vars in a grid declaration
+console.log(grid)
 grid.outer.template = {
   ...grid.vars,
   display: `grid`,
-  gridTemplateColumns: `repeat(var(${grid.outer.count.l}), var(${grid.size.l}))`
+  gridTemplateColumns: `repeat(var(${grid.outer.count.l}), var(${grid.size.l}))`,
+  gridAutoRows: `var(${grid.size.l})`
 }
 
 grid.inner.template = {
   ...grid.vars,
   display: `grid`,
-  gridTemplateColumns: `repeat(var(${grid.inner.count.l}), var(${grid.size.l}))`
+  gridTemplateColumns: `repeat(var(${grid.inner.count.l}), var(${grid.size.l}))`,
+  gridAutoRows: `var(${grid.size.l})`
 }
 
 export default grid
