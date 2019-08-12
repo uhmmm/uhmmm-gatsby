@@ -6,7 +6,7 @@ projectImages:
   - './foia-over.png'
 cover: ''
 category: 'something'
-date: '2019/05/01'
+date: '2019/07/01'
 authors:
   - Erik van Zummeren
   - Robert-Jan Korteschiel

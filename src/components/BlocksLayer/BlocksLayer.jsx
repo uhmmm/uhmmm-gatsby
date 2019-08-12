@@ -21,6 +21,13 @@ const Block = styled(Img)(({ area, shadowColor, hide }) => ({
   }
 }))
 
+const GradientBlock = styled.div({
+  position: 'absolute',
+  height: `var(${grid.size.l})`,
+  width: '100vw',
+  background: `linear-gradient(to bottom, black 0%, transparent var(${grid.size.l}))`
+})
+
 const BlocksLayerRaw = ({ data }) => {
   const images = data.allFile.edges.reduce(
     (acc, image) => ({
@@ -43,6 +50,8 @@ const BlocksLayerRaw = ({ data }) => {
         shadowColor={colors.blueHalf}
         hide
       />
+      <GradientBlock />
+
       <Block
         fluid={images['single-vertical']}
         area="7 / 12 / 8 / 13"
