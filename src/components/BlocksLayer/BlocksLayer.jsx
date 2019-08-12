@@ -59,18 +59,18 @@ const BlocksLayerRaw = ({ data }) => {
 
   return (
     <Container>
-      {/* <ImgBlock
+      <ImgBlock
         fluid={images['triple-horizontal']}
         area="1 / 1 / 2 / 4"
         shadowColor={colors.purple}
-      /> */}
+      />
       <ImgBlock
         fluid={images['single-horizontal']}
         area="1 / 10 / 2 / 11"
         shadowColor={colors.blueHalf}
         hide
       />
-      {/* <GradientOverlay /> */}
+      <GradientOverlay />
       <WhiteBlock area="6 / 13 / 7 / 14" />
       <ImgBlock
         fluid={images['single-vertical']}
