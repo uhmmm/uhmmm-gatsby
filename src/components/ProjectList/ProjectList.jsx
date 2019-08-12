@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import Project from '../Project/Project'
 import { PurpleBlock, WhiteBlock } from '../BlocksLayer/BlocksLayer'
 
-import { media, type, grid, colors, util } from '../Styles'
+import { media, type, grid, util } from '../Styles'
 
 const Container = styled.div({
   paddingBottom: `calc(var(${grid.size.l}) * 2)`,

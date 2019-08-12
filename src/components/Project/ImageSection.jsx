@@ -27,8 +27,9 @@ const ImgUnder = styled(Img)(({ layout }) => ({
 
 const ImgOver = styled(Img)(({ layout }) => ({
   position: 'absolute',
-  gridArea: layout === 'imgfirst' ? '1 / 1 / 4 / 4' : '1 / 1 / 4 / 4',
-  width: '100%'
+  gridArea: layout === 'imgfirst' ? '1 / 1 / 4 / 5' : '1 / 1 / 4 / 5',
+  width: `calc(var(${grid.size.l}) * 3)`,
+  justifySelf: 'center'
 }))
 
 const ImageSection = ({ project, layout }) => {
