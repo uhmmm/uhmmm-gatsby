@@ -3,8 +3,8 @@ module.exports = {
   siteTitleShort: 'Uhmmm', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt:
     'Uhmmm - Digital environments where academia, journalism & society meets', // Alternative site title for SEO.
-  siteLogo: '/logos/logo-square-optim.png', // Logo used for SEO and manifest.
-  siteFavicon: '/logos/favicon-round-optim.png', // Logo used for SEO and manifest.
+  siteLogo: './images/logos/logo-square-optim.png', // Logo used for SEO and manifest.
+  siteFavicon: './images/logos/favicon-round-optim.png', // Logo used for SEO and manifest.
   siteUrl: 'https://uhmmm.net', // Domain of your website without pathPrefix.
   pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:

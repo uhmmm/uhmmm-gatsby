@@ -5,7 +5,7 @@ import { type, colors } from '../Styles'
 
 export const titleQuery = graphql`
   query titleQuery {
-    allFile(filter: { relativeDirectory: { regex: "/title/" } }) {
+    allFile(filter: { relativeDirectory: { regex: "/images/title/" } }) {
       edges {
         node {
           id

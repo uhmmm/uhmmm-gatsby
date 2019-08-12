@@ -55,7 +55,7 @@ const BlocksLayerRaw = ({ data }) => {
 
 const backgroundQuery = graphql`
   query backgroundQuery {
-    allFile(filter: { relativeDirectory: { regex: "/background/" } }) {
+    allFile(filter: { relativeDirectory: { regex: "/images/background/" } }) {
       edges {
         node {
           id
