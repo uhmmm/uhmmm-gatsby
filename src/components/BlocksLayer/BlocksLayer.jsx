@@ -2,15 +2,26 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { size, cover, transparentize } from 'polished'
+import { size, cover, transparentize, math } from 'polished'
 
 import { grid, media, colors } from '../Styles'
 
-const Container = styled.div({
+const BlockContainer = styled.div({
   ...grid.outer.template,
   ...cover(),
   zIndex: '-2'
 })
+
+const dotSize = '2px'
+const dotPos = math(`(  ${dotSize} / 2) + 1`)
+const dotPerSquare = 7
+const dotGap = `calc(var(${grid.size.l}) / ${dotPerSquare})`
+const mask = {
+  maskImage: `radial-gradient(circle at ${dotPos} ${dotPos}, rgba(0,0,0,0) 0px, rgba(0,0,0,0) ${dotSize}, rgba(0,0,0,1) ${dotSize})`,
+  maskPosition: '-2px -2px',
+  maskRepeat: 'repeat',
+  maskSize: `${dotGap} ${dotGap}`
+}
 
 const ImgBlock = styled(Img)(({ area, shadowColor, hide }) => ({
   gridArea: area,
@@ -24,6 +35,7 @@ const ImgBlock = styled(Img)(({ area, shadowColor, hide }) => ({
 const WhiteBlock = styled.div(({ area }) => ({
   gridArea: area,
   ...size('100%'),
+  ...mask,
   background: colors.day,
   boxShadow: `0 0 6px ${transparentize(0.68, colors.day)}`,
   [media.phablet.q]: {
@@ -58,16 +70,18 @@ const BlocksLayerRaw = ({ data }) => {
   )
 
   return (
-    <Container>
+    <BlockContainer>
       <ImgBlock
         fluid={images['triple-horizontal']}
         area="1 / 1 / 2 / 4"
+        imgStyle={mask}
         shadowColor={colors.purple}
       />
       <ImgBlock
         fluid={images['single-horizontal']}
         area="1 / 10 / 2 / 11"
         shadowColor={colors.blueHalf}
+        imgStyle={mask}
         hide
       />
       <GradientOverlay />
@@ -76,10 +90,11 @@ const BlocksLayerRaw = ({ data }) => {
         fluid={images['single-vertical']}
         area="7 / 12 / 8 / 13"
         shadowColor={colors.blueHalf}
+        imgStyle={mask}
         hide
       />
       <WhiteBlock area="6 / 13 / 7 / 14" />
-    </Container>
+    </BlockContainer>
   )
 }
 

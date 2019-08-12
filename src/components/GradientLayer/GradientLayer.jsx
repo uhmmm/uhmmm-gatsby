@@ -17,7 +17,7 @@ const gradients = {
     vertical: `linear-gradient(to bottom, ${colors.pink} 0%, ${colors.blue} 60%, ${colors.green} 100%)`
   },
   dotsOverlay: {
-    circle: `radial-gradient(circle at ${dotPos} ${dotPos}, rgba(0,0,0,0) 0px, rgba(0,0,0,1) ${dotSize})`
+    circle: `radial-gradient(circle at ${dotPos} ${dotPos}, rgba(0,0,0,0) 0px, rgba(0,0,0,0) ${dotSize}, rgba(0,0,0,1) ${dotSize})`
   },
   pageOverlay: {
     horizontal: `repeating-linear-gradient(to right, black 0%, transparent 5%, transparent 95%, black 100%)`,
