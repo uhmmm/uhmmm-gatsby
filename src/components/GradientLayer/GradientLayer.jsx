@@ -5,7 +5,7 @@ import { backgrounds, cover, transparentize, math } from 'polished'
 import { colors, grid } from '../Styles'
 
 const dotSize = '2px'
-const dotSizeAlias = '3px'
+const dotSizeMask = '4px'
 const dotPos = math(`(  ${dotSize} / 2) + 1`)
 const dotPerSquare = 7
 const dotGap = `calc(var(${grid.size.l}) / ${dotPerSquare})`
@@ -17,8 +17,6 @@ const gradients = {
     vertical: `linear-gradient(to bottom, ${colors.pink} 0%, ${colors.green} 100%)`
   },
   dotsOverlay: {
-    horizontal: `repeating-linear-gradient(to right, transparent 0px, transparent ${dotSize}, black ${dotSize}, black ${dotGap})`,
-    vertical: `repeating-linear-gradient(to bottom, transparent 0px, transparent ${dotSize}, black ${dotSize}, black ${dotGap})`,
     circle: `radial-gradient(circle at ${dotPos} ${dotPos}, rgba(0,0,0,0) 0px, rgba(0,0,0,1) ${dotSize})`
   },
   pageOverlay: {
@@ -26,14 +24,11 @@ const gradients = {
     vertical: `linear-gradient(210deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh, transparent 120vh, black 130vh)`,
     verticalWithout: `linear-gradient(210deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh)`
   },
-  // verticalLineMasks: {
-  //   gaps: `repeating-linear-gradient(to bottom, black 0px, black ${dotSize}, transparent ${dotSize}, transparent ${dotGap})`,
-  //   columns: `repeating-linear-gradient(to right, black 0px, black ${dotSize}, transparent ${dotSize}, transparent var(${grid.size.l}))`
-  // },
+  verticalLineMasks: {
+    columns: `repeating-linear-gradient(to right, black 0px, black ${dotSizeMask}, transparent ${dotSizeMask}, transparent var(${grid.size.l}))`
+  },
   horizontalLineMasks: {
-    rows: `repeating-linear-gradient(to bottom, black 0px, black ${dotSize}, transparent ${dotSize}, transparent var(${grid.size.l}))`,
-    rowsAlias: `repeating-linear-gradient(to bottom, black 0px, black ${dotSizeAlias}, transparent ${dotSizeAlias}, transparent var(${grid.size.l}))`,
-    circle: `radial-gradient(circle at ${dotPos} ${dotPos}, rgba(0,0,0,1) 0px, rgba(0,0,0,0) ${dotSize});`
+    rows: `repeating-linear-gradient(to bottom, black 0px, black ${dotSizeMask}, transparent ${dotSizeMask}, transparent var(${grid.size.l}))`
   }
 }
 
@@ -42,28 +37,28 @@ const maskedBackgrounds = {
     ...backgrounds(
       // gradients.pageOverlay.horizontal,
       // gradients.pageOverlay.vertical,
-      // gradients.dotsOverlay.horizontal,
       gradients.dotsOverlay.circle,
       gradients.color.vertical
     ),
     backgroundSize: `${dotGap} ${dotGap}, 100% 100%`,
     backgroundRepeat: 'repeat, no-repeat',
     backgroundPosition: '-1px -1px, 0px 0px',
-    maskImage: gradients.horizontalLineMasks.rowsAlias,
-    // maskImage: `${gradients.horizontalLineMasks.circle}`,
-    // maskSize: `${dotGap} ${dotGap}`,
-    // maskRepeat: 'repeat',
+    maskImage: gradients.horizontalLineMasks.rows,
+    maskPosition: '-1px -1px'
+  },
+  verticalLines: {
+    ...backgrounds(
+      // gradients.pageOverlay.horizontal,
+      // gradients.pageOverlay.verticalWithout,
+      gradients.dotsOverlay.circle,
+      gradients.color.horizontal
+    ),
+    backgroundSize: `${dotGap} ${dotGap}, 100% 100%`,
+    backgroundRepeat: 'repeat, no-repeat',
+    backgroundPosition: '-1px -1px, 0px 0px',
+    maskImage: gradients.verticalLineMasks.columns,
     maskPosition: '-1px -1px'
   }
-  // verticalLines: {
-  //   ...backgrounds(
-  //     gradients.pageOverlay.horizontal,
-  //     gradients.pageOverlay.verticalWithout,
-  //     gradients.dotsOverlay.vertical,
-  //     gradients.color.horizontal
-  //   ),
-  //   maskImage: gradients.verticalLineMasks.columns
-  // }
 }
 
 const GradientLayer = styled.div(({ background }) => ({
@@ -75,6 +70,6 @@ const GradientLayer = styled.div(({ background }) => ({
 export default () => (
   <>
     <GradientLayer background={maskedBackgrounds.horizontalLines} />
-    {/* <GradientLayer background={maskedBackgrounds.verticalLines} /> */}
+    <GradientLayer background={maskedBackgrounds.verticalLines} />
   </>
 )
