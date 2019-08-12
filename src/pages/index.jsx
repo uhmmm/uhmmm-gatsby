@@ -32,8 +32,8 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Helmet title={config.siteTitle} />
-      <BlocksLayer type="index" />
       <GradientLayer />
+      <BlocksLayer type="index" />
       <SEO />
       <Navbar />
       <Showcase />

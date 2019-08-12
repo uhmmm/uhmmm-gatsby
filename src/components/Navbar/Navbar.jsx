@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 
 import { media, grid, type } from '../Styles'
 
-const Container = styled.nav({
+const NavContainer = styled.nav({
   ...grid.inner.template,
   gridTemplateRows: 'repeat(2, var(--grid-size))',
   alignItems: 'center'
@@ -29,7 +29,7 @@ const StyledLink = styled(Link)(({ position }) => ({
 
 const Navbar = () => {
   return (
-    <Container>
+    <NavContainer>
       <LogoLink to="/">uhmmm</LogoLink>
       <StyledLink to="/#about" position="1 / 11 / 2 / 12">
         about
@@ -40,7 +40,7 @@ const Navbar = () => {
       <StyledLink to="/#contact" position="2 / 11 / 3 / 12">
         contact
       </StyledLink>
-    </Container>
+    </NavContainer>
   )
 }
 

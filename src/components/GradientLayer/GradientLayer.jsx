@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { backgrounds, cover } from 'polished'
+import { backgrounds, cover, size } from 'polished'
 
 import { colors, grid } from '../Styles'
 
@@ -48,19 +48,15 @@ const maskedBackgrounds = {
   }
 }
 
-const Container = styled.div({
+const GradientLayer = styled.div(({ background }) => ({
   ...cover(),
+  ...background,
   zIndex: '-3'
-})
-
-const Layer = styled.div(({ background }) => ({
-  ...cover(),
-  ...background
 }))
 
 export default () => (
-  <Container>
-    <Layer background={maskedBackgrounds.horizontal} />
-    <Layer background={maskedBackgrounds.vertical} />
-  </Container>
+  <>
+    <GradientLayer background={maskedBackgrounds.horizontal} />
+    <GradientLayer background={maskedBackgrounds.vertical} />
+  </>
 )

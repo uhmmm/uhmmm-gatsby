@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { size, cover } from 'polished'
+import { normalize, size, cover } from 'polished'
 
 import { grid, media } from '../Styles'
 
