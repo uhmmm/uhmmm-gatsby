@@ -2,9 +2,9 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { normalize, size, cover } from 'polished'
+import { size, cover } from 'polished'
 
-import { grid, media } from '../Styles'
+import { grid, media, colors } from '../Styles'
 
 const Container = styled.div({
   ...grid.outer.template,
@@ -35,18 +35,18 @@ const BlocksLayerRaw = ({ data }) => {
       <Block
         fluid={images['triple-horizontal']}
         area="1 / 1 / 2 / 4"
-        shadowColor="var(--color-purple)"
+        shadowColor={colors.purple}
       />
       <Block
         fluid={images['single-horizontal']}
         area="1 / 10 / 2 / 11"
-        shadowColor="var(--color-blue-half)"
+        shadowColor={colors.blueHalf}
         hide
       />
       <Block
         fluid={images['single-vertical']}
         area="7 / 12 / 8 / 13"
-        shadowColor="var(--color-blue-half)"
+        shadowColor={colors.blueHalf}
         hide
       />
     </Container>
