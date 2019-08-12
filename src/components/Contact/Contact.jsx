@@ -8,8 +8,8 @@ import { media, grid, util, type } from '../Styles'
 const Container = styled.div({
   ...grid.vars,
   ...grid.inner.template,
-  paddingBottom: `var(${grid.size.l})`,
-  ...util.scrollOffset
+  ...util.scrollOffset,
+  paddingBottom: `calc(var(${grid.size.l}) * 2)`
 })
 
 const ContactContainer = styled.div({

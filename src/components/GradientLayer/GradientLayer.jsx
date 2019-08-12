@@ -23,7 +23,7 @@ const gradients = {
     horizontal: `repeating-linear-gradient(to right, black 0%, transparent 5%, transparent 95%, black 100%)`,
     vertical: `linear-gradient(190deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh, transparent 170vh, black 190vh)`,
     verticalOnce: `linear-gradient(190deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh)`,
-    verticalBottom: `linear-gradient(to bottom, transparent 0, transparent 85%, black 90%,  black 100%)`
+    verticalBottom: `linear-gradient(to bottom, transparent 0, transparent 80%, black 85%,  black 100%)`
   },
   verticalLineMasks: {
     columns: `repeating-linear-gradient(to right, black 0px, black ${dotSizeMask}, transparent ${dotSizeMask}, transparent var(${grid.size.l}))`
