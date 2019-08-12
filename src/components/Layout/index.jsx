@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 import { fontFace, normalize } from 'polished'
 
 import config from '../../../data/SiteConfig'
-import { grid, colors, type, media } from '../Styles'
+import { grid, colors, type } from '../Styles'
 
 const typography = [
   ...[100, 200, 300, 400, 500, 600, 700].map(fontWeight =>
@@ -44,8 +44,6 @@ const responsiveFontSize = Object.assign(
     }
   }))
 )
-
-console.log(responsiveFontSize)
 
 const GlobalStyles = {
   ...normalize(),
@@ -111,41 +109,3 @@ const MainLayout = ({ children }) => {
 }
 
 export default MainLayout
-
-// /* minor type queries */
-// @media (min-width: 1400px) {
-//   :root {
-//     --type-base: 13px;
-//   }
-// }
-
-// @media (max-width: 1400px) {
-//   :root {
-//     --type-base: 12px;
-//   }
-// }
-
-// @media (max-width: ) {
-//   :root {
-//     --type-base: 11px;
-//   }
-// }
-
-// @media (max-width: 1100px) {
-//   :root {
-//     --type-base: 10px;
-//   }
-// }
-
-// @media (max-width: 900px) {
-//   :root {
-//     --type-base: 9px;
-//   }
-// }
-// @media (max-width: 800px) {
-//   :root {
-//     --type-base: 8px;
-//     --type-title: calc(var(--grid-size) / 1.6);
-//     --type-title-lh: calc(var(--grid-size) / 1.6);
-//   }
-// }
