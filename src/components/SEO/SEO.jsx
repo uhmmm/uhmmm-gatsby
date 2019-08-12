@@ -25,8 +25,10 @@ class SEO extends Component {
     }
 
     image = urljoin(config.siteUrl, config.pathPrefix, image)
+
     const favicon = urljoin(config.pathPrefix, config.siteFavicon)
     const blogURL = urljoin(config.siteUrl, config.pathPrefix)
+
     const schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
@@ -68,6 +70,7 @@ class SEO extends Component {
         }
       )
     }
+
     return (
       <Helmet>
         {/* General tags */}

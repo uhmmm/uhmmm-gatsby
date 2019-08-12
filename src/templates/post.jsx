@@ -32,7 +32,7 @@ const PostTemplate = props => {
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+        {/* <SEO postPath={slug} postNode={postNode} postSEO /> */}
         <Navbar />
         <div className={styles.outer}>
           <div className={styles.container}>

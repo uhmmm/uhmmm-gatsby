@@ -65,7 +65,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     } else {
       slug = `/${parsedFilePath.dir}/`
     }
-
     if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')) {
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug'))
         slug = `/${_.kebabCase(node.frontmatter.slug)}`

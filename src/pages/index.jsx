@@ -34,7 +34,7 @@ const Index = ({ data }) => {
       <Helmet title={config.siteTitle} />
       <GradientLayer />
       <BlocksLayer type="index" />
-      <SEO />
+      {/* <SEO /> */}
       <Navbar />
       <Showcase />
       <ProjectList projects={projects} />
