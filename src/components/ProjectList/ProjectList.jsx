@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { size } from 'polished'
 
 import Project from '../Project/Project'
+import { PurpleBlock, WhiteBlock } from '../BlocksLayer/BlocksLayer'
 
 import { media, type, grid, colors, util } from '../Styles'
 
@@ -23,29 +23,13 @@ const Subtitle = styled.h2({
   ...type.subtitle
 })
 
-const Decoration = styled.div({
-  ...size('100%'),
-  background: colors.purple,
-  boxShadow: `0px 0px 12px ${colors.day68}`,
-  [media.phablet.q]: {
-    display: 'none'
-  }
-})
-
-const DecorationHeader = styled(Decoration)({
-  gridArea: '1 / 5 / 2 / 6'
-})
-
-const DecorationFooter = styled(Decoration)({
-  gridArea: '1 / 1 / 2 / 2'
-})
-
 const ProjectList = ({ projects }) => {
   return (
     <Container id="projects">
       <Header>
         <Subtitle>projects</Subtitle>
-        <DecorationHeader />
+        <PurpleBlock area="1 / 5 / 2 / 6" />
+        <WhiteBlock area="1 / 10 / 2 / 11" />
       </Header>
       <div>
         {projects.map((project, index) => (
@@ -53,7 +37,7 @@ const ProjectList = ({ projects }) => {
         ))}
       </div>
       <Header>
-        <DecorationFooter />
+        <PurpleBlock area="1 / 1 / 2 / 2" />
       </Header>
     </Container>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { size, cover } from 'polished'
+import { size, cover, transparentize } from 'polished'
 
 import { grid, media, colors } from '../Styles'
 
@@ -12,7 +12,7 @@ const Container = styled.div({
   zIndex: '-2'
 })
 
-const Block = styled(Img)(({ area, shadowColor, hide }) => ({
+const ImgBlock = styled(Img)(({ area, shadowColor, hide }) => ({
   gridArea: area,
   ...size('100%'),
   boxShadow: `0 0 6px ${shadowColor}`,
@@ -21,7 +21,27 @@ const Block = styled(Img)(({ area, shadowColor, hide }) => ({
   }
 }))
 
-const GradientBlock = styled.div({
+const WhiteBlock = styled.div(({ area }) => ({
+  gridArea: area,
+  ...size('100%'),
+  background: colors.day,
+  boxShadow: `0 0 6px ${transparentize(0.68, colors.day)}`,
+  [media.phablet.q]: {
+    display: 'none'
+  }
+}))
+
+const PurpleBlock = styled.div(({ area }) => ({
+  gridArea: area,
+  ...size('100%'),
+  background: colors.purple,
+  boxShadow: `0px 0px 6px ${transparentize(0.68, colors.day)}`,
+  [media.phablet.q]: {
+    display: 'none'
+  }
+}))
+
+const GradientOverlay = styled.div({
   position: 'absolute',
   height: `var(${grid.size.l})`,
   width: '100vw',
@@ -39,25 +59,26 @@ const BlocksLayerRaw = ({ data }) => {
 
   return (
     <Container>
-      <Block
+      <ImgBlock
         fluid={images['triple-horizontal']}
         area="1 / 1 / 2 / 4"
         shadowColor={colors.purple}
       />
-      <Block
+      <ImgBlock
         fluid={images['single-horizontal']}
         area="1 / 10 / 2 / 11"
         shadowColor={colors.blueHalf}
         hide
       />
-      <GradientBlock />
-
-      <Block
+      <GradientOverlay />
+      <WhiteBlock area="6 / 13 / 7 / 14" />
+      <ImgBlock
         fluid={images['single-vertical']}
         area="7 / 12 / 8 / 13"
         shadowColor={colors.blueHalf}
         hide
       />
+      <WhiteBlock area="6 / 13 / 7 / 14" />
     </Container>
   )
 }
@@ -87,4 +108,6 @@ const BlocksLayer = props => (
     render={data => <BlocksLayerRaw data={data} {...props} />}
   />
 )
+
 export default BlocksLayer
+export { WhiteBlock, PurpleBlock }
