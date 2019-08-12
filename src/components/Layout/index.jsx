@@ -52,15 +52,13 @@ const GlobalStyles = {
     boxSizing: 'border-box'
   },
   html: {
-    height: '100%',
     scrollBehavior: 'smooth',
     fontSize: type.base,
     ...responsiveFontSize
   },
   body: {
     margin: '0',
-    background: colors.dark,
-    height: '100%'
+    background: colors.dark
   },
   ul: {
     listStyle: 'none',
@@ -80,13 +78,14 @@ const GlobalStyles = {
 const AppContainer = styled.div({
   display: 'grid',
   width: '100vw',
-  height: '100vh',
+  minHeight: '100vh',
   justifyContent: 'center'
 })
 
 const OuterGrid = styled.div({
-  position: 'relative',
-  ...grid.outer.template
+  ...grid.outer.template,
+  gridAutoRows: 'unset',
+  position: 'relative'
 })
 
 const InnerGridContainer = styled.div({
