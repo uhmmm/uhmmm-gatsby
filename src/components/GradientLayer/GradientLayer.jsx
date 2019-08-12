@@ -5,7 +5,7 @@ import { backgrounds, cover, transparentize, math } from 'polished'
 import { colors, grid } from '../Styles'
 
 const dotSize = '2px'
-const dotSizeMask = '4px'
+const dotSizeMask = '8px'
 const dotPos = math(`(  ${dotSize} / 2) + 1`)
 const dotPerSquare = 7
 const dotGap = `calc(var(${grid.size.l}) / ${dotPerSquare})`
@@ -21,8 +21,8 @@ const gradients = {
   },
   pageOverlay: {
     horizontal: `repeating-linear-gradient(to right, black 0%, transparent 5%, transparent 95%, black 100%)`,
-    vertical: `linear-gradient(210deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh, transparent 120vh, black 130vh)`,
-    verticalWithout: `linear-gradient(210deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh)`
+    vertical: `linear-gradient(190deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh, transparent 170vh, black 190vh)`,
+    verticalWithout: `linear-gradient(190deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh)`
   },
   verticalLineMasks: {
     columns: `repeating-linear-gradient(to right, black 0px, black ${dotSizeMask}, transparent ${dotSizeMask}, transparent var(${grid.size.l}))`
@@ -35,29 +35,29 @@ const gradients = {
 const maskedBackgrounds = {
   horizontalLines: {
     ...backgrounds(
-      // gradients.pageOverlay.horizontal,
-      // gradients.pageOverlay.vertical,
+      gradients.pageOverlay.horizontal,
+      gradients.pageOverlay.vertical,
       gradients.dotsOverlay.circle,
       gradients.color.vertical
     ),
     backgroundSize: `${dotGap} ${dotGap}, 100% 100%`,
     backgroundRepeat: 'repeat, no-repeat',
-    backgroundPosition: '-1px -1px, 0px 0px',
+    backgroundPosition: '0px 0px, 0px 0px, -1px -1px, 0px 0px',
     maskImage: gradients.horizontalLineMasks.rows,
-    maskPosition: '-1px -1px'
+    maskPosition: '-4px -4px'
   },
   verticalLines: {
     ...backgrounds(
-      // gradients.pageOverlay.horizontal,
-      // gradients.pageOverlay.verticalWithout,
+      gradients.pageOverlay.horizontal,
+      gradients.pageOverlay.verticalWithout,
       gradients.dotsOverlay.circle,
       gradients.color.horizontal
     ),
     backgroundSize: `${dotGap} ${dotGap}, 100% 100%`,
     backgroundRepeat: 'repeat, no-repeat',
-    backgroundPosition: '-1px -1px, 0px 0px',
+    backgroundPosition: '0px 0px, 0px 0px, -1px -1px, 0px 0px',
     maskImage: gradients.verticalLineMasks.columns,
-    maskPosition: '-1px -1px'
+    maskPosition: '-4px -4px'
   }
 }
 
