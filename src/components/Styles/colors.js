@@ -6,8 +6,8 @@ const colors = {
   purple: '#a960ff',
   pink: '#ff00ff',
   lightPink: '#fff9ff',
-  green: '#00d3ba',
-  blue: ' #17c0c0',
+  green: '#00D3BA',
+  blue: ' #459ACC',
   blueHalf: 'rgba(0, 195, 194, 0.5)'
 }
 

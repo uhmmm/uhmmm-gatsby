@@ -13,8 +13,8 @@ const tblack = transparentize(0.3, 'black')
 
 const gradients = {
   color: {
-    horizontal: `linear-gradient(to right, ${colors.pink} 0%, ${colors.green} 100%)`,
-    vertical: `linear-gradient(to bottom, ${colors.pink} 0%, ${colors.green} 100%)`
+    horizontal: `linear-gradient(to right, ${colors.pink} 0%, ${colors.blue} 60%, ${colors.green} 100%)`,
+    vertical: `linear-gradient(to bottom, ${colors.pink} 0%, ${colors.blue} 60%, ${colors.green} 100%)`
   },
   dotsOverlay: {
     circle: `radial-gradient(circle at ${dotPos} ${dotPos}, rgba(0,0,0,0) 0px, rgba(0,0,0,1) ${dotSize})`
