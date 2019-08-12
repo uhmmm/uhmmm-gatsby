@@ -37,13 +37,14 @@ const maskedBackgrounds = {
   horizontalLines: {
     ...backgrounds(
       gradients.pageOverlay.horizontal,
+      gradients.pageOverlay.verticalBottom,
       gradients.pageOverlay.vertical,
       gradients.dotsOverlay.circle,
       gradients.color.vertical
     ),
-    backgroundSize: `100% 100%, 100% 100%, ${dotGap} ${dotGap}, 100% 100%`,
-    backgroundRepeat: 'no-repeat, no-repeat, repeat, no-repeat',
-    backgroundPosition: '0px 0px, 0px 0px, -2px -2px, 0px 0px',
+    backgroundSize: `100% 100%, 100% 100%, 100% 100%, ${dotGap} ${dotGap}, 100% 100%`,
+    backgroundRepeat: 'no-repeat, no-repeat, no-repeat, repeat, no-repeat',
+    backgroundPosition: '0px 0px, 0px 0px, 0px 0px, -2px -2px, 0px 0px',
     maskImage: gradients.horizontalLineMasks.rows,
     maskPosition: '-4px -4px'
   },
