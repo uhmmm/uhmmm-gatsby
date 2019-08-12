@@ -20,9 +20,7 @@ const gradients = {
   },
   pageOverlay: {
     horizontal: `repeating-linear-gradient(to right, black 0%, transparent 5%, transparent 95%, black 100%)`,
-    vertical: `repeating-linear-gradient(30deg, black 0, black 400px, transparent 500px, transparent 700px, black 900px)`
-  },
-  pageOverlayNew: {
+    vertical: `repeating-linear-gradient(30deg, black 0, black 400px, transparent 500px, transparent 700px, black 900px)`,
     vertical: `linear-gradient(210deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh, transparent 120vh, black 130vh)`,
     verticalWithout: `linear-gradient(210deg, transparent 0, transparent 20vh, ${tblack} 30vh, ${tblack} 50vh, ${tblack} 60vh, transparent 70vh)`
   },
@@ -36,7 +34,7 @@ const maskedBackgrounds = {
   horizontal: {
     ...backgrounds(
       gradients.pageOverlay.horizontal,
-      gradients.pageOverlayNew.verticalWithout,
+      gradients.pageOverlay.verticalWithout,
       gradients.dotsOverlay.vertical,
       gradients.color.horizontal
     ),
@@ -45,7 +43,7 @@ const maskedBackgrounds = {
   vertical: {
     ...backgrounds(
       gradients.pageOverlay.horizontal,
-      gradients.pageOverlayNew.vertical,
+      gradients.pageOverlay.vertical,
       gradients.dotsOverlay.horizontal,
       gradients.color.vertical
     ),
@@ -61,7 +59,7 @@ const GradientLayer = styled.div(({ background }) => ({
 
 export default () => (
   <>
-    <GradientLayer background={maskedBackgrounds.horizontal} />
     <GradientLayer background={maskedBackgrounds.vertical} />
+    <GradientLayer background={maskedBackgrounds.horizontal} />
   </>
 )
