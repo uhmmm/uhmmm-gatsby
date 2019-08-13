@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Img from 'gatsby-image'
 
-import { grid, media, type } from '../Styles'
+import { grid, media, type, colors } from '../Styles'
 
 const Container = styled.div({
   gridColumn: grid.inner.count.full,
@@ -17,7 +17,7 @@ const ListItem = styled.li({
 })
 
 const ListItemEmail = styled(ListItem)({
-  color: type.colors.grey
+  color: colors.lightGrey
 })
 
 const ImgStyled = styled(Img)({

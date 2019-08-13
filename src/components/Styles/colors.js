@@ -1,6 +1,7 @@
 const colors = {
   dark: 'black',
-  grey: 'grey',
+  grey: '#373737',
+  lightGrey: '#939393',
   day: 'white',
   day68: 'rgba(255, 255, 255, 0.68)',
   purple: '#a960ff',

@@ -6,7 +6,7 @@ import { colors, type } from '../Styles'
 
 const Container = styled.div(({ backgroundColor }) => ({
   display: 'inline-block',
-  padding: `0 2rem`,
+  padding: `0 1rem`,
   margin: `0 1rem 3rem 0`,
 
   background: backgroundColor() || 'unset',

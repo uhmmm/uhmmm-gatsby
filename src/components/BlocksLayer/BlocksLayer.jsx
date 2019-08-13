@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { size, cover, transparentize, math } from 'polished'
+import { size, cover, transparentize } from 'polished'
 
 import { grid, media, colors } from '../Styles'
 
@@ -78,7 +78,6 @@ const BlocksLayerRaw = ({ data }) => {
         shadowColor={colors.blueHalf}
         hide
       />
-      <WhiteBlock area="6 / 13 / 7 / 14" />
     </BlockContainer>
   )
 }
