@@ -26,7 +26,8 @@ const Details = styled.div(({ layout }) => {
 })
 
 const Header = styled.h3({
-  ...type.header
+  ...type.header,
+  paddingBottom: grid.unit
 })
 
 const BodyCopy = styled.p({
