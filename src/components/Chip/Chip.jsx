@@ -62,7 +62,7 @@ export default ({ text, color }) => {
       ref={chipEl}
       backgroundColor={() => calcColor({ elem: chipEl, color })}
     >
-      {text.toUpperCase()}
+      {text && text.toUpperCase()}
     </Container>
   )
 }
