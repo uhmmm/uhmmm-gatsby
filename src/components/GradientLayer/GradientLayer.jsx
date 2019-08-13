@@ -4,7 +4,7 @@ import { backgrounds, cover, transparentize, math } from 'polished'
 
 import { colors, grid } from '../Styles'
 
-const dotSize = '2px'
+const dotSize = '1px'
 const dotSizeMask = '8px'
 const dotPos = math(`(  ${dotSize} / 2) + 1`)
 const dotPerSquare = 7

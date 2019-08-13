@@ -24,7 +24,7 @@ const TitleContainer = styled.div({
 })
 
 const TextContainer = styled.div({
-  gridArea: `4 / 1 / 10 / 10`,
+  gridArea: `4 / 1 / 9 / 10`,
   columns: 2,
   columnGap: `var(${grid.size.l})`,
   [media.phablet.q]: {
