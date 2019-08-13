@@ -7,7 +7,7 @@ const colors = {
   pink: '#ff00ff',
   lightPink: '#fff9ff',
   green: '#00D3BA',
-  blue: ' #459ACC',
+  blue: '#459ACC',
   blueHalf: 'rgba(0, 195, 194, 0.5)'
 }
 

@@ -1,20 +1,68 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from '@emotion/styled'
-import { math } from 'polished'
+import { math, mix } from 'polished'
 
 import { colors, type, grid } from '../Styles'
 
 const Container = styled.div(({ backgroundColor }) => ({
   display: 'inline-block',
-  padding: math(`${grid.unit} / 2`),
+  padding: `${math(`${grid.unit} / 2`)} ${math(`${grid.unit} * 2`)}`,
   margin: `0 ${grid.unit} ${grid.unit} 0`,
 
-  background: colors[backgroundColor] || 'unset',
+  background: backgroundColor() || 'unset',
 
   ...type.caption,
   color: colors.day
 }))
 
-export default ({ text, color }) => (
-  <Container backgroundColor={color}>{text}</Container>
-)
+const calcColor = ({ elem, color }) => {
+  if (!elem.current || !window) {
+    return colors[color]
+  }
+
+  const position = elem.current.offsetLeft / window.innerWidth
+
+  const colorStops = [
+    { color: colors.pink, stop: 0 },
+    { color: colors.blue, stop: 0.6 },
+    { color: colors.green, stop: 1 }
+  ]
+
+  const { leftStop, rightStop } = colorStops.reduce(
+    ({ leftStop, rightStop }, currStop) => {
+      // second and further
+      // if not found
+      if (leftStop && !rightStop) {
+        // if inbetween
+        if (position >= leftStop.stop && position <= currStop.stop) {
+          rightStop = currStop
+          // if not inbetween
+        } else {
+          leftStop = currStop
+        }
+      } else if (!leftStop) {
+        leftStop = currStop
+      }
+
+      return { leftStop, rightStop }
+    },
+    {}
+  )
+
+  const weightedPos = 1 - position / (rightStop.stop - leftStop.stop)
+  const mixedColor = mix(weightedPos, leftStop.color, rightStop.color)
+
+  return mixedColor
+}
+
+export default ({ text, color }) => {
+  const chipEl = useRef(null)
+  return (
+    <Container
+      ref={chipEl}
+      backgroundColor={() => calcColor({ elem: chipEl, color })}
+    >
+      {text}
+    </Container>
+  )
+}
