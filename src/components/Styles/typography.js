@@ -81,7 +81,7 @@ type.caption = {
   fontFamily: 'Untitled Sans',
   fontWeight: 400,
   fontSize: '1.2rem',
-  lineHeight: '2.25rem'
+  lineHeight: '1.75rem'
 }
 
 type.tag = {

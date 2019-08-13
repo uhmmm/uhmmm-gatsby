@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar/Navbar'
 import SEO from '../components/SEO/SEO'
 import BlocksLayer from '../components/BlocksLayer/BlocksLayer'
 import GradientLayer from '../components/GradientLayer/GradientLayer'
+import DecorationLayer from '../components/BlocksLayer/DecorationLayer'
 
 import config from '../../data/SiteConfig'
 
@@ -34,6 +35,7 @@ const Index = ({ data }) => {
       <Helmet title={config.siteTitle} />
       <GradientLayer />
       <BlocksLayer type="index" />
+      <DecorationLayer />
       {/* <SEO /> */}
       <Navbar />
       <Showcase />
