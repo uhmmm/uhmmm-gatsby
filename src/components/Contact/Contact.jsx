@@ -13,7 +13,7 @@ const Container = styled.div({
 })
 
 const ContactContainer = styled.div({
-  padding: `0 calc(${grid.unit} *3) var(${grid.size.l}) 0`,
+  padding: `0 3rem var(${grid.size.l}) 0`,
   gridColumn: `span ${grid.inner.count.full / 4}`,
   [media.tablet.q]: {
     gridColumn: `span ${grid.inner.count.tablet / 2}`
@@ -29,7 +29,7 @@ const MembersContainer = styled.div({
   [media.phone.q]: { display: 'none' }
 })
 
-const Subtitle = styled.h2({ ...type.subtitle, padding: `0 0 ${grid.unit} 0` })
+const Subtitle = styled.h2({ ...type.subtitle, padding: `0 0 1rem 0` })
 
 const ListItem = styled.li({
   ...type.caption,

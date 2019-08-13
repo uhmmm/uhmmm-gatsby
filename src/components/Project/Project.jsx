@@ -8,30 +8,31 @@ import { media, grid, type } from '../Styles'
 
 const Container = styled.div({
   ...grid.inner.template,
-  gridTemplateRows: 'repeat(5, var(--grid-size))',
+  gridTemplateRows: `repeat(5, var(${grid.size.l}))`,
   ':last-of-type': {
-    gridTemplateRows: 'repeat(3, var(--grid-size))'
+    gridTemplateRows: `repeat(3, var(${grid.size.l}))`
   },
   [media.phablet.q]: {
     display: 'flex',
     flexDirection: 'column',
-    padding: 'calc(var(--grid-unit) * 2) 0'
+    padding: '1rem 0'
   }
 })
 
 const Details = styled.div(({ layout }) => {
   return {
-    gridArea: layout === 'imgfirst' ? '1 / 6 / 4 / 13' : '1 / 1 / 4 / 8'
+    gridArea: layout === 'imgfirst' ? '1 / 6 / 4 / 12' : '1 / 2 / 4 / 8'
   }
 })
 
 const Header = styled.h3({
   ...type.header,
-  paddingBottom: grid.unit
+  paddingBottom: '1rem'
 })
 
 const BodyCopy = styled.p({
-  ...type.body
+  ...type.body,
+  paddingBottom: `var(${grid.size.l})`
 })
 
 const Project = ({ project, index }) => {

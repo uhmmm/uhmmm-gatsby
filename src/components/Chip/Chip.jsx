@@ -2,16 +2,16 @@ import React, { useRef } from 'react'
 import styled from '@emotion/styled'
 import { math, mix } from 'polished'
 
-import { colors, type, grid } from '../Styles'
+import { colors, type } from '../Styles'
 
 const Container = styled.div(({ backgroundColor }) => ({
   display: 'inline-block',
-  padding: `${math(`${grid.unit} / 2`)} ${math(`${grid.unit} * 2`)}`,
-  margin: `0 ${grid.unit} ${grid.unit} 0`,
+  padding: `0 2rem`,
+  margin: `0 1rem 3rem 0`,
 
   background: backgroundColor() || 'unset',
 
-  ...type.caption,
+  ...type.tag,
   color: colors.day
 }))
 
@@ -62,7 +62,7 @@ export default ({ text, color }) => {
       ref={chipEl}
       backgroundColor={() => calcColor({ elem: chipEl, color })}
     >
-      {text}
+      {text.toUpperCase()}
     </Container>
   )
 }

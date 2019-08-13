@@ -1,5 +1,5 @@
 ---
-name: Robert-Jan Korteschiel
-email: robert-jan@uhmmm.net
+name: RJ Korteschiel
+email: rj@uhmmm.net
 image: ./rj.png
 ---

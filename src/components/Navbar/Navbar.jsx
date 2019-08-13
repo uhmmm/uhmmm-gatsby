@@ -6,7 +6,7 @@ import { media, grid, type } from '../Styles'
 
 const NavContainer = styled.nav({
   ...grid.inner.template,
-  gridTemplateRows: 'repeat(2, var(--grid-size))',
+  gridTemplateRows: `repeat(2, var(${grid.size.l}))`,
   alignItems: 'center'
 })
 

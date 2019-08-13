@@ -38,7 +38,7 @@ const DetailsList = styled.ul({
   gridColumn: 'span 2',
   justifyContent: 'center',
   [media.phablet.q]: {
-    paddingBottom: 'var(--grid-unit)'
+    paddingBottom: `var(${grid.size.l})`
   }
 })
 
