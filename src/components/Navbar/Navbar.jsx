@@ -23,7 +23,8 @@ const StyledLink = styled(Link)(({ position }) => ({
   ...type.caption,
 
   [media.phablet.q]: {
-    display: 'none'
+    display: 'none',
+    ...type.body
   }
 }))
 

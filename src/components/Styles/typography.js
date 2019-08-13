@@ -44,9 +44,7 @@ type.caption = {
   fontFamily: 'Untitled Sans',
   fontWeight: 400,
   fontSize: '1.2rem',
-  lineHeight: '1.8rem',
-  [media.tablet.q]: type.body,
-  [media.phone.q]: type.body
+  lineHeight: '1.8rem'
 }
 
 export default type

@@ -29,9 +29,12 @@ const MembersContainer = styled.div({
   [media.phone.q]: { display: 'none' }
 })
 
-const Subtitle = styled.h2([type.subtitle, { padding: `0 0 ${grid.unit} 0` }])
+const Subtitle = styled.h2({ ...type.subtitle, padding: `0 0 ${grid.unit} 0` })
 
-const ListItem = styled.li([type.caption])
+const ListItem = styled.li({
+  ...type.caption,
+  [media.phablet.q]: type.body
+})
 
 const Contact = () => {
   return (

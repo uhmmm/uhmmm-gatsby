@@ -11,7 +11,11 @@ const Container = styled.div({
   [media.phablet.q]: { display: 'flex', flexDirection: 'column' }
 })
 
-const ListItem = styled.li([type.caption])
+const ListItem = styled.li({
+  ...type.caption,
+  [media.phablet.q]: type.body
+})
+
 const ListItemEmail = styled(ListItem)({
   color: type.colors.grey
 })
