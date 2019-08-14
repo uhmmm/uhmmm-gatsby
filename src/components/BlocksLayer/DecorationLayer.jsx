@@ -45,33 +45,33 @@ const DecorationLayer = () => {
   return (
     <DecorationLayerContainer>
       <DecorationContainer
-        area="2 / 4 / 3 / 5"
+        areaFull="2 / 4 / 3 / 5"
         areaTablet="2 / 4 / 3 / 5"
         areaPhone="2 / 5 / 3 / 6"
       >
         <Decoration src={cross} alt="" size="small" />
       </DecorationContainer>
       <DecorationContainer
-        area="2 / 10 / 3 / 11"
+        areaFull="2 / 10 / 3 / 11"
         areaTablet="2 / 8 / 3 / 9"
         areaPhone="7 / 6 / 8 / 9"
       >
         <Decoration src={circle} alt="" />
       </DecorationContainer>
       <DecorationContainer
-        area="3 / 14 / 4 / 15"
+        areaFull="3 / 14 / 4 / 15"
         areaTablet="5 / 10 / 6 / 11"
         areaPhone="15 / 6 / 16 / 7"
       >
         <Decoration src={circles} alt="" />
       </DecorationContainer>
-      <DecorationContainer area="5 / 11 / 6 / 12" hide>
+      <DecorationContainer areaFull="5 / 11 / 6 / 12" hide>
         <Decoration src={cross} alt="" size="small" />
       </DecorationContainer>
-      <DecorationContainer area="8 / 12 / 9 / 13" hide>
+      <DecorationContainer areaFull="8 / 12 / 9 / 13" hide>
         <Decoration src={circle} alt="" />
       </DecorationContainer>
-      <DecorationContainer area="12 / 9 / 13 / 10" hide>
+      <DecorationContainer areaFull="12 / 9 / 13 / 10" hide>
         <Decoration src={circles} alt="" />
       </DecorationContainer>
     </DecorationLayerContainer>
