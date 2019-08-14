@@ -32,7 +32,10 @@ const Header = styled.h1(({ image }) => ({
   WebkitBackgroundClip: 'text',
 
   textFillColor: 'transparent',
-  WebkitTextFillColor: 'transparent'
+  WebkitTextFillColor: 'transparent',
+
+  overflowWrap: 'break-word',
+  hyphens: 'auto'
 }))
 
 const Title = ({ name, AllImages }) => {
