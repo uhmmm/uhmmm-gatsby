@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { math, mix } from 'polished'
 
@@ -9,7 +9,7 @@ const Container = styled.div(({ backgroundColor }) => ({
   padding: `0 1rem`,
   margin: `0 1rem 3rem 0`,
 
-  background: backgroundColor() || 'unset',
+  background: backgroundColor || 'unset',
 
   ...type.tag,
   color: colors.day
@@ -57,11 +57,15 @@ const calcColor = ({ elem, color }) => {
 
 export default ({ text, color }) => {
   const chipEl = useRef(null)
+
+  const [calculatedColor, setCalculatedColor] = useState(null)
+
+  useEffect(() => {
+    setCalculatedColor(calcColor({ elem: chipEl, color }))
+  }, [setCalculatedColor, chipEl, color])
+
   return (
-    <Container
-      ref={chipEl}
-      backgroundColor={() => calcColor({ elem: chipEl, color })}
-    >
+    <Container ref={chipEl} backgroundColor={calculatedColor}>
       {text && text.toUpperCase()}
     </Container>
   )
