@@ -8,7 +8,10 @@ import { media, type, grid, util } from '../Styles'
 
 const Container = styled.div({
   paddingBottom: `calc(var(${grid.size.l}) * 2)`,
-  ...util.scrollOffset
+  ...util.scrollOffset,
+  [media.phablet.q]: {
+    paddingBottom: `calc(var(${grid.size.l}) * 1)`
+  }
 })
 
 const Header = styled.div({
