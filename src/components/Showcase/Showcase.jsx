@@ -41,7 +41,7 @@ const BodyCopy = styled.p({
 export default () => (
   <Container id="about">
     <TitleContainer>
-      <Title name="Digital en&#8203;vironments where academia, journalism &&#160;society&#160;meets" />
+      <Title name="Digital environments where academia, journalism<br>& society meets" />
     </TitleContainer>
     <TextContainer>
       <BodyCopy>

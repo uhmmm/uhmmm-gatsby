@@ -2,6 +2,7 @@ import { fontFace } from 'polished'
 
 import colors from './colors'
 import grid from './grid'
+import media from './media'
 
 const typeColors = {
   day: colors.day,
@@ -53,7 +54,11 @@ type.title = {
   fontFamily: 'Sans Sharp',
   fontWeight: 900,
   fontSize: `calc(var(${grid.size.l}) / 1.25)`,
-  lineHeight: `calc(var(${grid.size.l}) / 1.25)`
+  lineHeight: `calc(var(${grid.size.l}) / 1.25)`,
+  [media.phone.q]: {
+    fontSize: `calc(var(${grid.size.l}) / 1.60)`,
+    lineHeight: `calc(var(${grid.size.l}) / 1.60)`
+  }
 }
 
 type.subtitle = {

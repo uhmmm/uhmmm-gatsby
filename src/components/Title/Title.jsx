@@ -46,7 +46,9 @@ const Title = ({ name, AllImages }) => {
     {}
   )
   const image = images['tekstbg-hq'].src
-  return <Header image={image}>{name}</Header>
+  return (
+    <Header image={image} dangerouslySetInnerHTML={{ __html: name }} />
+  )
 }
 
 const TitleContainer = props => (
