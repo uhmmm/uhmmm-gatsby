@@ -13,6 +13,9 @@ const Container = styled.div({
   [media.phablet.q]: {
     display: 'flex',
     flexDirection: 'column'
+  },
+  [media.large.q]: {
+    marginBottom: 0
   }
 })
 
@@ -24,7 +27,7 @@ const TitleContainer = styled.div({
 })
 
 const TextContainer = styled.div({
-  gridArea: `4 / 1 / 9 / 10`,
+  gridArea: `4 / 1 / 9 / 11`,
   columns: 2,
   columnGap: `var(${grid.size.l})`,
   [media.phablet.q]: {
@@ -34,6 +37,7 @@ const TextContainer = styled.div({
 
 const BodyCopy = styled.p({
   display: 'block',
+  maxWidth: '40rem',
   breakInside: 'avoid-column',
   ...type.body
 })
