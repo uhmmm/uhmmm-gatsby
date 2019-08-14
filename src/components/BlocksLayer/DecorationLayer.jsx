@@ -13,67 +13,98 @@ const DecorationLayerContainer = styled.div({
   zIndex: '-1'
 })
 
-const DecorationContainer = styled.div(
-  ({ areaFull, areaTablet, areaPhone, hide }) => ({
-    gridArea: areaFull,
-    position: 'relative',
-    [media.phablet.q]: {
-      display: hide && 'none'
-    },
-    [media.tablet.q]: {
-      gridArea: areaTablet
-    },
-    [media.phone.q]: {
-      gridArea: areaPhone
-    }
-  })
-)
+const DecorationContainer = styled.div(({ areas }) => ({
+  gridArea: areas.full,
+  position: 'relative',
+
+  [media.tablet.q]: {
+    gridArea: areas.tablet,
+    display: !areas.tablet && 'none'
+  },
+  [media.phone.q]: {
+    gridArea: areas.phone,
+    display: !areas.phone && 'none'
+  }
+}))
 
 const large = '4rem'
 const largePos = math(`${large} / 2 * -1`)
 const small = '2rem'
 const smallPos = math(`${small} / 2 * -1`)
 
-const Decoration = styled.img(({ size }) => ({
+const DecorationImg = styled.img(({ size }) => ({
   position: 'absolute',
   width: size !== 'small' ? large : small,
   left: size !== 'small' ? largePos : smallPos,
   top: size !== 'small' ? largePos : smallPos
 }))
 
+const Decoration = ({ areas, image, size }) => (
+  <DecorationContainer areas={areas}>
+    <DecorationImg src={image} alt="" size={size} />
+  </DecorationContainer>
+)
+
+const decorations = [
+  {
+    areas: {
+      full: '2 / 4 / 3 / 5',
+      tablet: '2 / 4 / 3 / 5',
+      phone: '2 / 5 / 3 / 6'
+    },
+    image: cross,
+    size: 'small'
+  },
+  {
+    areas: {
+      full: '2 / 10 / 3 / 11',
+      tablet: '2 / 8 / 3 / 9',
+      phone: '7 / 6 / 8 / 9'
+    },
+    image: circle
+  },
+  {
+    areas: {
+      full: '3 / 14 / 4 / 15',
+      tablet: '5 / 10 / 6 / 11',
+      phone: '15 / 6 / 16 / 7'
+    },
+    image: circles
+  },
+  {
+    areas: {
+      full: '5 / 11 / 6 / 12'
+    },
+    image: cross,
+    size: 'small'
+  },
+  {
+    areas: {
+      full: '8 / 12 / 9 / 13'
+    },
+    image: circle
+  },
+  {
+    areas: {
+      full: '12 / 9 / 13 / 10'
+    },
+    image: circles
+  }
+]
+
 const DecorationLayer = () => {
   return (
     <DecorationLayerContainer>
-      <DecorationContainer
-        areaFull="2 / 4 / 3 / 5"
-        areaTablet="2 / 4 / 3 / 5"
-        areaPhone="2 / 5 / 3 / 6"
-      >
-        <Decoration src={cross} alt="" size="small" />
-      </DecorationContainer>
-      <DecorationContainer
-        areaFull="2 / 10 / 3 / 11"
-        areaTablet="2 / 8 / 3 / 9"
-        areaPhone="7 / 6 / 8 / 9"
-      >
-        <Decoration src={circle} alt="" />
-      </DecorationContainer>
-      <DecorationContainer
-        areaFull="3 / 14 / 4 / 15"
-        areaTablet="5 / 10 / 6 / 11"
-        areaPhone="15 / 6 / 16 / 7"
-      >
-        <Decoration src={circles} alt="" />
-      </DecorationContainer>
-      <DecorationContainer areaFull="5 / 11 / 6 / 12" hide>
-        <Decoration src={cross} alt="" size="small" />
-      </DecorationContainer>
-      <DecorationContainer areaFull="8 / 12 / 9 / 13" hide>
-        <Decoration src={circle} alt="" />
-      </DecorationContainer>
-      <DecorationContainer areaFull="12 / 9 / 13 / 10" hide>
-        <Decoration src={circles} alt="" />
-      </DecorationContainer>
+      {decorations.map(item => {
+        return (
+          <Decoration
+            key={item.areas.full}
+            areas={item.areas}
+            image={item.image}
+            size={item.size}
+          />
+        )
+      })}
     </DecorationLayerContainer>
   )
 }
