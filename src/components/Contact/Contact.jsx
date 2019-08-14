@@ -9,7 +9,7 @@ const Container = styled.div({
   ...grid.vars,
   ...grid.inner.template,
   ...util.scrollOffset,
-  paddingBottom: `calc(var(${grid.size.l}) * 2)`
+  paddingBottom: `calc(var(${grid.size.l}) * 4)`
 })
 
 const ContactContainer = styled.div({
