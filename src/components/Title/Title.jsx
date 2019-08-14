@@ -34,8 +34,7 @@ const Header = styled.h1(({ image }) => ({
   textFillColor: 'transparent',
   WebkitTextFillColor: 'transparent',
 
-  overflowWrap: 'break-word',
-  hyphens: 'auto'
+  overflowWrap: 'break-word'
 }))
 
 const Title = ({ name, AllImages }) => {
