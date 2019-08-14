@@ -13,11 +13,11 @@ const DecorationLayerContainer = styled.div({
   zIndex: '-1'
 })
 
-const DecorationContainer = styled.div(({ area, hide }) => ({
+const DecorationContainer = styled.div(({ area }) => ({
   gridArea: area,
   position: 'relative',
   [media.phablet.q]: {
-    display: hide && 'none'
+    display: 'none'
   }
 }))
 
