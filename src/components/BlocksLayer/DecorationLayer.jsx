@@ -13,13 +13,21 @@ const DecorationLayerContainer = styled.div({
   zIndex: '-1'
 })
 
-const DecorationContainer = styled.div(({ area }) => ({
-  gridArea: area,
-  position: 'relative',
-  [media.phablet.q]: {
-    display: 'none'
-  }
-}))
+const DecorationContainer = styled.div(
+  ({ areaFull, areaTablet, areaPhone, hide }) => ({
+    gridArea: areaFull,
+    position: 'relative',
+    [media.phablet.q]: {
+      display: hide && 'none'
+    },
+    [media.tablet.q]: {
+      gridArea: areaTablet
+    },
+    [media.phone.q]: {
+      gridArea: areaPhone
+    }
+  })
+)
 
 const large = '4rem'
 const largePos = math(`${large} / 2 * -1`)
@@ -36,22 +44,34 @@ const Decoration = styled.img(({ size }) => ({
 const DecorationLayer = () => {
   return (
     <DecorationLayerContainer>
-      <DecorationContainer area="2 / 4 / 3 / 5">
+      <DecorationContainer
+        area="2 / 4 / 3 / 5"
+        areaTablet="2 / 4 / 3 / 5"
+        areaPhone="2 / 5 / 3 / 6"
+      >
         <Decoration src={cross} alt="" size="small" />
       </DecorationContainer>
-      <DecorationContainer area="2 / 10 / 3 / 11">
+      <DecorationContainer
+        area="2 / 10 / 3 / 11"
+        areaTablet="2 / 8 / 3 / 9"
+        areaPhone="7 / 6 / 8 / 9"
+      >
         <Decoration src={circle} alt="" />
       </DecorationContainer>
-      <DecorationContainer area="3 / 14 / 4 / 15">
+      <DecorationContainer
+        area="3 / 14 / 4 / 15"
+        areaTablet="5 / 10 / 6 / 11"
+        areaPhone="15 / 6 / 16 / 7"
+      >
         <Decoration src={circles} alt="" />
       </DecorationContainer>
-      <DecorationContainer area="5 / 11 / 6 / 12">
+      <DecorationContainer area="5 / 11 / 6 / 12" hide>
         <Decoration src={cross} alt="" size="small" />
       </DecorationContainer>
-      <DecorationContainer area="8 / 12 / 9 / 13">
+      <DecorationContainer area="8 / 12 / 9 / 13" hide>
         <Decoration src={circle} alt="" />
       </DecorationContainer>
-      <DecorationContainer area="12 / 9 / 13 / 10">
+      <DecorationContainer area="12 / 9 / 13 / 10" hide>
         <Decoration src={circles} alt="" />
       </DecorationContainer>
     </DecorationLayerContainer>
