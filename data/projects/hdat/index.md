@@ -11,7 +11,7 @@ authors:
   - Erik van Zummeren
   - Robert-Jan Korteschiel
 tags:
-  - Pre-production
+  - Under Development
 description: 'The historical Asiatic trading companies present a significant milestone in global trade. There is a lot of data about these companies available through work done by historians. We want to make this immersive through an interactive data-driven documentary and installation.'
 ---
 

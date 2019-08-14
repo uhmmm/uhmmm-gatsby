@@ -12,7 +12,7 @@ authors:
   - Robert-Jan Korteschiel
   - Tove Oegema
 tags:
-  - Under Development
+  - Under Production
 description: 'Getting information from governments seems like a daunting task. The blinking cursor on an empty document makes you wonder where to start, but what if there was a form to help you along? In this project we search for the right format to make the Dutch FOIA act more easily accessible.'
 ---
 
