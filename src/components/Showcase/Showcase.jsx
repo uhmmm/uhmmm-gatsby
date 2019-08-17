@@ -51,18 +51,20 @@ export default () => (
       <BodyCopy>
         We are a small collective that research, design, and code digital
         environments. Our projects are on the intersection between academia,
-        journalism, and society.
+        journalism, and society. We are a small collective that research,
+        design, and code digital environments. Our projects are on the
+        intersection between academia, journalism, and society.
       </BodyCopy>
       <BodyCopy>
         Most of our projects are self-initiated, but we don't like to build
         alone. We are always on the lookout for collaborations. If you have an
         idea on your mind, drop us a
-        <a href="mailto:info@uhmmm.net"> mail!</a>
+        <a href="mailto:info@uhmmm.net"> mail.</a>
       </BodyCopy>
       <BodyCopy>
-        In our work, we value inclusive perspectives and creativity. Whatever it
-        is, we try to get there with our partners. Together we create new
-        digital environments.
+        In our work, we value creativity, inclusive perspectives and narratives.
+        Whatever it is, we try to get there with our partners. Together we
+        create new digital environments.
       </BodyCopy>
     </TextContainer>
   </Container>
